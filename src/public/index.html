@@ -971,10 +971,10 @@ function renderBehaviorTrends() {
   const bannerClass = s.overallDirection === 'improving' ? 'improving' : s.overallDirection === 'worsening' ? 'worsening' : 'stable';
   const bannerEmoji = s.overallDirection === 'improving' ? '\u2705' : s.overallDirection === 'worsening' ? '\u26A0\uFE0F' : '\u2796';
   const bannerText = s.overallDirection === 'improving'
-    ? s.improved + ' of ' + s.total + ' tracked behaviors improved this week'
+    ? s.improved + ' of ' + s.total + ' tracked behaviors improved today'
     : s.overallDirection === 'worsening'
-    ? s.worsened + ' of ' + s.total + ' tracked behaviors worsened this week'
-    : 'Your usage patterns are mostly stable this week';
+    ? s.worsened + ' of ' + s.total + ' tracked behaviors worsened today'
+    : 'Your usage patterns are mostly stable today';
   const bannerSub = s.improved + ' improved, ' + s.worsened + ' worsened, ' + s.stable + ' stable';
 
   const trendArrowSvg = (m) => {
@@ -1021,7 +1021,7 @@ function renderBehaviorTrends() {
   bannerTitle.textContent = bannerText;
   const bannerSubEl = document.createElement('div');
   bannerSubEl.className = 'trends-banner-sub';
-  bannerSubEl.textContent = bannerSub + ' \u00B7 ' + bt.window.recent.sessions + ' sessions this week, ' + bt.window.prior.sessions + ' last week';
+  bannerSubEl.textContent = bannerSub + ' \u00B7 ' + bt.window.recent.sessions + ' sessions today vs ' + bt.window.prior.sessions + ' sessions (7-day avg)';
   bannerBody.appendChild(bannerTitle);
   bannerBody.appendChild(bannerSubEl);
   banner.appendChild(bannerIcon);
@@ -1053,7 +1053,7 @@ function renderBehaviorTrends() {
 
     const prev = document.createElement('div');
     prev.className = 'trend-card-prev';
-    prev.textContent = 'was ' + formatPrevValue(m) + ' last week';
+    prev.textContent = '7-day avg: ' + formatPrevValue(m);
 
     card.appendChild(label);
     card.appendChild(valueRow);
