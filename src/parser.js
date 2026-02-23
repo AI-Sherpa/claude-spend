@@ -26,15 +26,17 @@ async function parseJSONLFile(filePath) {
 function extractSessionData(entries) {
   const queries = [];
   let pendingUserMessage = null;
+  let clearCount = 0;
 
   for (const entry of entries) {
     if (entry.type === 'user' && entry.message?.role === 'user') {
       const content = entry.message.content;
       if (entry.isMeta) continue;
-      if (typeof content === 'string' && (
-        content.startsWith('<local-command') ||
-        content.startsWith('<command-name')
-      )) continue;
+      if (typeof content === 'string' && content.startsWith('<command-name')) {
+        if (content.includes('/clear')) clearCount++;
+        continue;
+      }
+      if (typeof content === 'string' && content.startsWith('<local-command')) continue;
 
       const textContent = typeof content === 'string'
         ? content
@@ -75,7 +77,7 @@ function extractSessionData(entries) {
     }
   }
 
-  return queries;
+  return { queries, clearCount };
 }
 
 async function parseAllSessions() {
@@ -125,7 +127,7 @@ async function parseAllSessions() {
       }
       if (entries.length === 0) continue;
 
-      const queries = extractSessionData(entries);
+      const { queries, clearCount } = extractSessionData(entries);
       if (queries.length === 0) continue;
 
       let inputTokens = 0, outputTokens = 0;
@@ -187,6 +189,7 @@ async function parseAllSessions() {
         model: primaryModel,
         queryCount: queries.length,
         queries,
+        clearCount,
         inputTokens,
         outputTokens,
         totalTokens,
