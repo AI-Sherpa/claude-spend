@@ -928,10 +928,18 @@ function renderInsights() {
   document.getElementById('insightsList').innerHTML = insights.map((ins, i) => {
     const detailHtml = ins.description ? `<div class="insight-detail">${escapeHtml(ins.description)}</div>` : '';
     const actionHtml = ins.action ? `<div class="insight-action-tip">${escapeHtml(ins.action)}</div>` : '';
+    let trendHtml = '';
+    if (ins.trend) {
+      const t = ins.trend;
+      const arrow = t.direction === 'improved' ? '\u2191' : t.direction === 'worsened' ? '\u2193' : '\u2192';
+      const sign = t.pctChange > 0 ? '+' : '';
+      trendHtml = '<span class="trend-badge ' + t.direction + '">' + arrow + ' ' + sign + t.pctChange + '%</span>';
+    }
     return `<div class="insight-card ${ins.type} animate delay-${Math.min(i + 2, 5)}" onclick="this.classList.toggle('expanded')">
       <div class="insight-top">
         <div class="insight-indicator">${emojis[ins.type] || ''}</div>
         <div class="insight-title">${escapeHtml(ins.title)}</div>
+        ${trendHtml}
         <div class="insight-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 4.5L6 7.5L9 4.5"/></svg></div>
       </div>
       <div class="insight-expand">
