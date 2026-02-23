@@ -330,6 +330,31 @@ async function parseAllSessions() {
   // Generate insights
   const insights = generateInsights(sessions, allPrompts, grandTotals);
 
+  // Compute behavior trends
+  const behaviorTrends = computeBehaviorTrends(sessions);
+
+  // Attach trend data to matching insights
+  if (behaviorTrends.hasData) {
+    const insightToMetric = {
+      'vague-prompts': 'prompt-specificity',
+      'context-growth': 'session-length',
+      'marathon-sessions': 'session-length',
+      'conversation-efficiency': 'tokens-per-turn',
+      'input-heavy': 'output-ratio',
+      'tool-heavy': 'tool-ratio',
+      'heavy-context': 'startup-context',
+      'model-mismatch': 'opus-simple-ratio',
+    };
+    const metricMap = {};
+    for (const m of behaviorTrends.metrics) metricMap[m.id] = m;
+    for (const insight of insights) {
+      const metricId = insightToMetric[insight.id];
+      if (metricId && metricMap[metricId]) {
+        insight.trend = metricMap[metricId];
+      }
+    }
+  }
+
   return {
     sessions,
     dailyUsage,
@@ -338,6 +363,7 @@ async function parseAllSessions() {
     topPrompts,
     totals: grandTotals,
     insights,
+    behaviorTrends,
   };
 }
 
