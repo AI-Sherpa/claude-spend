@@ -674,8 +674,8 @@ function computeBehaviorTrends(sessions) {
     summary: { improved, worsened, stable, total: metrics.length, overallDirection },
     hasData: true,
     window: {
-      recent: { from: startOfToday.toISOString().split('T')[0], to: now.toISOString().split('T')[0], sessions: recent.length },
-      prior: { from: priorCutoff.toISOString().split('T')[0], to: startOfToday.toISOString().split('T')[0], sessions: prior.length },
+      recent: { from: startOfToday.toISOString().split('T')[0], to: now.toISOString().split('T')[0], sessions: recent.length, label: 'today' },
+      prior: { from: priorCutoff.toISOString().split('T')[0], to: startOfToday.toISOString().split('T')[0], sessions: prior.length, label: '7-day avg' },
     },
   };
 }
