@@ -543,6 +543,117 @@ function generateInsights(sessions, allPrompts, totals) {
   return insights;
 }
 
+function computeBehaviorTrends(sessions) {
+  const now = new Date();
+  const msPerDay = 86400000;
+  const recentCutoff = new Date(now - 7 * msPerDay);
+  const priorCutoff = new Date(now - 14 * msPerDay);
+
+  const recent = sessions.filter(s => s.timestamp && new Date(s.timestamp) >= recentCutoff);
+  const prior = sessions.filter(s => s.timestamp && new Date(s.timestamp) >= priorCutoff && new Date(s.timestamp) < recentCutoff);
+
+  if (recent.length === 0 || prior.length === 0) {
+    return { metrics: [], summary: null, hasData: false };
+  }
+
+  function computeMetric(id, label, recentVal, priorVal, lowerIsBetter) {
+    if (priorVal === null || recentVal === null) {
+      return { id, label, current: recentVal, previous: priorVal, direction: 'no-data', pctChange: 0 };
+    }
+    const diff = recentVal - priorVal;
+    const pctChange = priorVal !== 0 ? Math.round((diff / Math.abs(priorVal)) * 100) : 0;
+    const threshold = 5;
+    let direction = 'stable';
+    if (Math.abs(pctChange) > threshold) {
+      const rawBetter = lowerIsBetter ? diff < 0 : diff > 0;
+      direction = rawBetter ? 'improved' : 'worsened';
+    }
+    return { id, label, current: Math.round(recentVal * 10) / 10, previous: Math.round(priorVal * 10) / 10, direction, pctChange };
+  }
+
+  function avgPromptLength(sessionsArr) {
+    let total = 0, count = 0;
+    for (const s of sessionsArr) {
+      for (const q of s.queries) {
+        if (q.userPrompt) { total += q.userPrompt.length; count++; }
+      }
+    }
+    return count > 0 ? total / count : null;
+  }
+
+  function avgSessionLength(sessionsArr) {
+    if (sessionsArr.length === 0) return null;
+    return sessionsArr.reduce((s, ses) => s + ses.queryCount, 0) / sessionsArr.length;
+  }
+
+  function clearFrequency(sessionsArr) {
+    if (sessionsArr.length === 0) return null;
+    return sessionsArr.reduce((s, ses) => s + (ses.clearCount || 0), 0) / sessionsArr.length;
+  }
+
+  function tokensPerTurn(sessionsArr) {
+    let totalTokens = 0, totalQueries = 0;
+    for (const s of sessionsArr) { totalTokens += s.totalTokens; totalQueries += s.queryCount; }
+    return totalQueries > 0 ? totalTokens / totalQueries : null;
+  }
+
+  function outputRatio(sessionsArr) {
+    let totalOut = 0, totalAll = 0;
+    for (const s of sessionsArr) { totalOut += s.outputTokens; totalAll += s.totalTokens; }
+    return totalAll > 0 ? (totalOut / totalAll) * 100 : null;
+  }
+
+  function toolRatio(sessionsArr) {
+    let totalTools = 0, totalUserMsgs = 0;
+    for (const s of sessionsArr) {
+      const userMsgs = s.queries.filter(q => q.userPrompt).length;
+      totalUserMsgs += userMsgs;
+      totalTools += s.queryCount - userMsgs;
+    }
+    return totalUserMsgs > 0 ? totalTools / totalUserMsgs : null;
+  }
+
+  function avgStartupContext(sessionsArr) {
+    const starts = sessionsArr.filter(s => s.queries.length > 0).map(s => s.queries[0].inputTokens);
+    return starts.length > 0 ? starts.reduce((a, b) => a + b, 0) / starts.length : null;
+  }
+
+  function opusSimpleRatio(sessionsArr) {
+    const opusSess = sessionsArr.filter(s => s.model.includes('opus'));
+    if (opusSess.length === 0) return null;
+    const simple = opusSess.filter(s => s.queryCount < 10 && s.totalTokens < 200000);
+    return (simple.length / opusSess.length) * 100;
+  }
+
+  const metrics = [
+    computeMetric('prompt-specificity', 'Prompt specificity', avgPromptLength(recent), avgPromptLength(prior), false),
+    computeMetric('session-length', 'Avg session length', avgSessionLength(recent), avgSessionLength(prior), true),
+    computeMetric('clear-frequency', '/clear usage per session', clearFrequency(recent), clearFrequency(prior), false),
+    computeMetric('tokens-per-turn', 'Tokens per message', tokensPerTurn(recent), tokensPerTurn(prior), true),
+    computeMetric('output-ratio', 'Output token ratio', outputRatio(recent), outputRatio(prior), false),
+    computeMetric('tool-ratio', 'Tool calls per message', toolRatio(recent), toolRatio(prior), true),
+    computeMetric('startup-context', 'Startup context size', avgStartupContext(recent), avgStartupContext(prior), true),
+    computeMetric('opus-simple-ratio', 'Opus for simple tasks', opusSimpleRatio(recent), opusSimpleRatio(prior), true),
+  ].filter(m => m.direction !== 'no-data');
+
+  const improved = metrics.filter(m => m.direction === 'improved').length;
+  const worsened = metrics.filter(m => m.direction === 'worsened').length;
+  const stable = metrics.filter(m => m.direction === 'stable').length;
+  let overallDirection = 'stable';
+  if (improved > worsened) overallDirection = 'improving';
+  else if (worsened > improved) overallDirection = 'worsening';
+
+  return {
+    metrics,
+    summary: { improved, worsened, stable, total: metrics.length, overallDirection },
+    hasData: true,
+    window: {
+      recent: { from: recentCutoff.toISOString().split('T')[0], to: now.toISOString().split('T')[0], sessions: recent.length },
+      prior: { from: priorCutoff.toISOString().split('T')[0], to: recentCutoff.toISOString().split('T')[0], sessions: prior.length },
+    },
+  };
+}
+
 function fmt(n) {
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M';
   if (n >= 10_000) return (n / 1_000).toFixed(0) + 'K';
