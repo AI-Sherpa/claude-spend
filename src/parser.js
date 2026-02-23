@@ -571,12 +571,12 @@ function generateInsights(sessions, allPrompts, totals) {
 
 function computeBehaviorTrends(sessions) {
   const now = new Date();
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const msPerDay = 86400000;
-  const recentCutoff = new Date(now - 7 * msPerDay);
-  const priorCutoff = new Date(now - 14 * msPerDay);
+  const priorCutoff = new Date(startOfToday - 7 * msPerDay);
 
-  const recent = sessions.filter(s => s.timestamp && new Date(s.timestamp) >= recentCutoff);
-  const prior = sessions.filter(s => s.timestamp && new Date(s.timestamp) >= priorCutoff && new Date(s.timestamp) < recentCutoff);
+  const recent = sessions.filter(s => s.timestamp && new Date(s.timestamp) >= startOfToday);
+  const prior = sessions.filter(s => s.timestamp && new Date(s.timestamp) >= priorCutoff && new Date(s.timestamp) < startOfToday);
 
   if (recent.length === 0 || prior.length === 0) {
     return { metrics: [], summary: null, hasData: false };
@@ -674,8 +674,8 @@ function computeBehaviorTrends(sessions) {
     summary: { improved, worsened, stable, total: metrics.length, overallDirection },
     hasData: true,
     window: {
-      recent: { from: recentCutoff.toISOString().split('T')[0], to: now.toISOString().split('T')[0], sessions: recent.length },
-      prior: { from: priorCutoff.toISOString().split('T')[0], to: recentCutoff.toISOString().split('T')[0], sessions: prior.length },
+      recent: { from: startOfToday.toISOString().split('T')[0], to: now.toISOString().split('T')[0], sessions: recent.length },
+      prior: { from: priorCutoff.toISOString().split('T')[0], to: startOfToday.toISOString().split('T')[0], sessions: prior.length },
     },
   };
 }
