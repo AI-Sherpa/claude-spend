@@ -882,6 +882,7 @@ function render() {
   document.getElementById('app').style.display = 'block';
   renderStats();
   renderInsights();
+  renderBehaviorTrends();
   renderDailyChart();
   renderModelChart();
   renderProjectBreakdown();
@@ -939,6 +940,119 @@ function renderInsights() {
       </div>
     </div>`;
   }).join('');
+}
+
+// Behavior Trends
+function renderBehaviorTrends() {
+  const bt = DATA.behaviorTrends;
+  const section = document.getElementById('behaviorTrendsSection');
+  const content = document.getElementById('behaviorTrendsContent');
+
+  if (!bt || !bt.hasData) {
+    section.style.display = 'block';
+    content.textContent = '';
+    const noData = document.createElement('div');
+    noData.className = 'trends-no-data';
+    noData.textContent = 'Not enough data yet \u2014 need at least 14 days of usage to show behavior trends.';
+    content.appendChild(noData);
+    return;
+  }
+
+  section.style.display = 'block';
+  const s = bt.summary;
+  const bannerClass = s.overallDirection === 'improving' ? 'improving' : s.overallDirection === 'worsening' ? 'worsening' : 'stable';
+  const bannerEmoji = s.overallDirection === 'improving' ? '\u2705' : s.overallDirection === 'worsening' ? '\u26A0\uFE0F' : '\u2796';
+  const bannerText = s.overallDirection === 'improving'
+    ? s.improved + ' of ' + s.total + ' tracked behaviors improved this week'
+    : s.overallDirection === 'worsening'
+    ? s.worsened + ' of ' + s.total + ' tracked behaviors worsened this week'
+    : 'Your usage patterns are mostly stable this week';
+  const bannerSub = s.improved + ' improved, ' + s.worsened + ' worsened, ' + s.stable + ' stable';
+
+  const trendArrowSvg = (m) => {
+    if (m.direction === 'improved') return '<svg viewBox="0 0 10 10" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7L5 3L9 7"/></svg>';
+    if (m.direction === 'worsened') return '<svg viewBox="0 0 10 10" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3L5 7L9 3"/></svg>';
+    return '<svg viewBox="0 0 10 10" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 5H9"/></svg>';
+  };
+
+  const formatMetricValue = (m) => {
+    if (m.id === 'prompt-specificity') return Math.round(m.current) + ' chars';
+    if (m.id === 'session-length') return m.current.toFixed(0) + ' turns';
+    if (m.id === 'clear-frequency') return m.current.toFixed(1) + '/session';
+    if (m.id === 'tokens-per-turn') return fmt(Math.round(m.current));
+    if (m.id === 'output-ratio') return m.current.toFixed(1) + '%';
+    if (m.id === 'tool-ratio') return m.current.toFixed(1) + 'x';
+    if (m.id === 'startup-context') return fmt(Math.round(m.current));
+    if (m.id === 'opus-simple-ratio') return m.current.toFixed(0) + '%';
+    return String(m.current);
+  };
+
+  const formatPrevValue = (m) => {
+    if (m.id === 'tokens-per-turn' || m.id === 'startup-context') return fmt(Math.round(m.previous));
+    if (m.id === 'prompt-specificity') return Math.round(m.previous) + ' chars';
+    if (m.id === 'session-length') return m.previous.toFixed(0) + ' turns';
+    if (m.id === 'clear-frequency') return m.previous.toFixed(1) + '/session';
+    if (m.id === 'output-ratio') return m.previous.toFixed(1) + '%';
+    if (m.id === 'tool-ratio') return m.previous.toFixed(1) + 'x';
+    if (m.id === 'opus-simple-ratio') return m.previous.toFixed(0) + '%';
+    return String(m.previous);
+  };
+
+  // Build DOM safely
+  content.textContent = '';
+
+  // Banner
+  const banner = document.createElement('div');
+  banner.className = 'trends-banner';
+  const bannerIcon = document.createElement('div');
+  bannerIcon.className = 'trends-banner-icon ' + bannerClass;
+  bannerIcon.textContent = bannerEmoji;
+  const bannerBody = document.createElement('div');
+  const bannerTitle = document.createElement('div');
+  bannerTitle.className = 'trends-banner-title';
+  bannerTitle.textContent = bannerText;
+  const bannerSubEl = document.createElement('div');
+  bannerSubEl.className = 'trends-banner-sub';
+  bannerSubEl.textContent = bannerSub + ' \u00B7 ' + bt.window.recent.sessions + ' sessions this week, ' + bt.window.prior.sessions + ' last week';
+  bannerBody.appendChild(bannerTitle);
+  bannerBody.appendChild(bannerSubEl);
+  banner.appendChild(bannerIcon);
+  banner.appendChild(bannerBody);
+  content.appendChild(banner);
+
+  // Metric cards grid
+  const grid = document.createElement('div');
+  grid.className = 'trends-grid';
+  for (const m of bt.metrics) {
+    const card = document.createElement('div');
+    card.className = 'trend-card';
+
+    const label = document.createElement('div');
+    label.className = 'trend-card-label';
+    label.textContent = m.label;
+
+    const valueRow = document.createElement('div');
+    valueRow.className = 'trend-card-value';
+    const valSpan = document.createElement('span');
+    valSpan.textContent = formatMetricValue(m);
+    const changeSpan = document.createElement('span');
+    changeSpan.className = 'trend-card-change ' + m.direction;
+    const sign = m.pctChange > 0 ? '+' : '';
+    // Safe: trendArrowSvg returns hardcoded SVG strings with no user input
+    changeSpan.innerHTML = trendArrowSvg(m) + ' ' + sign + m.pctChange + '%';
+    valueRow.appendChild(valSpan);
+    valueRow.appendChild(changeSpan);
+
+    const prev = document.createElement('div');
+    prev.className = 'trend-card-prev';
+    prev.textContent = 'was ' + formatPrevValue(m) + ' last week';
+
+    card.appendChild(label);
+    card.appendChild(valueRow);
+    card.appendChild(prev);
+    grid.appendChild(card);
+  }
+  content.appendChild(grid);
 }
 
 // Daily chart
