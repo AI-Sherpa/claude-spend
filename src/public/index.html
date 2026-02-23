@@ -961,7 +961,7 @@ function renderBehaviorTrends() {
     content.textContent = '';
     const noData = document.createElement('div');
     noData.className = 'trends-no-data';
-    noData.textContent = 'Not enough data yet \u2014 need at least 14 days of usage to show behavior trends.';
+    noData.textContent = 'Not enough data yet \u2014 need sessions today and at least one prior day to show behavior trends.';
     content.appendChild(noData);
     return;
   }
