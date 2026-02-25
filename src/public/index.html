@@ -48,6 +48,39 @@
     --mono: 'SF Mono', 'Cascadia Code', 'Fira Code', 'JetBrains Mono', monospace;
   }
 
+  :root[data-theme="dark"] {
+    --bg: #0F172A;
+    --bg-mesh-1: #1A1F35;
+    --bg-mesh-2: #1A2B2A;
+    --white: #1E293B;
+    --text: #F1F5F9;
+    --text-secondary: #CBD5E1;
+    --text-tertiary: #64748B;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.12);
+
+    --indigo: #818CF8;
+    --violet: #A78BFA;
+    --purple: #C084FC;
+    --teal: #2DD4BF;
+    --cyan: #22D3EE;
+    --emerald: #34D399;
+    --amber: #FBBF24;
+    --orange: #FB923C;
+    --rose: #FB7185;
+    --blue: #60A5FA;
+
+    --gradient-main: linear-gradient(135deg, #818CF8, #A78BFA, #C084FC);
+    --gradient-teal: linear-gradient(135deg, #2DD4BF, #22D3EE);
+    --gradient-warm: linear-gradient(135deg, #FBBF24, #FB923C);
+    --gradient-rose: linear-gradient(135deg, #FB7185, #F472B6);
+
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+    --shadow-glow: 0 0 40px rgba(129,140,248,0.2);
+  }
+
   body {
     font-family: var(--font);
     background: var(--bg);
@@ -62,9 +95,9 @@
     content: '';
     position: fixed; top: 0; left: 0; right: 0; height: 600px;
     background:
-      radial-gradient(ellipse 80% 60% at 10% 0%, rgba(99,102,241,0.12) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 50% at 90% 10%, rgba(139,92,246,0.08) 0%, transparent 50%),
-      radial-gradient(ellipse 50% 40% at 50% 20%, rgba(20,184,166,0.06) 0%, transparent 50%);
+      radial-gradient(ellipse 80% 60% at 10% 0%, rgba(129,140,248,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 10%, rgba(167,139,250,0.06) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 40% at 50% 20%, rgba(45,212,191,0.04) 0%, transparent 50%);
     pointer-events: none; z-index: 0;
   }
 
