@@ -1542,5 +1542,75 @@ window.addEventListener('resize', () => { if (DATA) { renderDailyChart(); render
     </svg>
   </button>
 
+  <script>
+    // Theme management
+    const html = document.documentElement;
+    const fab = document.getElementById('theme-toggle-fab');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+    const systemIcon = document.querySelector('.system-icon');
+
+    // Theme cycle order: auto → light → dark → auto
+    const themeCycle = ['auto', 'light', 'dark'];
+    let currentThemeIndex = 0;
+
+    // Initialize theme from localStorage or system preference
+    function initTheme() {
+      const stored = localStorage.getItem('claude-spend-theme');
+
+      if (stored) {
+        // User has manually set a preference
+        setTheme(stored);
+        currentThemeIndex = themeCycle.indexOf(stored);
+      } else {
+        // Follow system preference
+        setTheme('auto');
+        currentThemeIndex = 0;
+      }
+    }
+
+    // Apply theme to DOM and update icon
+    function setTheme(theme) {
+      if (theme === 'auto') {
+        // Remove data-theme to use default/system preference
+        html.removeAttribute('data-theme');
+        localStorage.removeItem('claude-spend-theme');
+        showIcon('system');
+      } else if (theme === 'light') {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('claude-spend-theme', 'light');
+        showIcon('sun');
+      } else if (theme === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('claude-spend-theme', 'dark');
+        showIcon('moon');
+      }
+    }
+
+    // Show only the active icon
+    function showIcon(icon) {
+      sunIcon.classList.toggle('hidden', icon !== 'sun');
+      moonIcon.classList.toggle('hidden', icon !== 'moon');
+      systemIcon.classList.toggle('hidden', icon !== 'system');
+    }
+
+    // Toggle to next theme in cycle
+    fab.addEventListener('click', () => {
+      currentThemeIndex = (currentThemeIndex + 1) % themeCycle.length;
+      setTheme(themeCycle[currentThemeIndex]);
+    });
+
+    // Apply system preference changes in real-time
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (currentThemeIndex === 0) { // Only if in 'auto' mode
+        // Theme will update automatically via media query
+        showIcon('system');
+      }
+    });
+
+    // Initialize on page load
+    initTheme();
+  </script>
+
 </body>
 </html>
