@@ -91,6 +91,12 @@
     transition: background-color 300ms, color 300ms;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    body {
+      transition: none;
+    }
+  }
+
   /* Mesh gradient background */
   body::before {
     content: '';
