@@ -1550,22 +1550,33 @@ window.addEventListener('resize', () => { if (DATA) { renderDailyChart(); render
     const moonIcon = document.querySelector('.moon-icon');
     const systemIcon = document.querySelector('.system-icon');
 
+    // Exit early if required DOM elements don't exist
+    if (!fab || !sunIcon || !moonIcon || !systemIcon) {
+      console.warn('Theme toggle elements not found');
+      return;
+    }
+
     // Theme cycle order: auto → light → dark → auto
     const themeCycle = ['auto', 'light', 'dark'];
     let currentThemeIndex = 0;
 
     // Initialize theme from localStorage or system preference
     function initTheme() {
-      const stored = localStorage.getItem('claude-spend-theme');
+      try {
+        const stored = localStorage.getItem('claude-spend-theme');
 
-      if (stored) {
-        // User has manually set a preference
-        setTheme(stored);
-        currentThemeIndex = themeCycle.indexOf(stored);
-      } else {
-        // Follow system preference
+        if (stored) {
+          // User has manually set a preference
+          setTheme(stored);
+          currentThemeIndex = themeCycle.indexOf(stored);
+        } else {
+          // Follow system preference
+          setTheme('auto');
+          currentThemeIndex = 0;
+        }
+      } catch (e) {
+        console.warn('Failed to read theme preference:', e);
         setTheme('auto');
-        currentThemeIndex = 0;
       }
     }
 
@@ -1574,15 +1585,27 @@ window.addEventListener('resize', () => { if (DATA) { renderDailyChart(); render
       if (theme === 'auto') {
         // Remove data-theme to use default/system preference
         html.removeAttribute('data-theme');
-        localStorage.removeItem('claude-spend-theme');
+        try {
+          localStorage.removeItem('claude-spend-theme');
+        } catch (e) {
+          console.warn('Failed to clear theme preference:', e);
+        }
         showIcon('system');
       } else if (theme === 'light') {
         html.setAttribute('data-theme', 'light');
-        localStorage.setItem('claude-spend-theme', 'light');
+        try {
+          localStorage.setItem('claude-spend-theme', 'light');
+        } catch (e) {
+          console.warn('Failed to save theme preference:', e);
+        }
         showIcon('sun');
       } else if (theme === 'dark') {
         html.setAttribute('data-theme', 'dark');
-        localStorage.setItem('claude-spend-theme', 'dark');
+        try {
+          localStorage.setItem('claude-spend-theme', 'dark');
+        } catch (e) {
+          console.warn('Failed to save theme preference:', e);
+        }
         showIcon('moon');
       }
     }
@@ -1603,7 +1626,7 @@ window.addEventListener('resize', () => { if (DATA) { renderDailyChart(); render
     // Apply system preference changes in real-time
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
       if (currentThemeIndex === 0) { // Only if in 'auto' mode
-        // Theme will update automatically via media query
+        // CSS automatically handles theme switching via media query
         showIcon('system');
       }
     });
