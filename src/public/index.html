@@ -79,6 +79,114 @@
     --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
     --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
     --shadow-glow: 0 0 40px rgba(129,140,248,0.2);
+
+    /* Dark mode hover and badge backgrounds */
+    --hover-bg: #1A2332;
+    --group-header-bg: #1A1F35;
+  }
+
+  /* Dark mode overrides for hardcoded light colors */
+  :root[data-theme="dark"] .prompt-row:hover,
+  :root[data-theme="dark"] .proj-row:hover td,
+  :root[data-theme="dark"] .session-card-header:hover,
+  :root[data-theme="dark"] .query-item:hover {
+    background: var(--hover-bg) !important;
+  }
+
+  :root[data-theme="dark"] .proj-group-header td {
+    background: var(--group-header-bg) !important;
+  }
+
+  :root[data-theme="dark"] .trend-badge.improved {
+    background: rgba(16, 185, 129, 0.15);
+    color: #6EE7B7;
+  }
+
+  :root[data-theme="dark"] .trend-badge.worsened {
+    background: rgba(239, 68, 68, 0.15);
+    color: #FCA5A5;
+  }
+
+  :root[data-theme="dark"] .trend-badge.stable {
+    background: rgba(100, 116, 139, 0.15);
+    color: #94A3B8;
+  }
+
+  :root[data-theme="dark"] .trends-banner-icon.improving {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(34, 211, 238, 0.1)) !important;
+  }
+
+  :root[data-theme="dark"] .trends-banner-icon.worsening {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(241, 114, 181, 0.1)) !important;
+  }
+
+  :root[data-theme="dark"] .trends-banner-icon.stable {
+    background: linear-gradient(135deg, rgba(100, 116, 139, 0.15), rgba(148, 163, 184, 0.1)) !important;
+  }
+
+  :root[data-theme="dark"] .insight-card.warning .insight-indicator {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(253, 230, 138, 0.1)) !important;
+  }
+
+  :root[data-theme="dark"] .insight-card.info .insight-indicator {
+    background: linear-gradient(135deg, rgba(129, 140, 248, 0.15), rgba(199, 210, 254, 0.1)) !important;
+  }
+
+  :root[data-theme="dark"] .insight-card.neutral .insight-indicator {
+    background: linear-gradient(135deg, rgba(148, 163, 184, 0.15), rgba(226, 232, 240, 0.1)) !important;
+  }
+
+  :root[data-theme="dark"] .insight-card.positive .insight-indicator {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(167, 243, 208, 0.1)) !important;
+  }
+
+  :root[data-theme="dark"] .model-opus {
+    background: rgba(79, 70, 229, 0.15);
+    color: #A5B4FC;
+  }
+
+  :root[data-theme="dark"] .model-sonnet {
+    background: rgba(16, 185, 129, 0.15);
+    color: #6EE7B7;
+  }
+
+  :root[data-theme="dark"] .model-haiku {
+    background: rgba(249, 115, 22, 0.15);
+    color: #FDBA74;
+  }
+
+  :root[data-theme="dark"] .model-unknown {
+    background: rgba(100, 116, 139, 0.15);
+    color: #CBD5E1;
+  }
+
+  /* Section icon styles */
+  .section-icon.projects-icon {
+    background: linear-gradient(135deg, #EDE9FE, #DDD6FE);
+  }
+
+  .section-icon.insights-icon {
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+  }
+
+  .section-icon.trends-icon {
+    background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+  }
+
+  :root[data-theme="dark"] .section-icon.projects-icon {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(167, 139, 250, 0.1)) !important;
+  }
+
+  :root[data-theme="dark"] .section-icon.insights-icon {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(253, 230, 138, 0.1)) !important;
+  }
+
+  :root[data-theme="dark"] .section-icon.trends-icon {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(167, 243, 208, 0.1)) !important;
+  }
+
+  :root[data-theme="dark"] .help-icon {
+    background: rgba(255, 255, 255, 0.1) !important;
   }
 
   body {
@@ -367,6 +475,7 @@
   .insight-card.warning .insight-indicator { background: linear-gradient(135deg, #FEF3C7, #FDE68A); }
   .insight-card.info .insight-indicator { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); }
   .insight-card.neutral .insight-indicator { background: linear-gradient(135deg, #F1F5F9, #E2E8F0); }
+  .insight-card.positive .insight-indicator { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); }
   .insight-title { font-size: 14px; font-weight: 700; line-height: 1.4; }
   .insight-oneliner { font-size: 13px; color: var(--text-secondary); margin-left: auto; white-space: nowrap; font-weight: 500; }
   .insight-expand {
@@ -445,6 +554,39 @@
   .trend-card-prev {
     font-size: 11px; color: var(--text-tertiary); font-weight: 500; margin-top: 4px;
   }
+  .trends-projects {
+    font-size: 12px; color: var(--text-secondary); font-weight: 500;
+    margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px 0;
+  }
+  .trends-project-item {
+    display: inline-flex; align-items: center; gap: 0;
+  }
+  .trends-project-name { font-weight: 600; color: var(--text-primary); }
+  .trends-project-detail { color: var(--text-tertiary); }
+  .trends-project-sep { color: var(--border); margin: 0 8px; }
+  .trend-card-toggle {
+    font-size: 11px; color: var(--text-tertiary); font-weight: 500;
+    margin-top: 8px; cursor: pointer; user-select: none;
+    display: flex; align-items: center; gap: 4px;
+    border-top: 1px solid var(--border); padding-top: 8px;
+  }
+  .trend-card-toggle:hover { color: var(--text-secondary); }
+  .trend-card-toggle svg { transition: transform 0.15s ease; }
+  .trend-card-toggle.open svg { transform: rotate(90deg); }
+  .trend-card-projects {
+    margin-top: 6px; font-size: 11px; font-weight: 500;
+    display: none;
+  }
+  .trend-card-projects.open { display: block; }
+  .trend-card-project-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 3px 0; color: var(--text-secondary);
+  }
+  .trend-card-project-row .proj-name {
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    max-width: 60%; font-weight: 600; color: var(--text-primary);
+  }
+  .trend-card-project-row .proj-val { font-variant-numeric: tabular-nums; }
 
   /* ---- CHARTS ---- */
   .charts-grid {
@@ -525,7 +667,7 @@
   .proj-row.expanded .proj-chevron { transform: rotate(90deg); }
   .proj-drawer td { padding: 0; border-bottom: 1px solid var(--border); }
   .proj-drawer-inner { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; background: #FAFBFC; }
-  .proj-drawer.open .proj-drawer-inner { max-height: 600px; }
+  .proj-drawer.open .proj-drawer-inner { max-height: 2000px; overflow-y: auto; }
   .proj-drawer-content { padding: 12px 16px 16px; }
   .drawer-prompt-list { display: flex; flex-direction: column; gap: 8px; }
   .drawer-prompt-row {
@@ -556,7 +698,56 @@
   .drawer-tokens .sub { font-size: 11px; color: var(--text-tertiary); font-weight: 500; margin-top: 2px; }
   .drawer-empty { text-align: center; padding: 20px; color: var(--text-tertiary); font-size: 13px; font-weight: 500; }
 
-  /* ---- SESSIONS ---- */
+  /* Session cards in drawer */
+  .drawer-session-list { display: flex; flex-direction: column; gap: 10px; }
+  .drawer-session-card {
+    background: white; border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+  }
+  .drawer-session-header {
+    display: grid; grid-template-columns: 24px 1fr auto; gap: 10px;
+    padding: 10px 14px; align-items: center; cursor: pointer; transition: background 0.15s;
+  }
+  .drawer-session-header:hover { background: var(--bg); }
+  .drawer-session-chevron {
+    width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  .drawer-session-card.expanded .drawer-session-chevron { transform: rotate(90deg); }
+  .drawer-session-name {
+    font-size: 13px; font-weight: 600; line-height: 1.4;
+    display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+    word-break: break-word;
+  }
+  .drawer-session-meta { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; margin-top: 4px; }
+  .drawer-session-prompts {
+    max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+    background: var(--bg); border-top: 1px solid var(--border);
+  }
+  .drawer-session-card.expanded .drawer-session-prompts { max-height: 2000px; }
+  .drawer-session-prompts-inner { padding: 8px 10px; display: flex; flex-direction: column; gap: 6px; }
+
+  /* Project group headers */
+  .proj-group-header td {
+    padding: 10px 16px; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.6px;
+    color: var(--text-tertiary); background: #F1F5F9;
+    border-bottom: 1px solid var(--border);
+  }
+  .proj-group-header td .group-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11px; font-weight: 700;
+  }
+  .proj-group-header td .group-count {
+    font-weight: 500; color: var(--text-tertiary); font-size: 11px;
+  }
+  .proj-inactive { display: none; }
+  .proj-inactive.show { display: table-row; }
+  #toggleInactive:hover {
+    border-color: var(--indigo); color: var(--indigo);
+    box-shadow: 0 2px 8px rgba(99,102,241,0.12);
+  }
+
+  /* ---- SESSIONS / CONVERSATION FLOWS ---- */
   .sessions-section { margin-bottom: 40px; }
   .sessions-toolbar {
     display: flex; align-items: center; justify-content: space-between;
@@ -572,35 +763,63 @@
   .session-search:focus { border-color: var(--indigo); box-shadow: 0 0 0 3px rgba(99,102,241,0.1); }
   .session-count { color: var(--text-tertiary); font-size: 13px; font-weight: 600; }
 
-  .sessions-card {
-    background: var(--white); border-radius: var(--radius);
-    border: 1px solid var(--border); box-shadow: var(--shadow-sm);
-    overflow: visible;
-  }
-  .sessions-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  .sessions-table th {
-    text-align: left; padding: 12px 16px;
-    font-size: 11px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.6px; color: var(--text-tertiary);
-    border-bottom: 1px solid var(--border);
-    cursor: pointer; user-select: none; white-space: nowrap;
-    background: #FAFBFC;
-  }
-  .sessions-table th:hover { color: var(--text-secondary); }
-  .sessions-table th.sorted { color: var(--indigo); }
-  .sessions-table td {
-    padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: middle;
-  }
-  .sessions-table tbody tr { cursor: pointer; transition: background 0.1s; }
-  .sessions-table tbody tr:hover td { background: #FAFBFF; }
-  .sessions-table tbody tr:last-child td { border-bottom: none; }
-  .prompt-preview {
-    max-width: 340px; overflow: hidden; text-overflow: ellipsis;
-    white-space: nowrap; font-weight: 500;
-  }
   .token-num {
     font-family: var(--mono); font-size: 13px; font-weight: 600;
     text-align: right; white-space: nowrap; letter-spacing: -0.3px;
+  }
+
+  /* Session accordion */
+  .session-accordion { display: flex; flex-direction: column; gap: 8px; }
+  .session-card {
+    background: var(--white); border-radius: var(--radius-sm);
+    border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+    overflow: hidden; transition: box-shadow 0.2s;
+  }
+  .session-card:hover { box-shadow: var(--shadow-md); }
+  .session-card-header {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 12px; padding: 14px 20px; cursor: pointer;
+    align-items: center; transition: background 0.15s;
+  }
+  .session-card-header:hover { background: #FAFBFF; }
+  .session-card-left { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .session-card-top { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  .session-card-date {
+    font-size: 12px; font-weight: 600; color: var(--text-tertiary);
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .session-card-prompt {
+    font-size: 14px; font-weight: 600; line-height: 1.4;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    min-width: 0;
+  }
+  .session-card-meta {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    font-size: 12px; color: var(--text-tertiary); font-weight: 500;
+  }
+  .session-card-right {
+    display: flex; align-items: center; gap: 16px; flex-shrink: 0;
+  }
+  .session-card-tokens { text-align: right; white-space: nowrap; }
+  .session-card-tokens .value {
+    font-family: var(--mono); font-size: 15px; font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  .session-card-tokens .sub {
+    font-size: 11px; color: var(--text-tertiary); font-weight: 500; margin-top: 2px;
+  }
+  .session-card-chevron {
+    width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;
+    color: var(--text-tertiary); transition: transform 0.25s ease; flex-shrink: 0;
+  }
+  .session-card.expanded .session-card-chevron { transform: rotate(90deg); }
+  .session-card-body {
+    max-height: 0; overflow: hidden; transition: max-height 0.35s ease;
+  }
+  .session-card.expanded .session-card-body { max-height: 5000px; }
+  .session-card-body-inner {
+    padding: 0 20px 16px;
+    border-top: 1px solid var(--border);
   }
   .model-badge {
     display: inline-flex; align-items: center; gap: 5px;
@@ -650,27 +869,7 @@
     max-width: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
 
-  /* ---- DRILLDOWN ---- */
-  .drilldown {
-    background: var(--white); border-radius: var(--radius);
-    padding: 28px; margin-bottom: 32px; display: none;
-    border: 1px solid var(--border); box-shadow: var(--shadow-lg);
-  }
-  .drilldown.open { display: block; animation: fadeUp 0.3s ease-out; }
-  .drilldown-header {
-    display: flex; align-items: flex-start; justify-content: space-between;
-    margin-bottom: 24px; gap: 16px;
-  }
-  .drilldown-title { font-size: 16px; font-weight: 700; line-height: 1.4; }
-  .drilldown-meta { font-size: 13px; color: var(--text-tertiary); margin-top: 4px; font-weight: 500; }
-  .drilldown-close {
-    background: var(--bg); border: none; color: var(--text-secondary);
-    width: 32px; height: 32px; border-radius: 8px; cursor: pointer;
-    font-size: 18px; display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; transition: all 0.15s;
-  }
-  .drilldown-close:hover { background: #EEF2FF; color: var(--indigo); }
-
+  /* ---- QUERY FLOW (used inside session accordion) ---- */
   .query-list { display: flex; flex-direction: column; gap: 8px; }
   .query-item {
     display: grid; grid-template-columns: 36px 1fr auto;
@@ -766,10 +965,45 @@
     Tokens are how AI measures text -- roughly 1 token = 1 word. Hover over any label with a <span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;background:rgba(0,0,0,0.08);font-size:10px;font-weight:700;vertical-align:middle;">?</span> for an explanation.
   </div>
 
+  <!-- Projects -->
+  <div class="projects-section animate delay-4">
+    <div class="section-header">
+      <div class="section-icon projects-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M12 3v18"/><path d="M3 7l9 4 9-4"/></svg>
+      </div>
+      <div class="section-title">Projects</div>
+      <span id="projectsCount" style="font-size:13px;color:var(--text-tertiary);font-weight:600;margin-left:auto"></span>
+      <button id="toggleInactive" onclick="toggleInactiveProjects()" style="background:var(--white);border:1px solid var(--border);color:var(--text-secondary);padding:5px 12px;border-radius:20px;cursor:pointer;font-size:12px;font-weight:600;font-family:var(--font);transition:all 0.2s;display:none">Show inactive</button>
+    </div>
+    <div class="sessions-card">
+      <table class="sessions-table">
+        <thead>
+          <tr>
+            <th rowspan="2">Project</th>
+            <th rowspan="2" style="text-align:right">Total Tokens</th>
+            <th rowspan="2" style="text-align:right">Sessions</th>
+            <th rowspan="2" style="text-align:right">Queries</th>
+            <th colspan="3" style="text-align:center;border-left:2px solid var(--border-strong);font-size:12px;letter-spacing:0.03em">Today</th>
+            <th colspan="3" style="text-align:center;border-left:2px solid var(--border-strong);font-size:12px;letter-spacing:0.03em">Yesterday</th>
+          </tr>
+          <tr>
+            <th style="text-align:right;border-left:2px solid var(--border-strong);font-size:11px;font-weight:500;color:var(--text-tertiary)">Tokens</th>
+            <th style="text-align:right;font-size:11px;font-weight:500;color:var(--text-tertiary)">Sessions</th>
+            <th style="text-align:right;font-size:11px;font-weight:500;color:var(--text-tertiary)">Queries</th>
+            <th style="text-align:right;border-left:2px solid var(--border-strong);font-size:11px;font-weight:500;color:var(--text-tertiary)">Tokens</th>
+            <th style="text-align:right;font-size:11px;font-weight:500;color:var(--text-tertiary)">Sessions</th>
+            <th style="text-align:right;font-size:11px;font-weight:500;color:var(--text-tertiary)">Queries</th>
+          </tr>
+        </thead>
+        <tbody id="projectsBody"></tbody>
+      </table>
+    </div>
+  </div>
+
   <!-- Insights -->
   <div id="insightsSection" class="insights-section" style="display:none">
     <div class="section-header animate">
-      <div class="section-icon" style="background:linear-gradient(135deg,#FEF3C7,#FDE68A)">
+      <div class="section-icon insights-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2.5" stroke-linecap="round"><path d="M12 2a7 7 0 0 1 4 12.75V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.25A7 7 0 0 1 12 2z"/><path d="M9 21h6"/></svg>
       </div>
       <div class="section-title">Insights</div>
@@ -780,7 +1014,7 @@
   <!-- Behavior Trends -->
   <div id="behaviorTrendsSection" class="behavior-trends" style="display:none">
     <div class="section-header animate">
-      <div class="section-icon" style="background:linear-gradient(135deg,#ECFDF5,#D1FAE5)">
+      <div class="section-icon trends-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       </div>
       <div class="section-title">Behavior Trends</div>
@@ -806,30 +1040,6 @@
     </div>
   </div>
 
-  <!-- Projects -->
-  <div class="projects-section animate delay-4">
-    <div class="section-header">
-      <div class="section-icon" style="background:linear-gradient(135deg,#EDE9FE,#DDD6FE)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M12 3v18"/><path d="M3 7l9 4 9-4"/></svg>
-      </div>
-      <div class="section-title">Projects</div>
-      <span id="projectsCount" style="font-size:13px;color:var(--text-tertiary);font-weight:600;margin-left:auto"></span>
-    </div>
-    <div class="sessions-card">
-      <table class="sessions-table">
-        <thead>
-          <tr>
-            <th>Project</th>
-            <th style="text-align:right">Total Tokens</th>
-            <th style="text-align:right">Sessions</th>
-            <th style="text-align:right">Queries</th>
-          </tr>
-        </thead>
-        <tbody id="projectsBody"></tbody>
-      </table>
-    </div>
-  </div>
-
   <!-- Most Expensive Prompts -->
   <div class="top-prompts animate delay-4">
     <div class="section-header">
@@ -841,46 +1051,19 @@
     <div class="prompts-card" id="topPromptsList"></div>
   </div>
 
-  <!-- Drill-down -->
-  <div id="drilldown" class="drilldown">
-    <div class="drilldown-header">
-      <div>
-        <div id="drilldownTitle" class="drilldown-title"></div>
-        <div id="drilldownMeta" class="drilldown-meta"></div>
-      </div>
-      <button class="drilldown-close" onclick="closeDrilldown()">&times;</button>
-    </div>
-    <div id="queryList" class="query-list"></div>
-  </div>
-
-  <!-- All Sessions -->
+  <!-- Conversation Flows -->
   <div class="sessions-section animate delay-5">
     <div class="section-header">
       <div class="section-icon" style="background:linear-gradient(135deg,#ECFDF5,#D1FAE5)">
         <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
       </div>
-      <div class="section-title">All Sessions</div>
+      <div class="section-title">Conversation Flows</div>
     </div>
     <div class="sessions-toolbar">
       <input type="text" class="session-search" id="searchInput" placeholder="Search prompts, models, projects...">
       <span id="sessionCount" class="session-count"></span>
     </div>
-    <div class="sessions-card">
-      <table class="sessions-table">
-        <thead>
-          <tr>
-            <th data-sort="date">Date</th>
-            <th data-sort="prompt">What you asked</th>
-            <th data-sort="model" class="has-tooltip has-tooltip-below">Model<div class="tooltip">Which AI model was used. Opus is the most capable (and uses more tokens), Sonnet is faster and lighter.</div></th>
-            <th data-sort="queries" style="text-align:right" class="has-tooltip has-tooltip-below">Messages<div class="tooltip">How many back-and-forth messages happened in this conversation, including automatic tool calls Claude made.</div></th>
-            <th data-sort="total" style="text-align:right" class="sorted has-tooltip has-tooltip-below">Total tokens<div class="tooltip">The total number of tokens used in this conversation. Higher means more expensive. Long conversations cost more because Claude re-reads everything each turn.</div></th>
-            <th data-sort="input" style="text-align:right" class="has-tooltip has-tooltip-below">Read<div class="tooltip">Tokens Claude read: your messages, the conversation history, files, and system context. This grows with each message because the full history gets re-sent.</div></th>
-            <th data-sort="output" style="text-align:right" class="has-tooltip has-tooltip-below">Written<div class="tooltip">Tokens Claude wrote back: responses, code, explanations. Usually a small fraction of the total.</div></th>
-          </tr>
-        </thead>
-        <tbody id="sessionsBody"></tbody>
-      </table>
-    </div>
+    <div id="sessionsAccordion" class="session-accordion"></div>
   </div>
 
   <div class="footer">
@@ -890,8 +1073,9 @@
 
 <script>
 let DATA = null;
-let currentSort = { key: 'total', dir: 'desc' };
+let currentSort = { key: 'date', dir: 'desc' };  // newest first
 let searchQuery = '';
+let _projectDataArr = [];
 
 function fmt(n) {
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M';
@@ -933,12 +1117,14 @@ function modelShort(m) {
   return m;
 }
 function projectShort(p) {
-  // Strip Windows drive prefix (e.g. D-- or C--)
-  let s = p.replace(/^[A-Za-z]--/, '');
+  // Strip Windows drive prefix (e.g. D-- or C--) and leading separator
+  let s = p.replace(/^[A-Za-z]--/, '').replace(/^-/, '');
   // Iteratively strip known parent directory segments
-  const known = /^(?:Users|home|user)-[^-]+-|^(?:GitHub|GitLab|git|Projects|projects|workspace|Workspace|Desktop|Documents|source|src|dev|Dev|code|Code|repos|Repos)-/;
+  const known = /^(?:Users|home|user)-[^-]+-|^(?:GitHub|GitLab|git|Projects|projects|workspace|Workspace|Desktop|Documents|Library|CloudStorage|Dropbox|OneDrive|iCloudDrive|source|src|dev|Dev|code|Code|repos|Repos)-/;
   let prev;
   do { prev = s; s = s.replace(known, ''); } while (s !== prev && s.length > 0);
+  // Strip common prefix shared by all projects (e.g. parent folder name)
+  if (_commonPrefix && s.startsWith(_commonPrefix)) s = s.substring(_commonPrefix.length);
   return s || p;
 }
 function projectFull(p) {
@@ -955,9 +1141,49 @@ function formatDate(d) {
   return `${months[parseInt(parts[1])-1]} ${parseInt(parts[2])}`;
 }
 
+let _commonPrefix = '';
+function computeCommonPrefix() {
+  const projects = (DATA.projectBreakdown || []).map(p => projectShort(p.project));
+  if (projects.length < 2) { _commonPrefix = ''; return; }
+  // Find the most common prefix shared by 80%+ of projects
+  let prefix = projects[0];
+  for (let i = 1; i < projects.length; i++) {
+    while (projects[i].indexOf(prefix) !== 0) {
+      prefix = prefix.substring(0, prefix.length - 1);
+      if (!prefix) break;
+    }
+    if (!prefix) break;
+  }
+  // If strict prefix failed, find the prefix shared by the majority
+  if (!prefix) {
+    // Use the most common first segment as candidate
+    const counts = {};
+    for (const p of projects) {
+      // Try progressively longer prefixes ending with '-'
+      let idx = p.indexOf('-');
+      while (idx !== -1) {
+        const cand = p.substring(0, idx + 1);
+        counts[cand] = (counts[cand] || 0) + 1;
+        idx = p.indexOf('-', idx + 1);
+      }
+    }
+    // Pick the longest prefix shared by 80%+ of projects
+    const threshold = projects.length * 0.8;
+    let best = '';
+    for (const [cand, count] of Object.entries(counts)) {
+      if (count >= threshold && cand.length > best.length) best = cand;
+    }
+    _commonPrefix = best;
+    return;
+  }
+  // Only strip if prefix ends with '-' (a directory boundary)
+  const lastDash = prefix.lastIndexOf('-');
+  _commonPrefix = lastDash > 0 ? prefix.substring(0, lastDash + 1) : '';
+}
 async function fetchData() {
   const res = await fetch('/api/data');
   DATA = await res.json();
+  computeCommonPrefix();
   render();
 }
 async function refreshData() {
@@ -980,6 +1206,23 @@ function render() {
   renderSessions();
 }
 
+function buildCacheBreakdownSub(t) {
+  const hasCacheData = t.totalCacheReadTokens > 0 || t.totalCacheCreationTokens > 0;
+  if (!hasCacheData) {
+    return `${fmt(t.totalInputTokens)} read by Claude + ${fmt(t.totalOutputTokens)} written back`;
+  }
+  const cachePct = ((t.totalCacheReadTokens / Math.max(t.totalInputTokens, 1)) * 100).toFixed(0);
+  return `<span style="display:flex;flex-direction:column;gap:3px;margin-top:2px">`
+    + `<span style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">`
+    + `<span style="color:var(--text-secondary)">Input ${fmt(t.totalInputTokens)}:</span>`
+    + `<span style="color:#10B981" title="Cache reads — 90% cheaper">\u25CF ${fmt(t.totalCacheReadTokens)} cached (${cachePct}%)</span>`
+    + `<span style="color:#F59E0B" title="Cache writes — 25% surcharge">\u25CF ${fmt(t.totalCacheCreationTokens)} cache writes</span>`
+    + `<span style="color:#6366F1" title="Fresh input — full price">\u25CF ${fmt(t.totalFreshInputTokens)} fresh</span>`
+    + `</span>`
+    + `<span style="color:var(--text-tertiary)">${fmt(t.totalOutputTokens)} output</span>`
+    + `</span>`;
+}
+
 // Stats
 function renderStats() {
   const t = DATA.totals;
@@ -987,8 +1230,8 @@ function renderStats() {
   document.getElementById('dateRange').textContent = range;
 
   const cards = [
-    { label: 'Total Usage', value: fmt(t.totalTokens), sub: `${fmt(t.totalInputTokens)} read by Claude + ${fmt(t.totalOutputTokens)} written back`,
-      tip: 'The total number of tokens used across all your conversations. This includes everything Claude reads (your messages, conversation history, files) plus everything Claude writes back.' },
+    { label: 'Total Usage', value: fmt(t.totalTokens), sub: buildCacheBreakdownSub(t),
+      tip: 'The total number of tokens used across all your conversations. Input tokens break down into: Cache read (90% cheaper — reused context), Cache write (25% more — first-time caching), and Fresh (full price — new content each turn). Output tokens are what Claude writes back.' },
     { label: 'Conversations', value: fmtFull(t.totalSessions), sub: `Each one used ~${fmt(t.avgTokensPerSession)} tokens on average`,
       tip: 'Each time you start Claude Code and begin chatting, that counts as one conversation. A new conversation starts fresh with no prior context.' },
     { label: 'Messages Sent', value: fmtFull(t.totalQueries), sub: `Each message cost ~${fmt(t.avgTokensPerQuery)} tokens on average`,
@@ -1013,7 +1256,7 @@ function renderInsights() {
 
   section.style.display = 'block';
   const icons = { warning: '!', info: 'i', neutral: '~' };
-  const emojis = { warning: '\u26A0\uFE0F', info: '\uD83D\uDCA1', neutral: '\uD83D\uDCC5' };
+  const emojis = { warning: '\u26A0\uFE0F', info: '\uD83D\uDCA1', neutral: '\uD83D\uDCC5', positive: '\u2705' };
 
   document.getElementById('insightsList').innerHTML = insights.map((ins, i) => {
     const detailHtml = ins.description ? `<div class="insight-detail">${escapeHtml(ins.description)}</div>` : '';
@@ -1114,9 +1357,51 @@ function renderBehaviorTrends() {
   bannerSubEl.textContent = bannerSub + ' \u00B7 ' + bt.window.recent.sessions + ' sessions today vs ' + bt.window.prior.sessions + ' sessions (7-day avg)';
   bannerBody.appendChild(bannerTitle);
   bannerBody.appendChild(bannerSubEl);
+
+  // Project session list under banner
+  if (bt.projectSessions && bt.projectSessions.length > 0) {
+    const projRow = document.createElement('div');
+    projRow.className = 'trends-projects';
+    bt.projectSessions.forEach((p, i) => {
+      const item = document.createElement('span');
+      item.className = 'trends-project-item';
+      const name = document.createElement('span');
+      name.className = 'trends-project-name';
+      name.textContent = projectShort(p.project);
+      name.title = projectFull(p.project);
+      const detail = document.createElement('span');
+      detail.className = 'trends-project-detail';
+      detail.textContent = ' ' + p.sessions + (p.sessions === 1 ? ' session' : ' sessions') + ' \u00B7 ' + fmt(p.tokens) + ' tokens';
+      item.appendChild(name);
+      item.appendChild(detail);
+      projRow.appendChild(item);
+      if (i < bt.projectSessions.length - 1) {
+        const sep = document.createElement('span');
+        sep.className = 'trends-project-sep';
+        sep.textContent = '|';
+        projRow.appendChild(sep);
+      }
+    });
+    bannerBody.appendChild(projRow);
+  }
+
   banner.appendChild(bannerIcon);
   banner.appendChild(bannerBody);
   content.appendChild(banner);
+
+  // Format per-project metric value
+  const formatProjectVal = (m, val) => {
+    const v = Math.round(val * 10) / 10;
+    if (m.id === 'prompt-specificity') return Math.round(v) + ' chars';
+    if (m.id === 'session-length') return v.toFixed(0) + ' turns';
+    if (m.id === 'clear-frequency') return v.toFixed(1) + '/session';
+    if (m.id === 'tokens-per-turn') return fmt(Math.round(v));
+    if (m.id === 'output-ratio') return v.toFixed(1) + '%';
+    if (m.id === 'tool-ratio') return v.toFixed(1) + 'x';
+    if (m.id === 'startup-context') return fmt(Math.round(v));
+    if (m.id === 'opus-simple-ratio') return v.toFixed(0) + '%';
+    return String(v);
+  };
 
   // Metric cards grid
   const grid = document.createElement('div');
@@ -1148,6 +1433,52 @@ function renderBehaviorTrends() {
     card.appendChild(label);
     card.appendChild(valueRow);
     card.appendChild(prev);
+
+    // Per-project expandable breakdown (only if multiple projects)
+    if (m.byProject && m.byProject.length > 1) {
+      const projContainer = document.createElement('div');
+      projContainer.className = 'trend-card-projects';
+
+      for (const p of m.byProject) {
+        const row = document.createElement('div');
+        row.className = 'trend-card-project-row';
+        const nameEl = document.createElement('span');
+        nameEl.className = 'proj-name';
+        nameEl.textContent = projectShort(p.project);
+        nameEl.title = projectFull(p.project);
+        const valEl = document.createElement('span');
+        valEl.className = 'proj-val';
+        valEl.textContent = formatProjectVal(m, p.value);
+        row.appendChild(nameEl);
+        row.appendChild(valEl);
+        projContainer.appendChild(row);
+      }
+
+      const toggle = document.createElement('div');
+      toggle.className = 'trend-card-toggle';
+      // Chevron SVG built via DOM — no user input
+      const chevron = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      chevron.setAttribute('viewBox', '0 0 6 10');
+      chevron.setAttribute('width', '6');
+      chevron.setAttribute('height', '10');
+      chevron.setAttribute('fill', 'none');
+      chevron.setAttribute('stroke', 'currentColor');
+      chevron.setAttribute('stroke-width', '1.5');
+      const chevronPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      chevronPath.setAttribute('d', 'M1 1L5 5L1 9');
+      chevron.appendChild(chevronPath);
+      toggle.appendChild(chevron);
+      const toggleText = document.createTextNode(' by project');
+      toggle.appendChild(toggleText);
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('open');
+        projContainer.classList.toggle('open');
+      });
+
+      card.appendChild(toggle);
+      card.appendChild(projContainer);
+    }
+
     grid.appendChild(card);
   }
   content.appendChild(grid);
@@ -1297,91 +1628,204 @@ function renderModelChart() {
 }
 
 // Project accordion
-function toggleProjectDrawer(i) {
+function toggleProjectDrawer(i, dateFilter) {
   const row = document.getElementById('proj-row-' + i);
   const drawer = document.getElementById('proj-drawer-' + i);
   const isOpen = drawer.classList.contains('open');
-  row.classList.toggle('expanded', !isOpen);
-  drawer.classList.toggle('open', !isOpen);
-}
-
-function buildDrawerContent(p) {
-  if (!p.topPrompts || p.topPrompts.length === 0) {
-    return '<div class="drawer-empty">No prompt data available</div>';
+  const p = _projectDataArr[i];
+  const contentEl = drawer.querySelector('.proj-drawer-content');
+  if (dateFilter) {
+    // Data is from user's own local session files, no untrusted content
+    contentEl.innerHTML = buildDrawerContent(p, dateFilter);
+    row.classList.add('expanded');
+    drawer.classList.add('open');
+  } else {
+    if (!isOpen) {
+      // Reset to default (all top prompts) when opening via row click
+      contentEl.innerHTML = buildDrawerContent(p);
+    }
+    row.classList.toggle('expanded', !isOpen);
+    drawer.classList.toggle('open', !isOpen);
   }
-  const items = p.topPrompts.map((pr, i) => {
-    const toolEntries = Object.entries(pr.toolCounts || {}).sort((a, b) => b[1] - a[1]);
-    const chips = toolEntries.map(([name, count]) =>
-      '<span class="tool-chip">' + count + '\u00d7\u00a0' + escapeHtml(name) + '</span>'
-    ).join('') + (pr.continuations > 0 ? '<span class="tool-chip">+' + pr.continuations + ' turns</span>' : '');
-    const badge = '<span class="model-badge ' + modelClass(pr.model) + '"><span class="model-dot"></span>' + modelShort(pr.model) + '</span>';
-    const tokVal = fmt(pr.totalTokens);
-    const tokSub = fmt(pr.inputTokens) + ' / ' + fmt(pr.outputTokens);
-    const promptText = escapeHtml(pr.prompt);
-    const sid = pr.sessionId;
-    return [
-      '<div class="drawer-prompt-row" onclick="openDrilldown(\'' + sid + '\')">',
-      '<div class="drawer-rank">' + (i + 1) + '</div>',
-      '<div>',
-      '<div class="drawer-prompt-text">' + promptText + '</div>',
-      '<div class="drawer-prompt-meta">' + badge + chips + '</div>',
-      '</div>',
-      '<div class="drawer-tokens"><div class="value">' + tokVal + '</div><div class="sub">' + tokSub + '</div></div>',
-      '</div>',
-    ].join('');
-  });
-  return '<div class="drawer-prompt-list">' + items.join('') + '</div>';
 }
 
-// Project breakdown
+function buildDrawerPromptRow(pr, i) {
+  const toolEntries = Object.entries(pr.toolCounts || {}).sort((a, b) => b[1] - a[1]);
+  const chips = toolEntries.map(([name, count]) =>
+    '<span class="tool-chip">' + count + '\u00d7\u00a0' + escapeHtml(name) + '</span>'
+  ).join('') + (pr.continuations > 0 ? '<span class="tool-chip">+' + pr.continuations + ' turns</span>' : '');
+  const badge = '<span class="model-badge ' + modelClass(pr.model) + '"><span class="model-dot"></span>' + modelShort(pr.model) + '</span>';
+  const tokVal = fmt(pr.totalTokens);
+  const cacheRead = pr.cacheReadTokens || 0;
+  const cacheWrite = pr.cacheCreationTokens || 0;
+  const fresh = pr.freshInputTokens || 0;
+  const hasCache = cacheRead > 0 || cacheWrite > 0;
+  const tokSub = fmt(pr.inputTokens) + ' in\u00a0\u00b7\u00a0' + fmt(pr.outputTokens) + ' out<br>'
+    + (hasCache
+      ? fmt(cacheRead) + ' cached\u00a0\u00b7\u00a0' + fmt(fresh) + ' fresh\u00a0\u00b7\u00a0' + fmt(cacheWrite) + ' write'
+      : ((pr.outputTokens / Math.max(pr.totalTokens, 1)) * 100).toFixed(1) + '% out');
+  const sid = pr.sessionId;
+  return [
+    '<div class="drawer-prompt-row" onclick="openDrilldown(\'' + sid + '\')">',
+    '<div class="drawer-rank">' + (i + 1) + '</div>',
+    '<div>',
+    '<div class="drawer-prompt-text">' + escapeHtml(pr.prompt) + '</div>',
+    '<div class="drawer-prompt-meta">' + badge + chips + '</div>',
+    '</div>',
+    '<div class="drawer-tokens"><div class="value">' + tokVal + '</div><div class="sub">' + tokSub + '</div></div>',
+    '</div>',
+  ].join('');
+}
+
+function toggleDrawerSession(el) {
+  el.closest('.drawer-session-card').classList.toggle('expanded');
+}
+
+function buildDrawerContent(p, dateFilter) {
+  // Session-grouped view for today/yesterday
+  if (dateFilter === 'today' || dateFilter === 'yesterday') {
+    const sessions = dateFilter === 'today' ? p.todaySessions : p.yesterdaySessions;
+    if (!sessions || sessions.length === 0) {
+      return '<div class="drawer-empty">No sessions ' + dateFilter + '</div>';
+    }
+    const chevronSvg = '<svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l4 4-4 4"/></svg>';
+    const cards = sessions.map(s => {
+      const badge = '<span class="model-badge ' + modelClass(s.model) + '"><span class="model-dot"></span>' + modelShort(s.model) + '</span>';
+      const queriesChip = '<span class="tool-chip">' + s.queryCount + ' queries</span>';
+      const promptRows = (s.prompts || []).map((pr, i) => buildDrawerPromptRow(pr, i)).join('');
+      return [
+        '<div class="drawer-session-card">',
+        '<div class="drawer-session-header" onclick="toggleDrawerSession(this)">',
+        '<div class="drawer-session-chevron">' + chevronSvg + '</div>',
+        '<div>',
+        '<div class="drawer-session-name">' + escapeHtml(s.name) + '</div>',
+        '<div class="drawer-session-meta">' + badge + queriesChip + '</div>',
+        '</div>',
+        '<div class="drawer-tokens"><div class="value">' + fmt(s.totalTokens) + '</div><div class="sub">' + fmt(s.inputTokens) + ' in\u00a0\u00b7\u00a0' + fmt(s.outputTokens) + ' out</div></div>',
+        '</div>',
+        '<div class="drawer-session-prompts"><div class="drawer-session-prompts-inner">' + promptRows + '</div></div>',
+        '</div>',
+      ].join('');
+    });
+    return '<div class="drawer-session-list">' + cards.join('') + '</div>';
+  }
+
+  // Default: flat prompt list (top prompts across all time)
+  const prompts = p.topPrompts;
+  if (!prompts || prompts.length === 0) {
+    return '<div class="drawer-empty">No prompt data</div>';
+  }
+  return '<div class="drawer-prompt-list">' + prompts.map((pr, i) => buildDrawerPromptRow(pr, i)).join('') + '</div>';
+}
+
+// Project breakdown — grouped by recency (Today > Yesterday > Inactive)
+// Note: All data is generated locally from user's own session files, no untrusted content
+let _showInactive = false;
+function toggleInactiveProjects() {
+  _showInactive = !_showInactive;
+  const btn = document.getElementById('toggleInactive');
+  btn.textContent = _showInactive ? 'Hide inactive' : 'Show inactive';
+  document.querySelectorAll('.proj-inactive').forEach(el => {
+    el.classList.toggle('show', _showInactive);
+  });
+}
+
+function buildProjectRow(p, i, maxTokens, extraClass) {
+  const barPct = (p.totalTokens / maxTokens * 100).toFixed(1);
+  const ariaLabel = p.modelBreakdown.map(m => modelShort(m.model) + ': ' + fmt(m.inputTokens) + ' input, ' + fmt(m.outputTokens) + ' output').join(', ');
+  const chevron = '<svg class="proj-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l4 4-4 4"/></svg>';
+  const pillItems = p.modelBreakdown.map(m =>
+    '<li><span class="model-badge ' + modelClass(m.model) +
+    '" aria-label="' + modelShort(m.model) + ': ' + fmt(m.inputTokens) + ' input, ' + fmt(m.outputTokens) + ' output">' +
+    '<span class="model-dot" aria-hidden="true"></span>' +
+    modelShort(m.model) +
+    ' <span class="token-detail"><span aria-hidden="true">\u2193</span><span class="sr-only">in </span>' + fmt(m.inputTokens) + '</span>' +
+    ' <span class="token-detail"><span aria-hidden="true">\u2191</span><span class="sr-only">out </span>' + fmt(m.outputTokens) + '</span>' +
+    '</span></li>'
+  ).join('');
+  const cls = extraClass ? ' ' + extraClass : '';
+  const summaryRow = [
+    '<tr class="proj-row' + cls + '" id="proj-row-' + i + '" onclick="toggleProjectDrawer(' + i + ')">',
+    '<td style="padding:10px 16px">',
+    '<div style="display:flex;align-items:center;gap:6px">',
+    chevron,
+    '<div>',
+    '<div class="proj-name" title="' + escapeHtml(projectFull(p.project)) + '">' + escapeHtml(projectShort(p.project)) + '</div>',
+    '<ul class="model-pills" aria-label="Models used: ' + escapeHtml(ariaLabel) + '">' + pillItems + '</ul>',
+    '</div></div></td>',
+    '<td class="token-num" style="font-weight:700;vertical-align:top;padding-top:12px">',
+    '<div style="display:flex;align-items:center;gap:8px;justify-content:flex-end">',
+    '<div style="flex:1;max-width:60px;height:3px;background:var(--bg);border-radius:4px;overflow:hidden">',
+    '<div style="width:' + barPct + '%;height:100%;background:var(--indigo);border-radius:4px"></div>',
+    '</div><div><div>' + fmt(p.totalTokens) + '</div><div style="font-size:11px;font-weight:500;color:var(--text-tertiary);margin-top:1px">' + fmt(p.inputTokens) + ' in\u00a0\u00b7\u00a0' + fmt(p.outputTokens) + ' out</div><div style="font-size:11px;font-weight:500;color:var(--text-tertiary);margin-top:1px">' + ((p.outputTokens / Math.max(p.totalTokens, 1)) * 100).toFixed(1) + '% out</div></div></div></td>',
+    '<td class="token-num" style="vertical-align:top;padding-top:12px">' + p.sessionCount + '</td>',
+    '<td class="token-num" style="vertical-align:top;padding-top:12px">' + p.queryCount + '</td>',
+    '<td class="token-num" style="vertical-align:top;padding-top:12px;border-left:2px solid var(--border-strong)">' + (p.todayStats.tokens ? '<div>' + fmt(p.todayStats.tokens) + '</div><div style="font-size:11px;font-weight:500;color:var(--text-tertiary);margin-top:1px">' + fmt(p.todayStats.inputTokens) + ' in\u00a0\u00b7\u00a0' + fmt(p.todayStats.outputTokens) + ' out</div><div style="font-size:11px;font-weight:500;color:var(--text-tertiary);margin-top:1px">' + ((p.todayStats.outputTokens / Math.max(p.todayStats.tokens, 1)) * 100).toFixed(1) + '% out</div>' : '\u2014') + '</td>',
+    '<td class="token-num" style="vertical-align:top;padding-top:12px">' + (p.todayStats.sessions ? '<span style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px" onclick="event.stopPropagation();toggleProjectDrawer(' + i + ',\'today\')">' + p.todayStats.sessions + '</span>' : '\u2014') + '</td>',
+    '<td class="token-num" style="vertical-align:top;padding-top:12px">' + (p.todayStats.queries || '\u2014') + '</td>',
+    '<td class="token-num" style="vertical-align:top;padding-top:12px;border-left:2px solid var(--border-strong)">' + (p.yesterdayStats.tokens ? '<div>' + fmt(p.yesterdayStats.tokens) + '</div><div style="font-size:11px;font-weight:500;color:var(--text-tertiary);margin-top:1px">' + fmt(p.yesterdayStats.inputTokens) + ' in\u00a0\u00b7\u00a0' + fmt(p.yesterdayStats.outputTokens) + ' out</div><div style="font-size:11px;font-weight:500;color:var(--text-tertiary);margin-top:1px">' + ((p.yesterdayStats.outputTokens / Math.max(p.yesterdayStats.tokens, 1)) * 100).toFixed(1) + '% out</div>' : '\u2014') + '</td>',
+    '<td class="token-num" style="vertical-align:top;padding-top:12px">' + (p.yesterdayStats.sessions ? '<span style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px" onclick="event.stopPropagation();toggleProjectDrawer(' + i + ',\'yesterday\')">' + p.yesterdayStats.sessions + '</span>' : '\u2014') + '</td>',
+    '<td class="token-num" style="vertical-align:top;padding-top:12px">' + (p.yesterdayStats.queries || '\u2014') + '</td>',
+    '</tr>',
+  ].join('');
+  const drawerRow = [
+    '<tr class="proj-drawer' + cls + '" id="proj-drawer-' + i + '">',
+    '<td colspan="10"><div class="proj-drawer-inner"><div class="proj-drawer-content">',
+    buildDrawerContent(p),
+    '</div></div></td></tr>',
+  ].join('');
+  return summaryRow + drawerRow;
+}
+
 function renderProjectBreakdown() {
   const projects = DATA.projectBreakdown;
   if (!projects || !projects.length) return;
 
+  // Split into three groups: today active, yesterday-only, inactive
+  const todayProjects = projects.filter(p => p.todayStats.tokens > 0)
+    .sort((a, b) => b.todayStats.tokens - a.todayStats.tokens);
+  const yesterdayOnly = projects.filter(p => !p.todayStats.tokens && p.yesterdayStats.tokens > 0)
+    .sort((a, b) => b.yesterdayStats.tokens - a.yesterdayStats.tokens);
+  const inactive = projects.filter(p => !p.todayStats.tokens && !p.yesterdayStats.tokens)
+    .sort((a, b) => b.totalTokens - a.totalTokens);
+
+  const activeCount = todayProjects.length + yesterdayOnly.length;
   const countEl = document.getElementById('projectsCount');
-  countEl.textContent = projects.length + ' project' + (projects.length === 1 ? '' : 's');
+  countEl.textContent = activeCount + ' active' + (inactive.length ? ' \u00b7 ' + inactive.length + ' inactive' : '');
+
+  // Show/hide toggle button
+  const toggleBtn = document.getElementById('toggleInactive');
+  toggleBtn.style.display = inactive.length ? 'inline-flex' : 'none';
+  toggleBtn.textContent = _showInactive ? 'Hide inactive' : 'Show inactive';
 
   const maxTokens = projects[0].totalTokens;
-  const chevron = '<svg class="proj-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l4 4-4 4"/></svg>';
   const rows = [];
-  projects.forEach((p, i) => {
-    const barPct = (p.totalTokens / maxTokens * 100).toFixed(1);
-    const ariaLabel = p.modelBreakdown.map(m => modelShort(m.model) + ': ' + fmt(m.inputTokens) + ' input, ' + fmt(m.outputTokens) + ' output').join(', ');
-    const pillItems = p.modelBreakdown.map(m =>
-      '<li><span class="model-badge ' + modelClass(m.model) +
-      '" aria-label="' + modelShort(m.model) + ': ' + fmt(m.inputTokens) + ' input, ' + fmt(m.outputTokens) + ' output">' +
-      '<span class="model-dot" aria-hidden="true"></span>' +
-      modelShort(m.model) +
-      ' <span class="token-detail"><span aria-hidden="true">\u2193</span><span class="sr-only">in </span>' + fmt(m.inputTokens) + '</span>' +
-      ' <span class="token-detail"><span aria-hidden="true">\u2191</span><span class="sr-only">out </span>' + fmt(m.outputTokens) + '</span>' +
-      '</span></li>'
-    ).join('');
-    const summaryRow = [
-      '<tr class="proj-row" id="proj-row-' + i + '" onclick="toggleProjectDrawer(' + i + ')">',
-      '<td style="padding:10px 16px">',
-      '<div style="display:flex;align-items:center;gap:6px">',
-      chevron,
-      '<div>',
-      '<div class="proj-name" title="' + projectFull(p.project) + '">' + escapeHtml(projectShort(p.project)) + '</div>',
-      '<ul class="model-pills" aria-label="Models used: ' + ariaLabel + '">' + pillItems + '</ul>',
-      '</div></div></td>',
-      '<td class="token-num" style="font-weight:700;vertical-align:top;padding-top:12px">',
-      '<div style="display:flex;align-items:center;gap:8px;justify-content:flex-end">',
-      '<div style="flex:1;max-width:60px;height:3px;background:var(--bg);border-radius:4px;overflow:hidden">',
-      '<div style="width:' + barPct + '%;height:100%;background:var(--indigo);border-radius:4px"></div>',
-      '</div><div><div>' + fmt(p.totalTokens) + '</div><div style="font-size:11px;font-weight:500;color:var(--text-tertiary);margin-top:1px">' + fmt(p.inputTokens) + ' in\u00a0\u00b7\u00a0' + fmt(p.outputTokens) + ' out</div></div></div></td>',
-      '<td class="token-num" style="vertical-align:top;padding-top:12px">' + p.sessionCount + '</td>',
-      '<td class="token-num" style="vertical-align:top;padding-top:12px">' + p.queryCount + '</td>',
-      '</tr>',
-    ].join('');
-    const drawerRow = [
-      '<tr class="proj-drawer" id="proj-drawer-' + i + '">',
-      '<td colspan="4"><div class="proj-drawer-inner"><div class="proj-drawer-content">',
-      buildDrawerContent(p),
-      '</div></div></td></tr>',
-    ].join('');
-    rows.push(summaryRow, drawerRow);
-  });
+  let idx = 0;
+  _projectDataArr = [];
+
+  function groupHeader(label, count, extraCls) {
+    return '<tr class="proj-group-header' + (extraCls ? ' ' + extraCls : '') + '"><td colspan="10"><span class="group-badge">' + escapeHtml(label) + ' <span class="group-count">' + count + ' project' + (count === 1 ? '' : 's') + '</span></span></td></tr>';
+  }
+
+  // Today group
+  if (todayProjects.length) {
+    rows.push(groupHeader('\u25cf Today', todayProjects.length, ''));
+    todayProjects.forEach(p => { _projectDataArr[idx] = p; rows.push(buildProjectRow(p, idx++, maxTokens, '')); });
+  }
+
+  // Yesterday group
+  if (yesterdayOnly.length) {
+    rows.push(groupHeader('\u25cb Yesterday', yesterdayOnly.length, ''));
+    yesterdayOnly.forEach(p => { _projectDataArr[idx] = p; rows.push(buildProjectRow(p, idx++, maxTokens, '')); });
+  }
+
+  // Inactive group (hidden by default)
+  if (inactive.length) {
+    const inactiveCls = 'proj-inactive' + (_showInactive ? ' show' : '');
+    rows.push(groupHeader('\u2014 Inactive', inactive.length, inactiveCls));
+    inactive.forEach(p => { _projectDataArr[idx] = p; rows.push(buildProjectRow(p, idx++, maxTokens, inactiveCls)); });
+  }
+
   document.getElementById('projectsBody').innerHTML = rows.join('');
 }
 
@@ -1406,12 +1850,13 @@ function renderTopPrompts() {
       <div class="prompt-tokens">
         <div class="value">${fmt(p.totalTokens)}</div>
         <div class="sub">${fmt(p.inputTokens)} read &middot; ${fmt(p.outputTokens)} written</div>
+        <div class="sub">${((p.outputTokens / Math.max(p.totalTokens, 1)) * 100).toFixed(1)}% out</div>
       </div>
     </div>`;
   }).join('');
 }
 
-// Sessions
+// Sessions (accordion cards, newest first)
 function renderSessions() {
   let sessions = [...DATA.sessions];
   if (searchQuery) {
@@ -1425,94 +1870,133 @@ function renderSessions() {
 
   const sortFns = {
     date: (a, b) => (a.timestamp || '').localeCompare(b.timestamp || ''),
-    prompt: (a, b) => a.firstPrompt.localeCompare(b.firstPrompt),
-    model: (a, b) => a.model.localeCompare(b.model),
-    queries: (a, b) => a.queryCount - b.queryCount,
     total: (a, b) => a.totalTokens - b.totalTokens,
-    input: (a, b) => a.inputTokens - b.inputTokens,
-    output: (a, b) => a.outputTokens - b.outputTokens,
   };
-  const fn = sortFns[currentSort.key] || sortFns.total;
+  const fn = sortFns[currentSort.key] || sortFns.date;
   sessions.sort((a, b) => currentSort.dir === 'desc' ? fn(b, a) : fn(a, b));
 
-  document.getElementById('sessionCount').textContent = `${sessions.length} sessions`;
+  document.getElementById('sessionCount').textContent = sessions.length + ' sessions';
 
-  document.getElementById('sessionsBody').innerHTML = sessions.map(s => `
-    <tr onclick="openDrilldown('${s.sessionId}')">
-      <td class="date-cell">
-        ${formatDate(s.date)}
-        <span class="project-tag" title="${escapeHtml(projectShort(s.project))}">${escapeHtml(projectShort(s.project))}</span>
-      </td>
-      <td><div class="prompt-preview" title="${escapeHtml(s.firstPrompt)}">${escapeHtml(s.firstPrompt)}</div></td>
-      <td><span class="model-badge ${modelClass(s.model)}"><span class="model-dot"></span>${modelShort(s.model)}</span></td>
-      <td class="token-num">${s.queryCount}</td>
-      <td class="token-num" style="font-weight:700">${fmt(s.totalTokens)}</td>
-      <td class="token-num">${fmt(s.inputTokens)}</td>
-      <td class="token-num">${fmt(s.outputTokens)}</td>
-    </tr>
-  `).join('');
+  const container = document.getElementById('sessionsAccordion');
+  const cards = [];
+  for (const s of sessions) {
+    const projName = escapeHtml(projectShort(s.project));
+    const projFull = escapeHtml(projectFull(s.project));
+    const prompt = escapeHtml(s.firstPrompt);
+    const badge = '<span class="model-badge ' + modelClass(s.model) + '"><span class="model-dot"></span>' + modelShort(s.model) + '</span>';
+    cards.push(
+      '<div class="session-card" id="session-' + s.sessionId + '">'
+      + '<div class="session-card-header" onclick="toggleSessionCard(\'' + s.sessionId + '\')">'
+      + '<div class="session-card-left">'
+      + '<div class="session-card-top">'
+      + '<span class="session-card-date">' + formatDate(s.date) + '</span>'
+      + '<span class="session-card-prompt" title="' + prompt + '">' + prompt + '</span>'
+      + '</div>'
+      + '<div class="session-card-meta">'
+      + badge
+      + '<span>' + s.queryCount + ' messages</span>'
+      + '<span>' + (s.toolCallCount || 0) + ' tool calls</span>'
+      + '<span title="' + projFull + '">' + projName + '</span>'
+      + '</div>'
+      + '</div>'
+      + '<div class="session-card-right">'
+      + '<div class="session-card-tokens">'
+      + '<div class="value">' + fmt(s.totalTokens) + '</div>'
+      + '<div class="sub">' + fmt(s.inputTokens) + ' in \u00b7 ' + fmt(s.outputTokens) + ' out</div>'
+      + '</div>'
+      + '<div class="session-card-chevron"><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l4 4-4 4"/></svg></div>'
+      + '</div>'
+      + '</div>'
+      + '<div class="session-card-body"><div class="session-card-body-inner" id="session-body-' + s.sessionId + '"></div></div>'
+      + '</div>'
+    );
+  }
+  container.textContent = '';
+  container.insertAdjacentHTML('beforeend', cards.join(''));
 }
 
-// Sort
-document.querySelectorAll('.sessions-table th[data-sort]').forEach(th => {
-  th.addEventListener('click', () => {
-    const key = th.dataset.sort;
-    if (currentSort.key === key) { currentSort.dir = currentSort.dir === 'desc' ? 'asc' : 'desc'; }
-    else { currentSort = { key, dir: 'desc' }; }
-    document.querySelectorAll('.sessions-table th').forEach(t => t.classList.remove('sorted'));
-    th.classList.add('sorted');
-    renderSessions();
-  });
-});
+function toggleSessionCard(sessionId) {
+  const card = document.getElementById('session-' + sessionId);
+  if (!card) return;
+  if (card.classList.contains('expanded')) {
+    card.classList.remove('expanded');
+    return;
+  }
+  const body = document.getElementById('session-body-' + sessionId);
+  if (!body.hasChildNodes()) {
+    body.insertAdjacentHTML('beforeend', buildSessionFlow(sessionId));
+  }
+  card.classList.add('expanded');
+}
 
-document.getElementById('searchInput').addEventListener('input', e => {
-  searchQuery = e.target.value;
-  renderSessions();
-});
-
-// Drill-down
-function openDrilldown(sessionId) {
+function buildSessionFlow(sessionId) {
   const session = DATA.sessions.find(s => s.sessionId === sessionId);
-  if (!session) return;
-
-  document.getElementById('drilldownTitle').textContent = session.firstPrompt.substring(0, 140);
-  document.getElementById('drilldownMeta').textContent =
-    `${formatDate(session.date)} \u00B7 ${modelShort(session.model)} \u00B7 ${session.queryCount} messages \u00B7 ${fmt(session.totalTokens)} tokens used`;
+  if (!session) return '<div class="drawer-empty">Session not found</div>';
 
   const grouped = [];
   let current = null;
   for (const q of session.queries) {
     if (q.userPrompt) {
       if (current) grouped.push(current);
-      current = { prompt: q.userPrompt, inputTokens: q.inputTokens, outputTokens: q.outputTokens, totalTokens: q.totalTokens, continuations: 0 };
+      current = { prompt: q.userPrompt, inputTokens: q.inputTokens, outputTokens: q.outputTokens, totalTokens: q.totalTokens, continuations: 0, tools: q.tools ? q.tools.slice() : [] };
     } else if (current) {
       current.inputTokens += q.inputTokens;
       current.outputTokens += q.outputTokens;
       current.totalTokens += q.totalTokens;
       current.continuations++;
+      for (const t of q.tools || []) current.tools.push(t);
     }
   }
   if (current) grouped.push(current);
 
-  document.getElementById('queryList').innerHTML = grouped.map((q, i) => {
-    const cont = q.continuations > 0 ? ` + ${q.continuations} tool uses` : '';
-    return `<div class="query-item">
-      <div class="query-num">${i + 1}</div>
-      <div class="query-prompt">${escapeHtml(q.prompt.substring(0, 500))}</div>
-      <div class="query-tokens-col">
-        <div class="total">${fmt(q.totalTokens)}</div>
-        <div class="detail">${fmt(q.inputTokens)} read / ${fmt(q.outputTokens)} written${cont}</div>
-      </div>
-    </div>`;
-  }).join('');
+  if (!grouped.length) return '<div class="drawer-empty">No conversation data</div>';
 
-  const panel = document.getElementById('drilldown');
-  panel.classList.add('open');
-  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const items = [];
+  for (let i = 0; i < grouped.length; i++) {
+    const q = grouped[i];
+    const cont = q.continuations > 0 ? ' + ' + q.continuations + ' tool uses' : '';
+    const toolCounts = {};
+    for (const t of q.tools) toolCounts[t] = (toolCounts[t] || 0) + 1;
+    const chips = Object.entries(toolCounts).sort((a, b) => b[1] - a[1])
+      .map(function(entry) { return '<span class="tool-chip">' + entry[1] + '\u00d7\u00a0' + escapeHtml(entry[0]) + '</span>'; }).join('');
+    items.push(
+      '<div class="query-item">'
+      + '<div class="query-num">' + (i + 1) + '</div>'
+      + '<div>'
+      + '<div class="query-prompt">' + escapeHtml(q.prompt.substring(0, 500)) + '</div>'
+      + (chips ? '<div class="drawer-prompt-meta" style="margin-top:6px">' + chips + '</div>' : '')
+      + '</div>'
+      + '<div class="query-tokens-col">'
+      + '<div class="total">' + fmt(q.totalTokens) + '</div>'
+      + '<div class="detail">' + fmt(q.inputTokens) + ' read / ' + fmt(q.outputTokens) + ' written</div>'
+      + '<div class="detail">' + ((q.outputTokens / Math.max(q.totalTokens, 1)) * 100).toFixed(1) + '% out' + cont + '</div>'
+      + '</div></div>'
+    );
+  }
+  return '<div class="query-list" style="margin-top:16px">' + items.join('') + '</div>';
 }
 
-function closeDrilldown() {
-  document.getElementById('drilldown').classList.remove('open');
+document.getElementById('searchInput').addEventListener('input', e => {
+  searchQuery = e.target.value;
+  renderSessions();
+});
+
+// Open a session from project drawers or top prompts
+function openDrilldown(sessionId) {
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput.value) {
+    searchInput.value = '';
+    searchQuery = '';
+    renderSessions();
+  }
+  const card = document.getElementById('session-' + sessionId);
+  if (!card) return;
+  const body = document.getElementById('session-body-' + sessionId);
+  if (!body.hasChildNodes()) {
+    body.insertAdjacentHTML('beforeend', buildSessionFlow(sessionId));
+  }
+  card.classList.add('expanded');
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 fetchData();
