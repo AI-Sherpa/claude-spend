@@ -666,14 +666,14 @@
   .proj-row:hover td { background: #FAFBFF; }
   .proj-row.expanded .proj-chevron { transform: rotate(90deg); }
   .proj-drawer td { padding: 0; border-bottom: 1px solid var(--border); }
-  .proj-drawer-inner { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; background: #FAFBFC; }
+  .proj-drawer-inner { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; background: var(--bg); }
   .proj-drawer.open .proj-drawer-inner { max-height: 2000px; overflow-y: auto; }
   .proj-drawer-content { padding: 12px 16px 16px; }
   .drawer-prompt-list { display: flex; flex-direction: column; gap: 8px; }
   .drawer-prompt-row {
     display: grid; grid-template-columns: 24px 1fr auto;
     gap: 10px; padding: 10px 14px; align-items: start;
-    background: white; border: 1px solid var(--border); border-radius: 10px;
+    background: var(--white); border: 1px solid var(--border); border-radius: 10px;
     cursor: pointer; transition: box-shadow 0.15s;
   }
   .drawer-prompt-row:hover { box-shadow: var(--shadow-md); }
@@ -701,7 +701,7 @@
   /* Session cards in drawer */
   .drawer-session-list { display: flex; flex-direction: column; gap: 10px; }
   .drawer-session-card {
-    background: white; border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
   }
   .drawer-session-header {
     display: grid; grid-template-columns: 24px 1fr auto; gap: 10px;
@@ -730,7 +730,7 @@
   .proj-group-header td {
     padding: 10px 16px; font-size: 11px; font-weight: 700;
     text-transform: uppercase; letter-spacing: 0.6px;
-    color: var(--text-tertiary); background: #F1F5F9;
+    color: var(--text-tertiary); background: rgba(0,0,0,0.04);
     border-bottom: 1px solid var(--border);
   }
   .proj-group-header td .group-badge {
@@ -781,7 +781,7 @@
     gap: 12px; padding: 14px 20px; cursor: pointer;
     align-items: center; transition: background 0.15s;
   }
-  .session-card-header:hover { background: #FAFBFF; }
+  .session-card-header:hover { background: rgba(99,102,241,0.08); }
   .session-card-left { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
   .session-card-top { display: flex; align-items: center; gap: 10px; min-width: 0; }
   .session-card-date {
@@ -877,7 +877,7 @@
     background: var(--bg); align-items: start;
     transition: background 0.1s;
   }
-  .query-item:hover { background: #EEF2FF; }
+  .query-item:hover { background: rgba(99,102,241,0.08); }
   .query-num {
     width: 28px; height: 28px; border-radius: 8px; background: var(--white);
     border: 1px solid var(--border);
