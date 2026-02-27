@@ -223,6 +223,12 @@ async function parseAllSessions() {
 
   sessions.sort((a, b) => b.totalTokens - a.totalTokens);
 
+  // Calculate today/yesterday boundaries for project grouping
+  const now = new Date();
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const msPerDay = 86400000;
+  const startOfYesterday = new Date(startOfToday - msPerDay);
+
   // Build per-project aggregation
   const projectMap = {};
   for (const session of sessions) {
@@ -234,6 +240,8 @@ async function parseAllSessions() {
         sessionCount: 0, queryCount: 0,
         modelMap: {},
         allPrompts: [],
+        todayStats: { inputTokens: 0, outputTokens: 0, tokens: 0 },
+        yesterdayStats: { inputTokens: 0, outputTokens: 0, tokens: 0 },
       };
     }
     const p = projectMap[proj];
@@ -242,6 +250,20 @@ async function parseAllSessions() {
     p.totalTokens += session.totalTokens;
     p.sessionCount += 1;
     p.queryCount += session.queryCount;
+
+    // Track today/yesterday stats for project grouping in dashboard
+    if (session.timestamp) {
+      const sessionDate = new Date(session.timestamp);
+      if (sessionDate >= startOfToday) {
+        p.todayStats.inputTokens += session.inputTokens;
+        p.todayStats.outputTokens += session.outputTokens;
+        p.todayStats.tokens += session.totalTokens;
+      } else if (sessionDate >= startOfYesterday && sessionDate < startOfToday) {
+        p.yesterdayStats.inputTokens += session.inputTokens;
+        p.yesterdayStats.outputTokens += session.outputTokens;
+        p.yesterdayStats.tokens += session.totalTokens;
+      }
+    }
 
     for (const q of session.queries) {
       if (q.model === '<synthetic>' || q.model === 'unknown') continue;
@@ -298,6 +320,8 @@ async function parseAllSessions() {
     totalTokens: p.totalTokens,
     sessionCount: p.sessionCount,
     queryCount: p.queryCount,
+    todayStats: p.todayStats,
+    yesterdayStats: p.yesterdayStats,
     modelBreakdown: Object.values(p.modelMap).sort((a, b) => b.totalTokens - a.totalTokens),
     topPrompts: (p.allPrompts || []).sort((a, b) => b.totalTokens - a.totalTokens).slice(0, 10),
   })).sort((a, b) => b.totalTokens - a.totalTokens);
