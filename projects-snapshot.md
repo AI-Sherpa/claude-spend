@@ -1,0 +1,4131 @@
+- generic [ref=e5]:
+  - generic [ref=e6]: 🔒 All data stays on your machine. Nothing is sent anywhere.
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - img [ref=e10]
+      - heading "Claude Spend" [level=1] [ref=e14]
+    - generic [ref=e15]:
+      - generic [ref=e16]: Jan 18 - Feb 24
+      - button "Refresh" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - text: Refresh
+  - generic [ref=e21]:
+    - heading "Your Claude Code usage, visualized." [level=2] [ref=e22]
+    - paragraph [ref=e23]: See where your tokens actually go.
+  - generic [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - text: Total Usage
+        - generic [ref=e27]: "?"
+        - generic: The total number of tokens used across all your conversations. This includes everything Claude reads (your messages, conversation history, files) plus everything Claude writes back.
+      - generic [ref=e28]: 4667.3M
+      - generic [ref=e29]: 4665.3M read by Claude + 1.9M written back
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - text: Conversations
+        - generic [ref=e32]: "?"
+        - generic: Each time you start Claude Code and begin chatting, that counts as one conversation. A new conversation starts fresh with no prior context.
+      - generic [ref=e33]: "205"
+      - generic [ref=e34]: Each one used ~22.8M tokens on average
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - text: Messages Sent
+        - generic [ref=e37]: "?"
+        - generic: Every time you hit Enter and send something to Claude, that is one message. This includes follow-up tool calls Claude makes automatically behind the scenes.
+      - generic [ref=e38]: 46,832
+      - generic [ref=e39]: Each message cost ~100K tokens on average
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - text: Claude Wrote
+        - generic [ref=e42]: "?"
+        - generic: The tokens Claude spent writing responses, code, and explanations. This is usually a tiny fraction of total usage because most tokens go toward re-reading your conversation history.
+      - generic [ref=e43]: 1.9M
+      - generic [ref=e44]: Only 0.0% of total -- most usage is from re-reading context
+  - generic [ref=e45]:
+    - text: Tokens are how AI measures text -- roughly 1 token = 1 word. Hover over any label with a
+    - generic [ref=e46]: "?"
+    - text: for an explanation.
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - img [ref=e50]
+      - generic [ref=e53]: Projects
+      - generic [ref=e54]: 4 active · 85 inactive
+      - button "Show inactive" [ref=e55] [cursor=pointer]
+    - table [ref=e57]:
+      - rowgroup [ref=e58]:
+        - row "Project Total Tokens Sessions Queries Today Yesterday" [ref=e59]:
+          - columnheader "Project" [ref=e60] [cursor=pointer]
+          - columnheader "Total Tokens" [ref=e61] [cursor=pointer]
+          - columnheader "Sessions" [ref=e62] [cursor=pointer]
+          - columnheader "Queries" [ref=e63] [cursor=pointer]
+          - columnheader "Today" [ref=e64] [cursor=pointer]
+          - columnheader "Yesterday" [ref=e65] [cursor=pointer]
+        - row "Tokens Sessions Queries Tokens Sessions Queries" [ref=e66]:
+          - columnheader "Tokens" [ref=e67] [cursor=pointer]
+          - columnheader "Sessions" [ref=e68] [cursor=pointer]
+          - columnheader "Queries" [ref=e69] [cursor=pointer]
+          - columnheader "Tokens" [ref=e70] [cursor=pointer]
+          - columnheader "Sessions" [ref=e71] [cursor=pointer]
+          - columnheader "Queries" [ref=e72] [cursor=pointer]
+      - rowgroup [ref=e73]:
+        - row "● Today 4 projects" [ref=e74] [cursor=pointer]:
+          - cell "● Today 4 projects" [ref=e75]:
+            - generic [ref=e76]:
+              - text: ● Today
+              - generic [ref=e77]: 4 projects
+        - 'row "claude-spend Models used: Opus 4.6: 56.7M input, 33K output 56.7M 56.7M in · 33K out 0.1% out 18 860 40.9M 40.9M in · 17K out 0.0% out 15 697 15.8M 15.7M in · 17K out 0.1% out 3 163" [ref=e78] [cursor=pointer]':
+          - 'cell "claude-spend Models used: Opus 4.6: 56.7M input, 33K output" [ref=e79]':
+            - generic [ref=e80]:
+              - img [ref=e81]
+              - generic [ref=e83]:
+                - generic "-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-claude-spend" [ref=e84]: claude-spend
+                - 'list "Models used: Opus 4.6: 56.7M input, 33K output" [ref=e85]':
+                  - listitem [ref=e86]:
+                    - 'generic "Opus 4.6: 56.7M input, 33K output" [ref=e87]':
+                      - text: Opus 4.6
+                      - generic [ref=e89]:
+                        - generic [ref=e90]: ↓
+                        - generic [ref=e91]: in
+                        - text: 56.7M
+                      - generic [ref=e92]:
+                        - generic [ref=e93]: ↑
+                        - generic [ref=e94]: out
+                        - text: 33K
+          - cell "56.7M 56.7M in · 33K out 0.1% out" [ref=e95]:
+            - generic [ref=e99]:
+              - generic [ref=e100]: 56.7M
+              - generic [ref=e101]: 56.7M in · 33K out
+              - generic [ref=e102]: 0.1% out
+          - cell "18" [ref=e103]
+          - cell "860" [ref=e104]
+          - cell "40.9M 40.9M in · 17K out 0.0% out" [ref=e105]:
+            - generic [ref=e106]: 40.9M
+            - generic [ref=e107]: 40.9M in · 17K out
+            - generic [ref=e108]: 0.0% out
+          - cell "15" [ref=e109]
+          - cell "697" [ref=e110]
+          - cell "15.8M 15.7M in · 17K out 0.1% out" [ref=e111]:
+            - generic [ref=e112]: 15.8M
+            - generic [ref=e113]: 15.7M in · 17K out
+            - generic [ref=e114]: 0.1% out
+          - cell "3" [ref=e115]
+          - cell "163" [ref=e116]
+        - row [ref=e117] [cursor=pointer]:
+          - cell [ref=e118]:
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - generic [ref=e122]: "1"
+                - generic [ref=e123]:
+                  - generic [ref=e124]: yes, go ahead
+                  - generic [ref=e125]:
+                    - generic [ref=e126]: Opus 4.6
+                    - generic [ref=e128]: 23× Bash
+                    - generic [ref=e129]: 11× Read
+                    - generic [ref=e130]: 11× mcp__plugin_playwright_playwright__browser_evaluate
+                    - generic [ref=e131]: 10× Grep
+                    - generic [ref=e132]: 10× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e133]: 9× Edit
+                    - generic [ref=e134]: 9× mcp__plugin_playwright_playwright__browser_take_screenshot
+                    - generic [ref=e135]: 6× TaskUpdate
+                    - generic [ref=e136]: 5× mcp__plugin_playwright_playwright__browser_wait_for
+                    - generic [ref=e137]: 3× TaskCreate
+                    - generic [ref=e138]: 3× mcp__plugin_playwright_playwright__browser_snapshot
+                    - generic [ref=e139]: 3× mcp__plugin_playwright_playwright__browser_click
+                    - generic [ref=e140]: 3× mcp__plugin_playwright_playwright__browser_close
+                    - generic [ref=e141]: 2× Write
+                    - generic [ref=e142]: +163 turns
+                - generic [ref=e143]:
+                  - generic [ref=e144]: 15.1M
+                  - generic [ref=e145]:
+                    - text: 15.1M in · 6.2K out
+                    - text: 0.0% out
+              - generic [ref=e146]:
+                - generic [ref=e147]: "2"
+                - generic [ref=e148]:
+                  - generic [ref=e149]: Enhance the logic to track behavior changes around the recommendations e.g. too much context embedded and usage of "/clear" has increased. Call out if behavior changes leading to token usage optimisation has improved or not
+                  - generic [ref=e150]:
+                    - generic [ref=e151]: Opus 4.6
+                    - generic [ref=e153]: 26× TaskUpdate
+                    - generic [ref=e154]: 13× TaskCreate
+                    - generic [ref=e155]: 13× Bash
+                    - generic [ref=e156]: 8× Read
+                    - generic [ref=e157]: 5× AskUserQuestion
+                    - generic [ref=e158]: 3× Skill
+                    - generic [ref=e159]: 3× Write
+                    - generic [ref=e160]: 3× mcp__plugin_playwright_playwright__browser_take_screenshot
+                    - generic [ref=e161]: 3× mcp__plugin_playwright_playwright__browser_evaluate
+                    - generic [ref=e162]: 2× Task
+                    - generic [ref=e163]: 1× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e164]: 1× mcp__plugin_playwright_playwright__browser_wait_for
+                    - generic [ref=e165]: 1× mcp__plugin_playwright_playwright__browser_snapshot
+                    - generic [ref=e166]: 1× Grep
+                    - generic [ref=e167]: 1× mcp__plugin_playwright_playwright__browser_close
+                    - generic [ref=e168]: +120 turns
+                - generic [ref=e169]:
+                  - generic [ref=e170]: 13.3M
+                  - generic [ref=e171]:
+                    - text: 13.3M in · 15K out
+                    - text: 0.1% out
+              - generic [ref=e172]:
+                - generic [ref=e173]: "3"
+                - generic [ref=e174]:
+                  - generic [ref=e175]: "Regardless of whether I click on sessions=13 (Today) or sessions=3 (yesterday) I get the same sessions drill down (image #2)"
+                  - generic [ref=e176]:
+                    - generic [ref=e177]: Opus 4.6
+                    - generic [ref=e179]: 21× Grep
+                    - generic [ref=e180]: 20× Read
+                    - generic [ref=e181]: 8× Edit
+                    - generic [ref=e182]: 3× Bash
+                    - generic [ref=e183]: 1× ToolSearch
+                    - generic [ref=e184]: 1× Skill
+                    - generic [ref=e185]: +94 turns
+                - generic [ref=e186]:
+                  - generic [ref=e187]: 5.3M
+                  - generic [ref=e188]:
+                    - text: 5.3M in · 961 out
+                    - text: 0.0% out
+              - generic [ref=e189]:
+                - generic [ref=e190]: "4"
+                - generic [ref=e191]:
+                  - generic [ref=e192]: subagent-driven - execute docs/plans/2026-02-24-day-on-day-trends-impl.md
+                  - generic [ref=e193]:
+                    - generic [ref=e194]: Opus 4.6
+                    - generic [ref=e196]: 12× TaskUpdate
+                    - generic [ref=e197]: 12× Bash
+                    - generic [ref=e198]: 10× Task
+                    - generic [ref=e199]: 5× TaskCreate
+                    - generic [ref=e200]: 4× Read
+                    - generic [ref=e201]: 1× Skill
+                    - generic [ref=e202]: 1× Grep
+                    - generic [ref=e203]: +72 turns
+                - generic [ref=e204]:
+                  - generic [ref=e205]: 4.5M
+                  - generic [ref=e206]:
+                    - text: 4.5M in · 487 out
+                    - text: 0.0% out
+              - generic [ref=e207]:
+                - generic [ref=e208]: "5"
+                - generic [ref=e209]:
+                  - generic [ref=e210]: yes, skip the design doc and just implement it
+                  - generic [ref=e211]:
+                    - generic [ref=e212]: Opus 4.6
+                    - generic [ref=e214]: 9× TaskUpdate
+                    - generic [ref=e215]: 5× Edit
+                    - generic [ref=e216]: 3× TaskCreate
+                    - generic [ref=e217]: 3× Read
+                    - generic [ref=e218]: 1× Bash
+                    - generic [ref=e219]: +30 turns
+                - generic [ref=e220]:
+                  - generic [ref=e221]: 1.7M
+                  - generic [ref=e222]:
+                    - text: 1.7M in · 347 out
+                    - text: 0.0% out
+              - generic [ref=e223]:
+                - generic [ref=e224]: "6"
+                - generic [ref=e225]:
+                  - generic [ref=e226]: Under "Today vs 7-day average" can we have an indication of which sessions belonging to which repos / projects?
+                  - generic [ref=e227]:
+                    - generic [ref=e228]: Opus 4.6
+                    - generic [ref=e230]: 5× TaskUpdate
+                    - generic [ref=e231]: 4× Grep
+                    - generic [ref=e232]: 4× Read
+                    - generic [ref=e233]: 3× TaskCreate
+                    - generic [ref=e234]: 1× Skill
+                    - generic [ref=e235]: 1× AskUserQuestion
+                    - generic [ref=e236]: +24 turns
+                - generic [ref=e237]:
+                  - generic [ref=e238]: 1.3M
+                  - generic [ref=e239]:
+                    - text: 1.3M in · 1.6K out
+                    - text: 0.1% out
+              - generic [ref=e240]:
+                - generic [ref=e241]: "7"
+                - generic [ref=e242]:
+                  - generic [ref=e243]: Breakdown Sessions by each session show token telemetry, queries, and number of tools calls in this order
+                  - generic [ref=e244]:
+                    - generic [ref=e245]: Opus 4.6
+                    - generic [ref=e247]: 12× Read
+                    - generic [ref=e248]: 5× Edit
+                    - generic [ref=e249]: 3× Grep
+                    - generic [ref=e250]: +31 turns
+                - generic [ref=e251]:
+                  - generic [ref=e252]: 1.3M
+                  - generic [ref=e253]:
+                    - text: 1.3M in · 583 out
+                    - text: 0.0% out
+              - generic [ref=e254]:
+                - generic [ref=e255]: "8"
+                - generic [ref=e256]:
+                  - generic [ref=e257]: Under Projects, show only projects with activity today (top talkers by tokens) and then yesterday (top talkers by tokens). Inactive projects are hidden by default via a toggle on/off
+                  - generic [ref=e258]:
+                    - generic [ref=e259]: Opus 4.6
+                    - generic [ref=e261]: 7× Read
+                    - generic [ref=e262]: 5× Bash
+                    - generic [ref=e263]: 4× Edit
+                    - generic [ref=e264]: 3× Grep
+                    - generic [ref=e265]: +29 turns
+                - generic [ref=e266]:
+                  - generic [ref=e267]: 1.3M
+                  - generic [ref=e268]:
+                    - text: 1.3M in · 991 out
+                    - text: 0.1% out
+              - generic [ref=e269]:
+                - generic [ref=e270]: "9"
+                - generic [ref=e271]:
+                  - generic [ref=e272]: I have week-on-week behavioral tracking. Since I'm active on claude code, let's do day-on-day tracking
+                  - generic [ref=e273]:
+                    - generic [ref=e274]: Opus 4.6
+                    - generic [ref=e276]: 5× TaskUpdate
+                    - generic [ref=e277]: 4× TaskCreate
+                    - generic [ref=e278]: 4× Grep
+                    - generic [ref=e279]: 1× Skill
+                    - generic [ref=e280]: 1× Bash
+                    - generic [ref=e281]: 1× Read
+                    - generic [ref=e282]: 1× AskUserQuestion
+                    - generic [ref=e283]: +19 turns
+                - generic [ref=e284]:
+                  - generic [ref=e285]: 996K
+                  - generic [ref=e286]:
+                    - text: 995K in · 344 out
+                    - text: 0.0% out
+              - generic [ref=e287]:
+                - generic [ref=e288]: "10"
+                - generic [ref=e289]:
+                  - generic [ref=e290]: Sessions are wrongly map under "Today"
+                  - generic [ref=e291]:
+                    - generic [ref=e292]: Opus 4.6
+                    - generic [ref=e294]: 5× Read
+                    - generic [ref=e295]: 4× Edit
+                    - generic [ref=e296]: 3× Grep
+                    - generic [ref=e297]: +21 turns
+                - generic [ref=e298]:
+                  - generic [ref=e299]: 933K
+                  - generic [ref=e300]:
+                    - text: 933K in · 359 out
+                    - text: 0.0% out
+        - 'row "distillVideo Models used: Opus 4.6: 319.3M input, 174K output 319.5M 319.3M in · 174K out 0.1% out 9 2925 18.1M 18.1M in · 5.7K out 0.0% out 3 198 46.8M 46.8M in · 23K out 0.0% out 3 445" [ref=e301] [cursor=pointer]':
+          - 'cell "distillVideo Models used: Opus 4.6: 319.3M input, 174K output" [ref=e302]':
+            - generic [ref=e303]:
+              - img [ref=e304]
+              - generic [ref=e306]:
+                - generic "-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-distillVideo" [ref=e307]: distillVideo
+                - 'list "Models used: Opus 4.6: 319.3M input, 174K output" [ref=e308]':
+                  - listitem [ref=e309]:
+                    - 'generic "Opus 4.6: 319.3M input, 174K output" [ref=e310]':
+                      - text: Opus 4.6
+                      - generic [ref=e312]:
+                        - generic [ref=e313]: ↓
+                        - generic [ref=e314]: in
+                        - text: 319.3M
+                      - generic [ref=e315]:
+                        - generic [ref=e316]: ↑
+                        - generic [ref=e317]: out
+                        - text: 174K
+          - cell "319.5M 319.3M in · 174K out 0.1% out" [ref=e318]:
+            - generic [ref=e320]:
+              - generic [ref=e321]: 319.5M
+              - generic [ref=e322]: 319.3M in · 174K out
+              - generic [ref=e323]: 0.1% out
+          - cell "9" [ref=e324]
+          - cell "2925" [ref=e325]
+          - cell "18.1M 18.1M in · 5.7K out 0.0% out" [ref=e326]:
+            - generic [ref=e327]: 18.1M
+            - generic [ref=e328]: 18.1M in · 5.7K out
+            - generic [ref=e329]: 0.0% out
+          - cell "3" [ref=e330]
+          - cell "198" [ref=e331]
+          - cell "46.8M 46.8M in · 23K out 0.0% out" [ref=e332]:
+            - generic [ref=e333]: 46.8M
+            - generic [ref=e334]: 46.8M in · 23K out
+            - generic [ref=e335]: 0.0% out
+          - cell "3" [ref=e336]
+          - cell "445" [ref=e337]
+        - row [ref=e338] [cursor=pointer]:
+          - cell [ref=e339]:
+            - generic [ref=e341]:
+              - generic [ref=e342]:
+                - generic [ref=e343]: "1"
+                - generic [ref=e344]:
+                  - generic [ref=e345]: Subagent-Driven
+                  - generic [ref=e346]:
+                    - generic [ref=e347]: Opus 4.6
+                    - generic [ref=e349]: 38× Bash
+                    - generic [ref=e350]: 17× TaskUpdate
+                    - generic [ref=e351]: 11× Edit
+                    - generic [ref=e352]: 10× Read
+                    - generic [ref=e353]: 7× TaskCreate
+                    - generic [ref=e354]: 3× Task
+                    - generic [ref=e355]: 2× Grep
+                    - generic [ref=e356]: 1× Skill
+                    - generic [ref=e357]: 1× TaskList
+                    - generic [ref=e358]: +141 turns
+                - generic [ref=e359]:
+                  - generic [ref=e360]: 16.9M
+                  - generic [ref=e361]:
+                    - text: 16.9M in · 11K out
+                    - text: 0.1% out
+              - generic [ref=e362]:
+                - generic [ref=e363]: "2"
+                - generic [ref=e364]:
+                  - generic [ref=e365]: execute docs/plans/2026-02-23-parakeet-reprocess.md using Subagent-Driven execution
+                  - generic [ref=e366]:
+                    - generic [ref=e367]: Opus 4.6
+                    - generic [ref=e369]: 46× Bash
+                    - generic [ref=e370]: 11× TaskUpdate
+                    - generic [ref=e371]: 8× Read
+                    - generic [ref=e372]: 5× Task
+                    - generic [ref=e373]: 4× TaskCreate
+                    - generic [ref=e374]: 4× TaskOutput
+                    - generic [ref=e375]: 3× Grep
+                    - generic [ref=e376]: 3× TaskStop
+                    - generic [ref=e377]: 2× Glob
+                    - generic [ref=e378]: 1× Skill
+                    - generic [ref=e379]: 1× Edit
+                    - generic [ref=e380]: +141 turns
+                - generic [ref=e381]:
+                  - generic [ref=e382]: 16.1M
+                  - generic [ref=e383]:
+                    - text: 16.1M in · 5.5K out
+                    - text: 0.0% out
+              - generic [ref=e384]:
+                - generic [ref=e385]: "3"
+                - generic [ref=e386]:
+                  - generic [ref=e387]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me chronologically analyze the conversation: 1. **Session Start**: This is a continuation from a previous session. The summary at th"
+                  - generic [ref=e388]:
+                    - generic [ref=e389]: Opus 4.6
+                    - generic [ref=e391]: 20× Bash
+                    - generic [ref=e392]: 18× Edit
+                    - generic [ref=e393]: 15× Read
+                    - generic [ref=e394]: 9× TaskUpdate
+                    - generic [ref=e395]: 4× TaskCreate
+                    - generic [ref=e396]: 4× Glob
+                    - generic [ref=e397]: 1× TaskList
+                    - generic [ref=e398]: 1× Skill
+                    - generic [ref=e399]: 1× Write
+                    - generic [ref=e400]: 1× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e401]: 1× mcp__plugin_playwright_playwright__browser_console_messages
+                    - generic [ref=e402]: 1× mcp__plugin_playwright_playwright__browser_take_screenshot
+                    - generic [ref=e403]: 1× mcp__plugin_playwright_playwright__browser_close
+                    - generic [ref=e404]: +130 turns
+                - generic [ref=e405]:
+                  - generic [ref=e406]: 13.6M
+                  - generic [ref=e407]:
+                    - text: 13.6M in · 6.0K out
+                    - text: 0.0% out
+              - generic [ref=e408]:
+                - generic [ref=e409]: "4"
+                - generic [ref=e410]:
+                  - generic [ref=e411]: I'm having issues with whisper transcription on the DGX Spark - there's a current job now which had to restart
+                  - generic [ref=e412]:
+                    - generic [ref=e413]: Opus 4.6
+                    - generic [ref=e415]: 26× Bash
+                    - generic [ref=e416]: 8× Read
+                    - generic [ref=e417]: 5× Grep
+                    - generic [ref=e418]: 5× Edit
+                    - generic [ref=e419]: 1× Write
+                    - generic [ref=e420]: +77 turns
+                - generic [ref=e421]:
+                  - generic [ref=e422]: 12.4M
+                  - generic [ref=e423]:
+                    - text: 12.4M in · 3.7K out
+                    - text: 0.0% out
+              - generic [ref=e424]:
+                - generic [ref=e425]: "5"
+                - generic [ref=e426]:
+                  - generic [ref=e427]: For each video, allow the user to change "GUEST" labels in the subtitles / diarization
+                  - generic [ref=e428]:
+                    - generic [ref=e429]: Opus 4.6
+                    - generic [ref=e431]: 17× Read
+                    - generic [ref=e432]: 16× Edit
+                    - generic [ref=e433]: 12× Grep
+                    - generic [ref=e434]: 2× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e435]: 2× mcp__plugin_playwright_playwright__browser_snapshot
+                    - generic [ref=e436]: 1× Bash
+                    - generic [ref=e437]: 1× mcp__plugin_playwright_playwright__browser_wait_for
+                    - generic [ref=e438]: 1× mcp__plugin_playwright_playwright__browser_evaluate
+                    - generic [ref=e439]: +78 turns
+                - generic [ref=e440]:
+                  - generic [ref=e441]: 12.0M
+                  - generic [ref=e442]:
+                    - text: 12.0M in · 2.4K out
+                    - text: 0.0% out
+              - generic [ref=e443]:
+                - generic [ref=e444]: "6"
+                - generic [ref=e445]:
+                  - generic [ref=e446]: subagent-driven, and address the DGX Spark visibility too
+                  - generic [ref=e447]:
+                    - generic [ref=e448]: Opus 4.6
+                    - generic [ref=e450]: 17× TaskUpdate
+                    - generic [ref=e451]: 11× Task
+                    - generic [ref=e452]: 9× Bash
+                    - generic [ref=e453]: 6× TaskCreate
+                    - generic [ref=e454]: 4× Read
+                    - generic [ref=e455]: 2× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e456]: 1× Skill
+                    - generic [ref=e457]: 1× TaskOutput
+                    - generic [ref=e458]: 1× mcp__plugin_playwright_playwright__browser_wait_for
+                    - generic [ref=e459]: 1× mcp__plugin_playwright_playwright__browser_click
+                    - generic [ref=e460]: 1× mcp__plugin_playwright_playwright__browser_take_screenshot
+                    - generic [ref=e461]: +78 turns
+                - generic [ref=e462]:
+                  - generic [ref=e463]: 10.9M
+                  - generic [ref=e464]:
+                    - text: 10.9M in · 6.4K out
+                    - text: 0.1% out
+              - generic [ref=e465]:
+                - generic [ref=e466]: "7"
+                - generic [ref=e467]:
+                  - generic [ref=e468]: Make the video float and persist (upper part of viewport) if user scrolling moves it out of view
+                  - generic [ref=e469]:
+                    - generic [ref=e470]: Opus 4.6
+                    - generic [ref=e472]: 11× mcp__plugin_playwright_playwright__browser_evaluate
+                    - generic [ref=e473]: 9× Edit
+                    - generic [ref=e474]: 4× Read
+                    - generic [ref=e475]: 4× mcp__plugin_playwright_playwright__browser_take_screenshot
+                    - generic [ref=e476]: 3× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e477]: 1× Bash
+                    - generic [ref=e478]: 1× mcp__plugin_playwright_playwright__browser_snapshot
+                    - generic [ref=e479]: 1× mcp__plugin_playwright_playwright__browser_click
+                    - generic [ref=e480]: +67 turns
+                - generic [ref=e481]:
+                  - generic [ref=e482]: 10.1M
+                  - generic [ref=e483]:
+                    - text: 10.1M in · 6.1K out
+                    - text: 0.1% out
+              - generic [ref=e484]:
+                - generic [ref=e485]: "8"
+                - generic [ref=e486]:
+                  - generic [ref=e487]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me chronologically analyze the conversation: 1. **Session Start**: This is a continuation from a previous session. The summary descr"
+                  - generic [ref=e488]:
+                    - generic [ref=e489]: Opus 4.6
+                    - generic [ref=e491]: 15× mcp__plugin_playwright_playwright__browser_evaluate
+                    - generic [ref=e492]: 11× Bash
+                    - generic [ref=e493]: 9× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e494]: 8× Read
+                    - generic [ref=e495]: 5× Grep
+                    - generic [ref=e496]: 3× Edit
+                    - generic [ref=e497]: 3× mcp__plugin_playwright_playwright__browser_wait_for
+                    - generic [ref=e498]: 1× mcp__plugin_playwright_playwright__browser_click
+                    - generic [ref=e499]: 1× mcp__plugin_playwright_playwright__browser_take_screenshot
+                    - generic [ref=e500]: 1× mcp__plugin_playwright_playwright__browser_close
+                    - generic [ref=e501]: +103 turns
+                - generic [ref=e502]:
+                  - generic [ref=e503]: 8.7M
+                  - generic [ref=e504]:
+                    - text: 8.7M in · 4.9K out
+                    - text: 0.1% out
+              - generic [ref=e505]:
+                - generic [ref=e506]: "9"
+                - generic [ref=e507]:
+                  - generic [ref=e508]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me chronologically analyze each section of the conversation: 1. **Session Start**: This is a continuation from a previous session. T"
+                  - generic [ref=e509]:
+                    - generic [ref=e510]: Opus 4.6
+                    - generic [ref=e512]: 8× Read
+                    - generic [ref=e513]: 4× Bash
+                    - generic [ref=e514]: 4× mcp__plugin_playwright_playwright__browser_evaluate
+                    - generic [ref=e515]: 3× mcp__plugin_playwright_playwright__browser_wait_for
+                    - generic [ref=e516]: 3× mcp__plugin_playwright_playwright__browser_take_screenshot
+                    - generic [ref=e517]: 2× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e518]: 2× mcp__plugin_playwright_playwright__browser_click
+                    - generic [ref=e519]: 2× Edit
+                    - generic [ref=e520]: 1× mcp__plugin_playwright_playwright__browser_snapshot
+                    - generic [ref=e521]: 1× mcp__plugin_playwright_playwright__browser_console_messages
+                    - generic [ref=e522]: 1× mcp__plugin_playwright_playwright__browser_press_key
+                    - generic [ref=e523]: +72 turns
+                - generic [ref=e524]:
+                  - generic [ref=e525]: 8.5M
+                  - generic [ref=e526]:
+                    - text: 8.5M in · 1.4K out
+                    - text: 0.0% out
+              - generic [ref=e527]:
+                - generic [ref=e528]: "10"
+                - generic [ref=e529]:
+                  - generic [ref=e530]: "1"
+                  - generic [ref=e531]:
+                    - generic [ref=e532]: Opus 4.6
+                    - generic [ref=e534]: 15× Edit
+                    - generic [ref=e535]: 9× Read
+                    - generic [ref=e536]: 9× Bash
+                    - generic [ref=e537]: 2× mcp__plugin_playwright_playwright__browser_run_code
+                    - generic [ref=e538]: 1× Grep
+                    - generic [ref=e539]: 1× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e540]: 1× mcp__plugin_playwright_playwright__browser_click
+                    - generic [ref=e541]: +65 turns
+                - generic [ref=e542]:
+                  - generic [ref=e543]: 7.4M
+                  - generic [ref=e544]:
+                    - text: 7.4M in · 2.2K out
+                    - text: 0.0% out
+        - 'row "researchRegRoadmap Models used: Opus 4.6: 898.7M input, 498K output 899.2M 898.7M in · 498K out 0.1% out 19 8362 11.3M 11.3M in · 8.4K out 0.1% out 4 211 — — —" [ref=e545] [cursor=pointer]':
+          - 'cell "researchRegRoadmap Models used: Opus 4.6: 898.7M input, 498K output" [ref=e546]':
+            - generic [ref=e547]:
+              - img [ref=e548]
+              - generic [ref=e550]:
+                - generic "-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-researchRegRoadmap" [ref=e551]: researchRegRoadmap
+                - 'list "Models used: Opus 4.6: 898.7M input, 498K output" [ref=e552]':
+                  - listitem [ref=e553]:
+                    - 'generic "Opus 4.6: 898.7M input, 498K output" [ref=e554]':
+                      - text: Opus 4.6
+                      - generic [ref=e556]:
+                        - generic [ref=e557]: ↓
+                        - generic [ref=e558]: in
+                        - text: 898.7M
+                      - generic [ref=e559]:
+                        - generic [ref=e560]: ↑
+                        - generic [ref=e561]: out
+                        - text: 498K
+          - cell "899.2M 898.7M in · 498K out 0.1% out" [ref=e562]:
+            - generic [ref=e564]:
+              - generic [ref=e565]: 899.2M
+              - generic [ref=e566]: 898.7M in · 498K out
+              - generic [ref=e567]: 0.1% out
+          - cell "19" [ref=e568]
+          - cell "8362" [ref=e569]
+          - cell "11.3M 11.3M in · 8.4K out 0.1% out" [ref=e570]:
+            - generic [ref=e571]: 11.3M
+            - generic [ref=e572]: 11.3M in · 8.4K out
+            - generic [ref=e573]: 0.1% out
+          - cell "4" [ref=e574]
+          - cell "211" [ref=e575]
+          - cell "—" [ref=e576]
+          - cell "—" [ref=e577]
+          - cell "—" [ref=e578]
+        - row [ref=e579] [cursor=pointer]:
+          - cell [ref=e580]:
+            - generic [ref=e582]:
+              - generic [ref=e583]:
+                - generic [ref=e584]: "1"
+                - generic [ref=e585]:
+                  - generic [ref=e586]: yes go ahead with mermaid
+                  - generic [ref=e587]:
+                    - generic [ref=e588]: Opus 4.6
+                    - generic [ref=e590]: 18× Read
+                    - generic [ref=e591]: 14× Edit
+                    - generic [ref=e592]: 14× Bash
+                    - generic [ref=e593]: 8× Grep
+                    - generic [ref=e594]: 6× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e595]: 6× mcp__plugin_playwright_playwright__browser_click
+                    - generic [ref=e596]: 4× mcp__plugin_playwright_playwright__browser_take_screenshot
+                    - generic [ref=e597]: 3× mcp__plugin_playwright_playwright__browser_evaluate
+                    - generic [ref=e598]: 2× TaskUpdate
+                    - generic [ref=e599]: 2× mcp__plugin_playwright_playwright__browser_wait_for
+                    - generic [ref=e600]: 1× TaskCreate
+                    - generic [ref=e601]: 1× mcp__plugin_playwright_playwright__browser_console_messages
+                    - generic [ref=e602]: 1× mcp__plugin_playwright_playwright__browser_snapshot
+                    - generic [ref=e603]: 1× mcp__plugin_playwright_playwright__browser_close
+                    - generic [ref=e604]: 1× TaskOutput
+                    - generic [ref=e605]: 1× TaskList
+                    - generic [ref=e606]: +147 turns
+                - generic [ref=e607]:
+                  - generic [ref=e608]: 18.2M
+                  - generic [ref=e609]:
+                    - text: 18.2M in · 5.5K out
+                    - text: 0.0% out
+              - generic [ref=e610]:
+                - generic [ref=e611]: "2"
+                - generic [ref=e612]:
+                  - generic [ref=e613]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me chronologically analyze the conversation: 1. **Context from previous session**: The conversation continues from a prior session w"
+                  - generic [ref=e614]:
+                    - generic [ref=e615]: Opus 4.6
+                    - generic [ref=e617]: 26× Write
+                    - generic [ref=e618]: 23× Read
+                    - generic [ref=e619]: 15× TaskUpdate
+                    - generic [ref=e620]: 11× Edit
+                    - generic [ref=e621]: 7× Bash
+                    - generic [ref=e622]: 7× Grep
+                    - generic [ref=e623]: 1× TaskList
+                    - generic [ref=e624]: +132 turns
+                - generic [ref=e625]:
+                  - generic [ref=e626]: 16.0M
+                  - generic [ref=e627]:
+                    - text: 16.0M in · 31K out
+                    - text: 0.2% out
+              - generic [ref=e628]:
+                - generic [ref=e629]: "3"
+                - generic [ref=e630]:
+                  - generic [ref=e631]: I had early requested for backend activities for updating the regulatory database (through freshness indictor) to move over to the DGX Spark earlier. Can you confirm that the design process has completed? DGX Spark 3b79 is online. Start building the infrastructure there. Make sure the infra persist
+                  - generic [ref=e632]:
+                    - generic [ref=e633]: Opus 4.6
+                    - generic [ref=e635]: 40× Bash
+                    - generic [ref=e636]: 24× TaskUpdate
+                    - generic [ref=e637]: 13× Read
+                    - generic [ref=e638]: 9× TaskCreate
+                    - generic [ref=e639]: 7× Write
+                    - generic [ref=e640]: 4× Glob
+                    - generic [ref=e641]: 4× Grep
+                    - generic [ref=e642]: 4× Edit
+                    - generic [ref=e643]: 2× TaskOutput
+                    - generic [ref=e644]: +155 turns
+                - generic [ref=e645]:
+                  - generic [ref=e646]: 15.7M
+                  - generic [ref=e647]:
+                    - text: 15.7M in · 9.7K out
+                    - text: 0.1% out
+              - generic [ref=e648]:
+                - generic [ref=e649]: "4"
+                - generic [ref=e650]:
+                  - generic [ref=e651]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me trace through this conversation carefully: **Session Start**: This is a continuation session from a previous conversation that ra"
+                  - generic [ref=e652]:
+                    - generic [ref=e653]: Opus 4.6
+                    - generic [ref=e655]: 51× Bash
+                    - generic [ref=e656]: 21× Edit
+                    - generic [ref=e657]: 12× Read
+                    - generic [ref=e658]: 8× TaskUpdate
+                    - generic [ref=e659]: 2× TaskGet
+                    - generic [ref=e660]: 2× Grep
+                    - generic [ref=e661]: 1× TaskList
+                    - generic [ref=e662]: +153 turns
+                - generic [ref=e663]:
+                  - generic [ref=e664]: 15.5M
+                  - generic [ref=e665]:
+                    - text: 15.5M in · 6.8K out
+                    - text: 0.0% out
+              - generic [ref=e666]:
+                - generic [ref=e667]: "5"
+                - generic [ref=e668]:
+                  - generic [ref=e669]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me chronologically analyze the conversation: 1. **Session continuation**: This session continues from a previous conversation about"
+                  - generic [ref=e670]:
+                    - generic [ref=e671]: Opus 4.6
+                    - generic [ref=e673]: 50× Bash
+                    - generic [ref=e674]: 14× Edit
+                    - generic [ref=e675]: 11× TaskUpdate
+                    - generic [ref=e676]: 6× TaskCreate
+                    - generic [ref=e677]: 5× Read
+                    - generic [ref=e678]: 5× Grep
+                    - generic [ref=e679]: +137 turns
+                - generic [ref=e680]:
+                  - generic [ref=e681]: 15.5M
+                  - generic [ref=e682]:
+                    - text: 15.5M in · 11K out
+                    - text: 0.1% out
+              - generic [ref=e683]:
+                - generic [ref=e684]: "6"
+                - generic [ref=e685]:
+                  - generic [ref=e686]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me chronologically analyze the conversation: 1. **Context from previous session**: The conversation continues from a prior compacted"
+                  - generic [ref=e687]:
+                    - generic [ref=e688]: Opus 4.6
+                    - generic [ref=e690]: 21× Read
+                    - generic [ref=e691]: 16× TaskUpdate
+                    - generic [ref=e692]: 14× Write
+                    - generic [ref=e693]: 13× Edit
+                    - generic [ref=e694]: 9× Bash
+                    - generic [ref=e695]: 5× Grep
+                    - generic [ref=e696]: 1× TaskList
+                    - generic [ref=e697]: 1× Glob
+                    - generic [ref=e698]: 1× Task
+                    - generic [ref=e699]: +124 turns
+                - generic [ref=e700]:
+                  - generic [ref=e701]: 13.5M
+                  - generic [ref=e702]:
+                    - text: 13.5M in · 32K out
+                    - text: 0.2% out
+              - generic [ref=e703]:
+                - generic [ref=e704]: "7"
+                - generic [ref=e705]:
+                  - generic [ref=e706]: <task-notification> <task-id>b0b1212</task-id> <output-file>/private/tmp/claude-501/-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-researchRegRoadmap/tasks/b0b1212.output</output-file> <status>completed</status> <summary>Background command "Test AI search endpoint with heredoc P
+                  - generic [ref=e707]:
+                    - generic [ref=e708]: Opus 4.6
+                    - generic [ref=e710]: 16× Bash
+                    - generic [ref=e711]: 8× Read
+                    - generic [ref=e712]: 7× mcp__plugin_playwright_playwright__browser_evaluate
+                    - generic [ref=e713]: 4× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e714]: 4× mcp__plugin_playwright_playwright__browser_click
+                    - generic [ref=e715]: 4× mcp__plugin_playwright_playwright__browser_snapshot
+                    - generic [ref=e716]: 4× Grep
+                    - generic [ref=e717]: 2× ToolSearch
+                    - generic [ref=e718]: 2× mcp__plugin_playwright_playwright__browser_close
+                    - generic [ref=e719]: 1× mcp__plugin_playwright_playwright__browser_fill_form
+                    - generic [ref=e720]: 1× mcp__plugin_playwright_playwright__browser_type
+                    - generic [ref=e721]: 1× mcp__plugin_playwright_playwright__browser_press_key
+                    - generic [ref=e722]: 1× mcp__plugin_playwright_playwright__browser_console_messages
+                    - generic [ref=e723]: 1× Edit
+                    - generic [ref=e724]: 1× mcp__plugin_playwright_playwright__browser_take_screenshot
+                    - generic [ref=e725]: +109 turns
+                - generic [ref=e726]:
+                  - generic [ref=e727]: 13.4M
+                  - generic [ref=e728]:
+                    - text: 13.4M in · 2.3K out
+                    - text: 0.0% out
+              - generic [ref=e729]:
+                - generic [ref=e730]: "8"
+                - generic [ref=e731]:
+                  - generic [ref=e732]: "1"
+                  - generic [ref=e733]:
+                    - generic [ref=e734]: Opus 4.6
+                    - generic [ref=e736]: 32× TaskCreate
+                    - generic [ref=e737]: 13× Write
+                    - generic [ref=e738]: 11× TaskUpdate
+                    - generic [ref=e739]: 7× Bash
+                    - generic [ref=e740]: 4× Read
+                    - generic [ref=e741]: 4× Task
+                    - generic [ref=e742]: 4× TaskOutput
+                    - generic [ref=e743]: 1× Skill
+                    - generic [ref=e744]: 1× TaskStop
+                    - generic [ref=e745]: +101 turns
+                - generic [ref=e746]:
+                  - generic [ref=e747]: 13.2M
+                  - generic [ref=e748]:
+                    - text: 13.2M in · 14K out
+                    - text: 0.1% out
+              - generic [ref=e749]:
+                - generic [ref=e750]: "9"
+                - generic [ref=e751]:
+                  - generic [ref=e752]: commit this Also need an example of a real positive. Activate a swarm agent at a time.
+                  - generic [ref=e753]:
+                    - generic [ref=e754]: Opus 4.6
+                    - generic [ref=e756]: 40× Bash
+                    - generic [ref=e757]: 6× Edit
+                    - generic [ref=e758]: 5× Read
+                    - generic [ref=e759]: 5× mcp__plugin_playwright_playwright__browser_navigate
+                    - generic [ref=e760]: 3× TaskOutput
+                    - generic [ref=e761]: 1× Grep
+                    - generic [ref=e762]: 1× TaskStop
+                    - generic [ref=e763]: 1× mcp__plugin_playwright_playwright__browser_close
+                    - generic [ref=e764]: 1× mcp__plugin_playwright_playwright__browser_click
+                    - generic [ref=e765]: 1× mcp__plugin_playwright_playwright__browser_take_screenshot
+                    - generic [ref=e766]: +113 turns
+                - generic [ref=e767]:
+                  - generic [ref=e768]: 13.1M
+                  - generic [ref=e769]:
+                    - text: 13.1M in · 9.5K out
+                    - text: 0.1% out
+              - generic [ref=e770]:
+                - generic [ref=e771]: "10"
+                - generic [ref=e772]:
+                  - generic [ref=e773]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me chronologically analyze the conversation: 1. **Session Start**: This is a continuation from a previous compacted session. The sum"
+                  - generic [ref=e774]:
+                    - generic [ref=e775]: Opus 4.6
+                    - generic [ref=e777]: 36× Bash
+                    - generic [ref=e778]: 22× Read
+                    - generic [ref=e779]: 6× Glob
+                    - generic [ref=e780]: 5× Edit
+                    - generic [ref=e781]: 2× TaskStop
+                    - generic [ref=e782]: 1× TaskOutput
+                    - generic [ref=e783]: +132 turns
+                - generic [ref=e784]:
+                  - generic [ref=e785]: 12.8M
+                  - generic [ref=e786]:
+                    - text: 12.7M in · 8.3K out
+                    - text: 0.1% out
+        - 'row "nvidiaDGXSpark Models used: Opus 4.6: 113.0M input, 85K output, Opus 4.5: 83.9M input, 3.1K output 197.0M 196.9M in · 88K out 0.0% out 12 2133 7.0M 7.0M in · 5.3K out 0.1% out 2 114 — — —" [ref=e787] [cursor=pointer]':
+          - 'cell "nvidiaDGXSpark Models used: Opus 4.6: 113.0M input, 85K output, Opus 4.5: 83.9M input, 3.1K output" [ref=e788]':
+            - generic [ref=e789]:
+              - img [ref=e790]
+              - generic [ref=e792]:
+                - generic "-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-nvidiaDGXSpark" [ref=e793]: nvidiaDGXSpark
+                - 'list "Models used: Opus 4.6: 113.0M input, 85K output, Opus 4.5: 83.9M input, 3.1K output" [ref=e794]':
+                  - listitem [ref=e795]:
+                    - 'generic "Opus 4.6: 113.0M input, 85K output" [ref=e796]':
+                      - text: Opus 4.6
+                      - generic [ref=e798]:
+                        - generic [ref=e799]: ↓
+                        - generic [ref=e800]: in
+                        - text: 113.0M
+                      - generic [ref=e801]:
+                        - generic [ref=e802]: ↑
+                        - generic [ref=e803]: out
+                        - text: 85K
+                  - listitem [ref=e804]:
+                    - 'generic "Opus 4.5: 83.9M input, 3.1K output" [ref=e805]':
+                      - text: Opus 4.5
+                      - generic [ref=e807]:
+                        - generic [ref=e808]: ↓
+                        - generic [ref=e809]: in
+                        - text: 83.9M
+                      - generic [ref=e810]:
+                        - generic [ref=e811]: ↑
+                        - generic [ref=e812]: out
+                        - text: 3.1K
+          - cell "197.0M 196.9M in · 88K out 0.0% out" [ref=e813]:
+            - generic [ref=e817]:
+              - generic [ref=e818]: 197.0M
+              - generic [ref=e819]: 196.9M in · 88K out
+              - generic [ref=e820]: 0.0% out
+          - cell "12" [ref=e821]
+          - cell "2133" [ref=e822]
+          - cell "7.0M 7.0M in · 5.3K out 0.1% out" [ref=e823]:
+            - generic [ref=e824]: 7.0M
+            - generic [ref=e825]: 7.0M in · 5.3K out
+            - generic [ref=e826]: 0.1% out
+          - cell "2" [ref=e827]
+          - cell "114" [ref=e828]
+          - cell "—" [ref=e829]
+          - cell "—" [ref=e830]
+          - cell "—" [ref=e831]
+        - row [ref=e832] [cursor=pointer]:
+          - cell [ref=e833]:
+            - generic [ref=e835]:
+              - generic [ref=e836]:
+                - generic [ref=e837]: "1"
+                - generic [ref=e838]:
+                  - generic [ref=e839]: "yes"
+                  - generic [ref=e840]:
+                    - generic [ref=e841]: Opus 4.5
+                    - generic [ref=e843]: 13× Bash
+                    - generic [ref=e844]: 8× Edit
+                    - generic [ref=e845]: 7× Write
+                    - generic [ref=e846]: 5× Read
+                    - generic [ref=e847]: +68 turns
+                - generic [ref=e848]:
+                  - generic [ref=e849]: 8.9M
+                  - generic [ref=e850]:
+                    - text: 8.9M in · 221 out
+                    - text: 0.0% out
+              - generic [ref=e851]:
+                - generic [ref=e852]: "2"
+                - generic [ref=e853]:
+                  - generic [ref=e854]: open dmg
+                  - generic [ref=e855]:
+                    - generic [ref=e856]: Opus 4.6
+                    - generic [ref=e858]: 28× Bash
+                    - generic [ref=e859]: 11× Edit
+                    - generic [ref=e860]: 7× Read
+                    - generic [ref=e861]: 1× Glob
+                    - generic [ref=e862]: +90 turns
+                - generic [ref=e863]:
+                  - generic [ref=e864]: 8.2M
+                  - generic [ref=e865]:
+                    - text: 8.2M in · 8.1K out
+                    - text: 0.1% out
+              - generic [ref=e866]:
+                - generic [ref=e867]: "3"
+                - generic [ref=e868]:
+                  - generic [ref=e869]: A
+                  - generic [ref=e870]:
+                    - generic [ref=e871]: Opus 4.5
+                    - generic [ref=e873]: 20× Bash
+                    - generic [ref=e874]: 13× TaskUpdate
+                    - generic [ref=e875]: 7× TaskCreate
+                    - generic [ref=e876]: 6× Read
+                    - generic [ref=e877]: 4× Task
+                    - generic [ref=e878]: 3× Write
+                    - generic [ref=e879]: 2× Skill
+                    - generic [ref=e880]: 1× TaskList
+                    - generic [ref=e881]: +83 turns
+                - generic [ref=e882]:
+                  - generic [ref=e883]: 7.1M
+                  - generic [ref=e884]:
+                    - text: 7.1M in · 634 out
+                    - text: 0.0% out
+              - generic [ref=e885]:
+                - generic [ref=e886]: "4"
+                - generic [ref=e887]:
+                  - generic [ref=e888]: totally bizarre
+                  - generic [ref=e889]:
+                    - generic [ref=e890]: Opus 4.6
+                    - generic [ref=e892]: 25× Bash
+                    - generic [ref=e893]: 3× Edit
+                    - generic [ref=e894]: 1× Read
+                    - generic [ref=e895]: 1× Write
+                    - generic [ref=e896]: +54 turns
+                - generic [ref=e897]:
+                  - generic [ref=e898]: 6.8M
+                  - generic [ref=e899]:
+                    - text: 6.8M in · 6.7K out
+                    - text: 0.1% out
+              - generic [ref=e900]:
+                - generic [ref=e901]: "5"
+                - generic [ref=e902]:
+                  - generic [ref=e903]: Error in xcode projection
+                  - generic [ref=e904]:
+                    - generic [ref=e905]: Opus 4.5
+                    - generic [ref=e907]: 8× Write
+                    - generic [ref=e908]: 7× Bash
+                    - generic [ref=e909]: 3× Edit
+                    - generic [ref=e910]: 1× Read
+                    - generic [ref=e911]: +40 turns
+                - generic [ref=e912]:
+                  - generic [ref=e913]: 6.6M
+                  - generic [ref=e914]:
+                    - text: 6.6M in · 82 out
+                    - text: 0.0% out
+              - generic [ref=e915]:
+                - generic [ref=e916]: "6"
+                - generic [ref=e917]:
+                  - generic [ref=e918]: the app doesn't have a suitable app icon. Research what the DGX Spark looks like, and give the app a nice icon.
+                  - generic [ref=e919]:
+                    - generic [ref=e920]: Opus 4.5
+                    - generic [ref=e922]: 17× Bash
+                    - generic [ref=e923]: 2× WebSearch
+                    - generic [ref=e924]: 2× Read
+                    - generic [ref=e925]: 2× Edit
+                    - generic [ref=e926]: 1× WebFetch
+                    - generic [ref=e927]: 1× Write
+                    - generic [ref=e928]: +55 turns
+                - generic [ref=e929]:
+                  - generic [ref=e930]: 6.1M
+                  - generic [ref=e931]:
+                    - text: 6.1M in · 166 out
+                    - text: 0.0% out
+              - generic [ref=e932]:
+                - generic [ref=e933]: "7"
+                - generic [ref=e934]:
+                  - generic [ref=e935]: no GPU util - what's the curl command used?
+                  - generic [ref=e936]:
+                    - generic [ref=e937]: Opus 4.6
+                    - generic [ref=e939]: 13× Bash
+                    - generic [ref=e940]: 5× Edit
+                    - generic [ref=e941]: +29 turns
+                - generic [ref=e942]:
+                  - generic [ref=e943]: 4.8M
+                  - generic [ref=e944]:
+                    - text: 4.8M in · 816 out
+                    - text: 0.0% out
+              - generic [ref=e945]:
+                - generic [ref=e946]: "8"
+                - generic [ref=e947]:
+                  - generic [ref=e948]: <task-notification> <task-id>b533f32</task-id> <output-file>/private/tmp/claude-501/-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-nvidiaDGXSpark/tasks/b533f32.output</output-file> <status>failed</status> <summary>Background command "Pull vLLM 26.01, remove old vLLM and NeMo 25.
+                  - generic [ref=e949]:
+                    - generic [ref=e950]: Opus 4.6
+                    - generic [ref=e952]: 11× Bash
+                    - generic [ref=e953]: 6× TaskOutput
+                    - generic [ref=e954]: 4× TaskUpdate
+                    - generic [ref=e955]: 3× Read
+                    - generic [ref=e956]: +42 turns
+                - generic [ref=e957]:
+                  - generic [ref=e958]: 4.6M
+                  - generic [ref=e959]:
+                    - text: 4.6M in · 1.3K out
+                    - text: 0.0% out
+              - generic [ref=e960]:
+                - generic [ref=e961]: "9"
+                - generic [ref=e962]:
+                  - generic [ref=e963]: "iOS app: doesn't contain icon. Fix."
+                  - generic [ref=e964]:
+                    - generic [ref=e965]: Opus 4.5
+                    - generic [ref=e967]: 7× Bash
+                    - generic [ref=e968]: 2× Write
+                    - generic [ref=e969]: 1× Glob
+                    - generic [ref=e970]: 1× Read
+                    - generic [ref=e971]: 1× Edit
+                    - generic [ref=e972]: +26 turns
+                - generic [ref=e973]:
+                  - generic [ref=e974]: 3.9M
+                  - generic [ref=e975]:
+                    - text: 3.9M in · 50 out
+                    - text: 0.0% out
+              - generic [ref=e976]:
+                - generic [ref=e977]: "10"
+                - generic [ref=e978]:
+                  - generic [ref=e979]: In between the node names and "ssh local", let's include the GPU current utilisation
+                  - generic [ref=e980]:
+                    - generic [ref=e981]: Opus 4.6
+                    - generic [ref=e983]: 6× Bash
+                    - generic [ref=e984]: 4× Read
+                    - generic [ref=e985]: 4× Edit
+                    - generic [ref=e986]: 1× Grep
+                    - generic [ref=e987]: +27 turns
+                - generic [ref=e988]:
+                  - generic [ref=e989]: 3.7M
+                  - generic [ref=e990]:
+                    - text: 3.7M in · 862 out
+                    - text: 0.0% out
+  - generic [ref=e991]:
+    - generic [ref=e992]:
+      - img [ref=e994]
+      - generic [ref=e996]: Insights
+    - generic [ref=e997]:
+      - generic [ref=e998] [cursor=pointer]:
+        - generic [ref=e999]:
+          - generic [ref=e1000]: ⚠️
+          - generic [ref=e1001]: Short, vague messages are costing you the most
+          - generic [ref=e1002]: ↓ -96%
+          - img [ref=e1004]
+        - generic:
+          - generic [ref=e1006]: 470 times you sent a short message like "restart", "yes go ahead with mermaid", "Subagent-Driven", "ok" -- and each time, Claude used over 100K tokens to respond. That adds up to 904.9M tokens total. When you say just "Yes" or "Do it", Claude doesn't know exactly what you want, so it tries harder -- reading more files, running more tools, making more attempts. Each of those steps re-sends the entire conversation, which multiplies the cost.
+          - generic [ref=e1007]: Try being specific. Instead of "Yes", say "Yes, update the login page and run the tests." It gives Claude a clear target, so it finishes faster and uses fewer tokens.
+      - generic [ref=e1008] [cursor=pointer]:
+        - generic [ref=e1009]:
+          - generic [ref=e1010]: ⚠️
+          - generic [ref=e1011]: The longer you chat, the more each message costs
+          - generic [ref=e1012]: ↑ -82%
+          - img [ref=e1014]
+        - generic:
+          - generic [ref=e1016]: "In 66 of your conversations, the messages near the end cost 3.1x more than the ones at the start. Why? Every time you send a message, Claude re-reads the entire conversation from the beginning. So message #5 is cheap, but message #80 is expensive because Claude is re-reading 79 previous messages plus all the code it wrote. Your longest conversation (\"iOS: Once the user indicates the boarding of a bus...\") grew 6.3x more expensive by the end."
+          - generic [ref=e1017]: Start a fresh conversation when you move to a new task. If you need context from before, paste a short summary in your first message. This gives Claude a clean slate instead of re-reading hundreds of old messages.
+      - generic [ref=e1018] [cursor=pointer]:
+        - generic [ref=e1019]:
+          - generic [ref=e1020]: 💡
+          - generic [ref=e1021]: Just 55 long conversations used 91% of all your tokens
+          - generic [ref=e1022]: ↑ -82%
+          - img [ref=e1024]
+        - generic:
+          - generic [ref=e1026]: You have 55 conversations with over 200 messages each. These alone consumed 4262.3M tokens -- that's 91% of everything. Meanwhile, your typical conversation is about 30 messages. Long conversations aren't always bad, but they're disproportionately expensive because of how context builds up.
+          - generic [ref=e1027]: Try keeping one conversation per task. When a conversation starts drifting into different topics, that is a good time to start a new one.
+      - generic [ref=e1028] [cursor=pointer]:
+        - generic [ref=e1029]:
+          - generic [ref=e1030]: 💡
+          - generic [ref=e1031]: 0.0% of your tokens are Claude actually writing
+          - generic [ref=e1032]: → +2%
+          - img [ref=e1034]
+        - generic:
+          - generic [ref=e1036]: "Here's something surprising: out of 4667.3M total tokens, only 1.9M are from Claude writing responses. The other 100.0% is Claude re-reading your conversation history, files, and context before each response. This means the biggest factor in token usage isn't how much Claude writes -- it's how long your conversations are."
+          - generic [ref=e1037]: Keeping conversations shorter has more impact than asking for shorter answers. A 20-message conversation costs far less than a 200-message one, even if the total output is similar.
+      - generic [ref=e1038] [cursor=pointer]:
+        - generic [ref=e1039]:
+          - generic [ref=e1040]: 📅
+          - generic [ref=e1041]: You use Claude the most on Fridays
+          - img [ref=e1043]
+        - generic [ref=e1045]: Your Friday conversations average 52.6M tokens each, compared to 7.8M on Thursdays. This could mean you tackle bigger tasks on Fridays, or your conversations tend to run longer.
+      - generic [ref=e1046] [cursor=pointer]:
+        - generic [ref=e1047]:
+          - generic [ref=e1048]: ⚠️
+          - generic [ref=e1049]: 18 simple conversations used Opus unnecessarily
+          - generic [ref=e1050]: → 0%
+          - img [ref=e1052]
+        - generic:
+          - generic [ref=e1054]: "These conversations had fewer than 10 messages and used 2.3M tokens on Opus: \"review all the mp4 files and tell me abo\", \"restart server\", \"<command-message>init</command-message> \". Opus is the most capable model but also the most expensive. For quick questions and small tasks, Sonnet or Haiku would give similar results at a fraction of the cost."
+          - generic [ref=e1055]: Use /model to switch to Sonnet or Haiku for simple tasks. Save Opus for complex multi-file changes, architecture decisions, or tricky debugging.
+      - generic [ref=e1056] [cursor=pointer]:
+        - generic [ref=e1057]:
+          - generic [ref=e1058]: 💡
+          - generic [ref=e1059]: 139 conversations had 9x more tool calls than messages
+          - generic [ref=e1060]: → -2%
+          - img [ref=e1062]
+        - generic:
+          - generic [ref=e1064]: In these conversations, Claude made ~9 tool calls for every message you sent. Each tool call (reading files, running commands, searching code) is a full round trip that re-reads the entire conversation. These 139 conversations used 4585.2M tokens total.
+          - generic [ref=e1065]: Point Claude to specific files and line numbers when you can. "Fix the bug in src/auth.js line 42" triggers fewer tool calls than "fix the login bug" where Claude has to search for the right file first.
+      - generic [ref=e1066] [cursor=pointer]:
+        - generic [ref=e1067]:
+          - generic [ref=e1068]: ⚠️
+          - generic [ref=e1069]: Each message costs 2.3x more in long conversations
+          - generic [ref=e1070]: ↑ -41%
+          - img [ref=e1072]
+        - generic:
+          - generic [ref=e1074]: In your short conversations (under 15 messages), each message costs ~41K tokens. In your long ones (80+ messages), each message costs ~95K tokens. That is 2.3x more per message, because Claude re-reads the entire history every turn.
+          - generic [ref=e1075]: This is the single biggest lever for reducing token usage. Start fresh conversations more often. A 5-conversation workflow costs far less than one 500-message marathon.
+  - generic [ref=e1076]:
+    - generic [ref=e1077]:
+      - img [ref=e1079]
+      - generic [ref=e1081]: Behavior Trends
+      - generic [ref=e1082]: Today vs 7-day average
+    - generic [ref=e1083]:
+      - generic [ref=e1084]:
+        - generic [ref=e1085]: ✅
+        - generic [ref=e1086]:
+          - generic [ref=e1087]: 4 of 8 tracked behaviors improved today
+          - generic [ref=e1088]: 4 improved, 1 worsened, 3 stable · 24 sessions today vs 24 sessions (7-day avg)
+          - generic [ref=e1089]:
+            - generic [ref=e1090]:
+              - generic "-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-claude-spend" [ref=e1091]: claude-spend
+              - generic [ref=e1092]: 15 sessions · 40.9M tokens
+            - generic [ref=e1093]: "|"
+            - generic [ref=e1094]:
+              - generic "-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-distillVideo" [ref=e1095]: distillVideo
+              - generic [ref=e1096]: 3 sessions · 18.1M tokens
+            - generic [ref=e1097]: "|"
+            - generic [ref=e1098]:
+              - generic "-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-researchRegRoadmap" [ref=e1099]: researchRegRoadmap
+              - generic [ref=e1100]: 4 sessions · 11.3M tokens
+            - generic [ref=e1101]: "|"
+            - generic [ref=e1102]:
+              - generic "-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-nvidiaDGXSpark" [ref=e1103]: nvidiaDGXSpark
+              - generic [ref=e1104]: 2 sessions · 7.0M tokens
+      - generic [ref=e1105]:
+        - generic [ref=e1106]:
+          - generic [ref=e1107]: Prompt specificity
+          - generic [ref=e1108]:
+            - generic [ref=e1109]: 125 chars
+            - generic [ref=e1110]:
+              - img [ref=e1111]
+              - text: "-96%"
+          - generic [ref=e1113]: "7-day avg: 2795 chars"
+          - generic [ref=e1114] [cursor=pointer]:
+            - img [ref=e1115]
+            - text: by project
+        - generic [ref=e1117]:
+          - generic [ref=e1118]: Avg session length
+          - generic [ref=e1119]:
+            - generic [ref=e1120]: 51 turns
+            - generic [ref=e1121]:
+              - img [ref=e1122]
+              - text: "-82%"
+          - generic [ref=e1124]: "7-day avg: 289 turns"
+          - generic [ref=e1125] [cursor=pointer]:
+            - img [ref=e1126]
+            - text: by project
+        - generic [ref=e1128]:
+          - generic [ref=e1129]: /clear usage per session
+          - generic [ref=e1130]:
+            - generic [ref=e1131]: 1.0/session
+            - generic [ref=e1132]:
+              - img [ref=e1133]
+              - text: +300%
+          - generic [ref=e1135]: "7-day avg: 0.3/session"
+          - generic [ref=e1136] [cursor=pointer]:
+            - img [ref=e1137]
+            - text: by project
+        - generic [ref=e1139]:
+          - generic [ref=e1140]: Tokens per message
+          - generic [ref=e1141]:
+            - generic [ref=e1142]: 63K
+            - generic [ref=e1143]:
+              - img [ref=e1144]
+              - text: "-41%"
+          - generic [ref=e1146]: "7-day avg: 108K"
+          - generic [ref=e1147] [cursor=pointer]:
+            - img [ref=e1148]
+            - text: by project
+        - generic [ref=e1150]:
+          - generic [ref=e1151]: Output token ratio
+          - generic [ref=e1152]:
+            - generic [ref=e1153]: 0.0%
+            - generic [ref=e1154]:
+              - img [ref=e1155]
+              - text: +2%
+          - generic [ref=e1156]: "7-day avg: 0.0%"
+          - generic [ref=e1157] [cursor=pointer]:
+            - img [ref=e1158]
+            - text: by project
+        - generic [ref=e1160]:
+          - generic [ref=e1161]: Tool calls per message
+          - generic [ref=e1162]:
+            - generic [ref=e1163]: 7.2x
+            - generic [ref=e1164]:
+              - img [ref=e1165]
+              - text: "-2%"
+          - generic [ref=e1166]: "7-day avg: 7.3x"
+          - generic [ref=e1167] [cursor=pointer]:
+            - img [ref=e1168]
+            - text: by project
+        - generic [ref=e1170]:
+          - generic [ref=e1171]: Startup context size
+          - generic [ref=e1172]:
+            - generic [ref=e1173]: 32K
+            - generic [ref=e1174]:
+              - img [ref=e1175]
+              - text: "-31%"
+          - generic [ref=e1177]: "7-day avg: 47K"
+          - generic [ref=e1178] [cursor=pointer]:
+            - img [ref=e1179]
+            - text: by project
+        - generic [ref=e1181]:
+          - generic [ref=e1182]: Opus for simple tasks
+          - generic [ref=e1183]:
+            - generic [ref=e1184]: 13%
+            - generic [ref=e1185]:
+              - img [ref=e1186]
+              - text: 0%
+          - generic [ref=e1187]: "7-day avg: 0%"
+          - generic [ref=e1188] [cursor=pointer]:
+            - img [ref=e1189]
+            - text: by project
+  - generic [ref=e1191]:
+    - generic [ref=e1192]:
+      - heading "Tokens per Day How many tokens you used each day. Taller bars mean heavier usage days. The indigo portion is what Claude read, the teal is what Claude wrote." [level=3] [ref=e1193]:
+        - text: Tokens per Day
+        - generic: How many tokens you used each day. Taller bars mean heavier usage days. The indigo portion is what Claude read, the teal is what Claude wrote.
+      - generic [ref=e1195]:
+        - generic [ref=e1196]: Read by Claude (your messages + context)
+        - generic [ref=e1198]: Written by Claude (responses)
+    - generic [ref=e1200]:
+      - heading "By Model" [level=3] [ref=e1201]
+      - generic [ref=e1203]:
+        - generic [ref=e1206]:
+          - strong [ref=e1207]: Opus 4.6
+          - text: – 2725.9M (58.4%)
+        - generic [ref=e1210]:
+          - strong [ref=e1211]: Opus 4.5
+          - text: – 1923.2M (41.2%)
+        - generic [ref=e1214]:
+          - strong [ref=e1215]: qwen3-coder-next:cloud
+          - text: – 18.2M (0.4%)
+        - generic [ref=e1218]:
+          - strong [ref=e1219]: minimax-m2:cloud
+          - text: – 0 (0.0%)
+        - generic [ref=e1222]:
+          - strong [ref=e1223]: qwen3-coder:480b-cloud
+          - text: – 0 (0.0%)
+        - generic [ref=e1226]:
+          - strong [ref=e1227]: kimi-k2.5:cloud
+          - text: – 0 (0.0%)
+  - generic [ref=e1228]:
+    - generic [ref=e1229]:
+      - img [ref=e1231]
+      - generic [ref=e1232]:
+        - text: Most Expensive Prompts
+        - generic: Your top 20 individual messages ranked by how many tokens they used. Short vague messages like "Yes" often rank highest because they trigger long chains of tool calls where Claude tries to figure out what you meant.
+    - generic [ref=e1233]:
+      - generic [ref=e1234] [cursor=pointer]:
+        - generic [ref=e1235]: "1"
+        - generic [ref=e1236]:
+          - generic [ref=e1237]: 1 and then 2. Post setup of models, run 2 sets of translation, one for each model.
+          - generic [ref=e1238]: Jan 26 · Opus 4.5
+        - generic [ref=e1242]:
+          - generic [ref=e1243]: 35.2M
+          - generic [ref=e1244]: 35.2M read · 597 written
+          - generic [ref=e1245]: 0.0% out
+      - generic [ref=e1246] [cursor=pointer]:
+        - generic [ref=e1247]: "2"
+        - generic [ref=e1248]:
+          - generic [ref=e1249]: <task-notification> <task-id>bcf9e65</task-id> <output-file>/private/tmp/claude-501/-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-theBiologyOfTrauma/tasks/bcf9e65.output</output-file> <status>completed</status> <summary>Background command "Check OCR progress after 5 more minute
+          - generic [ref=e1250]: Jan 30 · Opus 4.5
+        - generic [ref=e1254]:
+          - generic [ref=e1255]: 33.1M
+          - generic [ref=e1256]: 33.1M read · 556 written
+          - generic [ref=e1257]: 0.0% out
+      - generic [ref=e1258] [cursor=pointer]:
+        - generic [ref=e1259]: "3"
+        - generic [ref=e1260]:
+          - generic [ref=e1261]: restart
+          - generic [ref=e1262]: Feb 3 · Opus 4.5
+        - generic [ref=e1266]:
+          - generic [ref=e1267]: 33.0M
+          - generic [ref=e1268]: 33.0M read · 447 written
+          - generic [ref=e1269]: 0.0% out
+      - generic [ref=e1270] [cursor=pointer]:
+        - generic [ref=e1271]: "4"
+        - generic [ref=e1272]:
+          - generic [ref=e1273]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Summary: 1. Primary Request and Intent: The user requested implementation of a \"Concept Graph\" feature to improve search quality for fact-findin"
+          - generic [ref=e1274]: Feb 2 · Opus 4.5
+        - generic [ref=e1278]:
+          - generic [ref=e1279]: 25.2M
+          - generic [ref=e1280]: 25.2M read · 468 written
+          - generic [ref=e1281]: 0.0% out
+      - generic [ref=e1282] [cursor=pointer]:
+        - generic [ref=e1283]: "5"
+        - generic [ref=e1284]:
+          - generic [ref=e1285]: For diagrams, create a section "Diagrams" at the bank of the book and place them there referenced by their captions. Scan and capture all diagrams in the Kindle version using Playwright.
+          - generic [ref=e1286]: Feb 1 · Opus 4.5
+        - generic [ref=e1290]:
+          - generic [ref=e1291]: 22.0M
+          - generic [ref=e1292]: 22.0M read · 557 written
+          - generic [ref=e1293]: 0.0% out
+      - generic [ref=e1294] [cursor=pointer]:
+        - generic [ref=e1295]: "6"
+        - generic [ref=e1296]:
+          - generic [ref=e1297]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me chronologically analyze the conversation: 1. **Session Start**: This was a continuation from a previous session that had been wor"
+          - generic [ref=e1298]: Jan 24 · Opus 4.5
+        - generic [ref=e1302]:
+          - generic [ref=e1303]: 21.5M
+          - generic [ref=e1304]: 21.5M read · 471 written
+          - generic [ref=e1305]: 0.0% out
+      - generic [ref=e1306] [cursor=pointer]:
+        - generic [ref=e1307]: "7"
+        - generic [ref=e1308]:
+          - generic [ref=e1309]: Mind Map and Transcript still stuck. Use Playwright to visualise and troubleshoot.
+          - generic [ref=e1310]: Feb 4 · Opus 4.5
+        - generic [ref=e1314]:
+          - generic [ref=e1315]: 20.2M
+          - generic [ref=e1316]: 20.2M read · 11K written
+          - generic [ref=e1317]: 0.1% out
+      - generic [ref=e1318] [cursor=pointer]:
+        - generic [ref=e1319]: "8"
+        - generic [ref=e1320]:
+          - generic [ref=e1321]: "The answer to: What does Lustig suggest that I do biochemically-wise to heal from my trauma? is incomplete. \"ccording to Dr. Robert Lustig in the transcript, healing from trauma biochemically requires addressing the 'four breaks' on the amygdala that are currently failing. Since the amygdala itself"
+          - generic [ref=e1322]: Feb 2 · Opus 4.5
+        - generic [ref=e1326]:
+          - generic [ref=e1327]: 19.2M
+          - generic [ref=e1328]: 19.2M read · 345 written
+          - generic [ref=e1329]: 0.0% out
+      - generic [ref=e1330] [cursor=pointer]:
+        - generic [ref=e1331]: "9"
+        - generic [ref=e1332]:
+          - generic [ref=e1333]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me chronologically analyze the conversation: 1. **Session continuation**: This is a continuation from a previous conversation. The s"
+          - generic [ref=e1334]: Feb 4 · Opus 4.6
+        - generic [ref=e1338]:
+          - generic [ref=e1339]: 19.1M
+          - generic [ref=e1340]: 19.1M read · 13K written
+          - generic [ref=e1341]: 0.1% out
+      - generic [ref=e1342] [cursor=pointer]:
+        - generic [ref=e1343]: "10"
+        - generic [ref=e1344]:
+          - generic [ref=e1345]: yes go ahead with mermaid
+          - generic [ref=e1346]: Feb 17 · Opus 4.6
+        - generic [ref=e1350]:
+          - generic [ref=e1351]: 18.2M
+          - generic [ref=e1352]: 18.2M read · 5.5K written
+          - generic [ref=e1353]: 0.0% out
+      - generic [ref=e1354] [cursor=pointer]:
+        - generic [ref=e1355]: "11"
+        - generic [ref=e1356]:
+          - generic [ref=e1357]: Research and run a suitable model across both nodes
+          - generic [ref=e1358]: Feb 11 · Opus 4.6
+        - generic [ref=e1362]:
+          - generic [ref=e1363]: 17.7M
+          - generic [ref=e1364]: 17.7M read · 11K written
+          - generic [ref=e1365]: 0.1% out
+      - generic [ref=e1366] [cursor=pointer]:
+        - generic [ref=e1367]: "12"
+        - generic [ref=e1368]:
+          - generic [ref=e1369]: "The right answer is found here: 28:03 Dr. Robert Lustig There are four things. 28:04 Dr. Robert Lustig There are four, four basic principles. 28:07 Dr. Robert Lustig Okay. 28:07 Dr. Robert Lustig You have to feed the gut. 28:08 Dr. Robert Lustig You have to protect the liver and you have to support"
+          - generic [ref=e1370]: Feb 1 · Opus 4.5
+        - generic [ref=e1373]:
+          - generic [ref=e1374]: 17.1M
+          - generic [ref=e1375]: 17.1M read · 271 written
+          - generic [ref=e1376]: 0.0% out
+      - generic [ref=e1377] [cursor=pointer]:
+        - generic [ref=e1378]: "13"
+        - generic [ref=e1379]:
+          - generic [ref=e1380]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Summary: 1. Primary Request and Intent: - Execute the plan in `docs/plans/2026-02-03-processing-mode-design.md` to add DGX vs Local Mac processi"
+          - generic [ref=e1381]: Feb 3 · Opus 4.5
+        - generic [ref=e1385]:
+          - generic [ref=e1386]: 17.0M
+          - generic [ref=e1387]: 17.0M read · 483 written
+          - generic [ref=e1388]: 0.0% out
+      - generic [ref=e1389] [cursor=pointer]:
+        - generic [ref=e1390]: "14"
+        - generic [ref=e1391]:
+          - generic [ref=e1392]: Subagent-Driven
+          - generic [ref=e1393]: Feb 23 · Opus 4.6
+        - generic [ref=e1397]:
+          - generic [ref=e1398]: 16.9M
+          - generic [ref=e1399]: 16.9M read · 11K written
+          - generic [ref=e1400]: 0.1% out
+      - generic [ref=e1401] [cursor=pointer]:
+        - generic [ref=e1402]: "15"
+        - generic [ref=e1403]:
+          - generic [ref=e1404]: when app is running, implement "Live Activities" on locked screen
+          - generic [ref=e1405]: Feb 20 · qwen3-coder-next:cloud
+        - generic [ref=e1409]:
+          - generic [ref=e1410]: 16.7M
+          - generic [ref=e1411]: 16.7M read · 542 written
+          - generic [ref=e1412]: 0.0% out
+      - generic [ref=e1413] [cursor=pointer]:
+        - generic [ref=e1414]: "16"
+        - generic [ref=e1415]:
+          - generic [ref=e1416]: ok
+          - generic [ref=e1417]: Jan 24 · Opus 4.5
+        - generic [ref=e1420]:
+          - generic [ref=e1421]: 16.4M
+          - generic [ref=e1422]: 16.4M read · 211 written
+          - generic [ref=e1423]: 0.0% out
+      - generic [ref=e1424] [cursor=pointer]:
+        - generic [ref=e1425]: "17"
+        - generic [ref=e1426]:
+          - generic [ref=e1427]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Summary: 1. Primary Request and Intent: - Continue from previous session where panel toggle bugs and saved searches were fixed - Push code to"
+          - generic [ref=e1428]: Feb 4 · Opus 4.5
+        - generic [ref=e1432]:
+          - generic [ref=e1433]: 16.3M
+          - generic [ref=e1434]: 16.3M read · 5.6K written
+          - generic [ref=e1435]: 0.0% out
+      - generic [ref=e1436] [cursor=pointer]:
+        - generic [ref=e1437]: "18"
+        - generic [ref=e1438]:
+          - generic [ref=e1439]: Leave ollama and its models out
+          - generic [ref=e1440]: Feb 4 · Opus 4.6
+        - generic [ref=e1444]:
+          - generic [ref=e1445]: 16.3M
+          - generic [ref=e1446]: 16.2M read · 13K written
+          - generic [ref=e1447]: 0.1% out
+      - generic [ref=e1448] [cursor=pointer]:
+        - generic [ref=e1449]: "19"
+        - generic [ref=e1450]:
+          - generic [ref=e1451]: "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. Analysis: Let me chronologically analyze this conversation to capture all important details: 1. **Session Start Context**: This is a continuation"
+          - generic [ref=e1452]: Jan 30 · Opus 4.5
+        - generic [ref=e1456]:
+          - generic [ref=e1457]: 16.2M
+          - generic [ref=e1458]: 16.2M read · 347 written
+          - generic [ref=e1459]: 0.0% out
+      - generic [ref=e1460] [cursor=pointer]:
+        - generic [ref=e1461]: "20"
+        - generic [ref=e1462]:
+          - generic [ref=e1463]: <task-notification> <task-id>ba9a541</task-id> <output-file>/private/tmp/claude-501/-Users-jansentang-Library-CloudStorage-Dropbox-Passive-Income-Ideas-theBiologyOfTrauma/tasks/ba9a541.output</output-file> <status>completed</status> <summary>Background command "Check download progress after 30 secon
+          - generic [ref=e1464]: Jan 30 · Opus 4.5
+        - generic [ref=e1467]:
+          - generic [ref=e1468]: 16.2M
+          - generic [ref=e1469]: 16.2M read · 201 written
+          - generic [ref=e1470]: 0.0% out
+  - generic [ref=e1471]:
+    - generic [ref=e1472]:
+      - img [ref=e1474]
+      - generic [ref=e1476]: All Sessions
+    - generic [ref=e1477]:
+      - textbox "Search prompts, models, projects..." [ref=e1478]
+      - generic [ref=e1479]: 205 sessions
+    - table [ref=e1481]:
+      - rowgroup [ref=e1482]:
+        - 'row "Date What you asked Model Which AI model was used. Opus is the most capable (and uses more tokens), Sonnet is faster and lighter. Total tokens The total number of tokens used in this conversation. Higher means more expensive. Long conversations cost more because Claude re-reads everything each turn. Read Tokens Claude read: your messages, the conversation history, files, and system context. This grows with each message because the full history gets re-sent. Written Tokens Claude wrote back: responses, code, explanations. Usually a small fraction of the total. Queries How many back-and-forth messages happened in this conversation, including automatic tool calls Claude made. Tool Calls Number of tool calls Claude made during this session (file reads, edits, searches, bash commands, etc)." [ref=e1483]':
+          - columnheader "Date" [ref=e1484] [cursor=pointer]
+          - columnheader "What you asked" [ref=e1485] [cursor=pointer]
+          - columnheader "Model Which AI model was used. Opus is the most capable (and uses more tokens), Sonnet is faster and lighter." [ref=e1486] [cursor=pointer]:
+            - text: Model
+            - generic: Which AI model was used. Opus is the most capable (and uses more tokens), Sonnet is faster and lighter.
+          - columnheader "Total tokens The total number of tokens used in this conversation. Higher means more expensive. Long conversations cost more because Claude re-reads everything each turn." [ref=e1487] [cursor=pointer]:
+            - text: Total tokens
+            - generic: The total number of tokens used in this conversation. Higher means more expensive. Long conversations cost more because Claude re-reads everything each turn.
+          - 'columnheader "Read Tokens Claude read: your messages, the conversation history, files, and system context. This grows with each message because the full history gets re-sent." [ref=e1488] [cursor=pointer]':
+            - text: Read
+            - generic: "Tokens Claude read: your messages, the conversation history, files, and system context. This grows with each message because the full history gets re-sent."
+          - 'columnheader "Written Tokens Claude wrote back: responses, code, explanations. Usually a small fraction of the total." [ref=e1489] [cursor=pointer]':
+            - text: Written
+            - generic: "Tokens Claude wrote back: responses, code, explanations. Usually a small fraction of the total."
+          - columnheader "Queries How many back-and-forth messages happened in this conversation, including automatic tool calls Claude made." [ref=e1490] [cursor=pointer]:
+            - text: Queries
+            - generic: How many back-and-forth messages happened in this conversation, including automatic tool calls Claude made.
+          - columnheader "Tool Calls Number of tool calls Claude made during this session (file reads, edits, searches, bash commands, etc)." [ref=e1491] [cursor=pointer]:
+            - text: Tool Calls
+            - generic: Number of tool calls Claude made during this session (file reads, edits, searches, bash commands, etc).
+      - rowgroup [ref=e1492]:
+        - row "Jan 30 theBiologyOfTrauma Using Playwright, build a HTML repo of this ebook (https://read.amazon.com/?asin=B0D1S92WXY&ref_=dbs_t_r_khbodl) which I have bought. Make sure to capture the appropriate metadata of the pages. I will Opus 4.5 305.1M 305.1M 6.9K 2957 1193" [ref=e1493] [cursor=pointer]:
+          - cell "Jan 30 theBiologyOfTrauma" [ref=e1494]:
+            - text: Jan 30
+            - generic "theBiologyOfTrauma" [ref=e1495]
+          - cell "Using Playwright, build a HTML repo of this ebook (https://read.amazon.com/?asin=B0D1S92WXY&ref_=dbs_t_r_khbodl) which I have bought. Make sure to capture the appropriate metadata of the pages. I will" [ref=e1496]:
+            - generic "Using Playwright, build a HTML repo of this ebook (https://read.amazon.com/?asin=B0D1S92WXY&ref_=dbs_t_r_khbodl) which I have bought. Make sure to capture the appropriate metadata of the pages. I will" [ref=e1497]
+          - cell "Opus 4.5" [ref=e1498]:
+            - generic [ref=e1499]: Opus 4.5
+          - cell "305.1M" [ref=e1501]
+          - cell "305.1M" [ref=e1502]
+          - cell "6.9K" [ref=e1503]
+          - cell "2957" [ref=e1504]
+          - cell "1193" [ref=e1505]
+        - row "Feb 10 researchRegRoadmap reload frontend Opus 4.6 240.6M 240.3M 225K 2168 1230" [ref=e1506] [cursor=pointer]:
+          - cell "Feb 10 researchRegRoadmap" [ref=e1507]:
+            - text: Feb 10
+            - generic "researchRegRoadmap" [ref=e1508]
+          - cell "reload frontend" [ref=e1509]:
+            - generic "reload frontend" [ref=e1510]
+          - cell "Opus 4.6" [ref=e1511]:
+            - generic [ref=e1512]: Opus 4.6
+          - cell "240.6M" [ref=e1514]
+          - cell "240.3M" [ref=e1515]
+          - cell "225K" [ref=e1516]
+          - cell "2168" [ref=e1517]
+          - cell "1230" [ref=e1518]
+        - row "Feb 16 distillVideo frontend and backend services should be started using nohup Opus 4.6 198.6M 198.5M 117K 1741 926" [ref=e1519] [cursor=pointer]:
+          - cell "Feb 16 distillVideo" [ref=e1520]:
+            - text: Feb 16
+            - generic "distillVideo" [ref=e1521]
+          - cell "frontend and backend services should be started using nohup" [ref=e1522]:
+            - generic "frontend and backend services should be started using nohup" [ref=e1523]
+          - cell "Opus 4.6" [ref=e1524]:
+            - generic [ref=e1525]: Opus 4.6
+          - cell "198.6M" [ref=e1527]
+          - cell "198.5M" [ref=e1528]
+          - cell "117K" [ref=e1529]
+          - cell "1741" [ref=e1530]
+          - cell "926" [ref=e1531]
+        - row "Jan 24 exploreFreedomVideos tell me about the claude code skill DGX Spark Opus 4.5 189.2M 189.2M 4.3K 1831 751" [ref=e1532] [cursor=pointer]:
+          - cell "Jan 24 exploreFreedomVideos" [ref=e1533]:
+            - text: Jan 24
+            - generic "exploreFreedomVideos" [ref=e1534]
+          - cell "tell me about the claude code skill DGX Spark" [ref=e1535]:
+            - generic "tell me about the claude code skill DGX Spark" [ref=e1536]
+          - cell "Opus 4.5" [ref=e1537]:
+            - generic [ref=e1538]: Opus 4.5
+          - cell "189.2M" [ref=e1540]
+          - cell "189.2M" [ref=e1541]
+          - cell "4.3K" [ref=e1542]
+          - cell "1831" [ref=e1543]
+          - cell "751" [ref=e1544]
+        - row "Jan 31 theBiologyOfTrauma where were we at? Opus 4.5 158.8M 158.8M 5.2K 1696 708" [ref=e1545] [cursor=pointer]:
+          - cell "Jan 31 theBiologyOfTrauma" [ref=e1546]:
+            - text: Jan 31
+            - generic "theBiologyOfTrauma" [ref=e1547]
+          - cell "where were we at?" [ref=e1548]:
+            - generic "where were we at?" [ref=e1549]
+          - cell "Opus 4.5" [ref=e1550]:
+            - generic [ref=e1551]: Opus 4.5
+          - cell "158.8M" [ref=e1553]
+          - cell "158.8M" [ref=e1554]
+          - cell "5.2K" [ref=e1555]
+          - cell "1696" [ref=e1556]
+          - cell "708" [ref=e1557]
+        - row "Feb 17 researchRegRoadmap pip install websockets && python3 scripts/gateway.py Opus 4.6 147.0M 146.9M 68K 1300 745" [ref=e1558] [cursor=pointer]:
+          - cell "Feb 17 researchRegRoadmap" [ref=e1559]:
+            - text: Feb 17
+            - generic "researchRegRoadmap" [ref=e1560]
+          - cell "pip install websockets && python3 scripts/gateway.py" [ref=e1561]:
+            - generic "pip install websockets && python3 scripts/gateway.py" [ref=e1562]
+          - cell "Opus 4.6" [ref=e1563]:
+            - generic [ref=e1564]: Opus 4.6
+          - cell "147.0M" [ref=e1566]
+          - cell "146.9M" [ref=e1567]
+          - cell "68K" [ref=e1568]
+          - cell "1300" [ref=e1569]
+          - cell "745" [ref=e1570]
+        - row "Feb 4 theBiologyOfTrauma As comprehensively as you can, document everything you know about the book, the metadata, embeddings etc in https://www.dropbox.com/scl/fo/uhe95cv91333mehzte62p/AOGpC4nMr_DQ5AfHibAzAk0?rlkey=2yytxvgdc Opus 4.6 141.8M 141.7M 79K 1294 670" [ref=e1571] [cursor=pointer]:
+          - cell "Feb 4 theBiologyOfTrauma" [ref=e1572]:
+            - text: Feb 4
+            - generic "theBiologyOfTrauma" [ref=e1573]
+          - cell "As comprehensively as you can, document everything you know about the book, the metadata, embeddings etc in https://www.dropbox.com/scl/fo/uhe95cv91333mehzte62p/AOGpC4nMr_DQ5AfHibAzAk0?rlkey=2yytxvgdc" [ref=e1574]:
+            - generic "As comprehensively as you can, document everything you know about the book, the metadata, embeddings etc in https://www.dropbox.com/scl/fo/uhe95cv91333mehzte62p/AOGpC4nMr_DQ5AfHibAzAk0?rlkey=2yytxvgdc" [ref=e1575]
+          - cell "Opus 4.6" [ref=e1576]:
+            - generic [ref=e1577]: Opus 4.6
+          - cell "141.8M" [ref=e1579]
+          - cell "141.7M" [ref=e1580]
+          - cell "79K" [ref=e1581]
+          - cell "1294" [ref=e1582]
+          - cell "670" [ref=e1583]
+        - row "Feb 4 video-diarization-app he video \"Dissolving Pain and Unlocking True Freedom\" actual has two speakers. Resolve this in the background. Opus 4.5 140.1M 140.1M 72K 1281 512" [ref=e1584] [cursor=pointer]:
+          - cell "Feb 4 video-diarization-app" [ref=e1585]:
+            - text: Feb 4
+            - generic "video-diarization-app" [ref=e1586]
+          - cell "he video \"Dissolving Pain and Unlocking True Freedom\" actual has two speakers. Resolve this in the background." [ref=e1587]:
+            - generic "he video" [ref=e1588]: he video "Dissolving Pain and Unlocking True Freedom" actual has two speakers. Resolve this in the background.
+          - cell "Opus 4.5" [ref=e1589]:
+            - generic [ref=e1590]: Opus 4.5
+          - cell "140.1M" [ref=e1592]
+          - cell "140.1M" [ref=e1593]
+          - cell "72K" [ref=e1594]
+          - cell "1281" [ref=e1595]
+          - cell "512" [ref=e1596]
+        - row "Feb 12 drAimieApigian register the service in projIndex and start all frontend and backend services Opus 4.6 136.2M 136.1M 46K 1193 645" [ref=e1597] [cursor=pointer]:
+          - cell "Feb 12 drAimieApigian" [ref=e1598]:
+            - text: Feb 12
+            - generic "drAimieApigian" [ref=e1599]
+          - cell "register the service in projIndex and start all frontend and backend services" [ref=e1600]:
+            - generic "register the service in projIndex and start all frontend and backend services" [ref=e1601]
+          - cell "Opus 4.6" [ref=e1602]:
+            - generic [ref=e1603]: Opus 4.6
+          - cell "136.2M" [ref=e1605]
+          - cell "136.1M" [ref=e1606]
+          - cell "46K" [ref=e1607]
+          - cell "1193" [ref=e1608]
+          - cell "645" [ref=e1609]
+        - row "Feb 12 aiNewsAlertFrontEnd exact steps for gmail access Opus 4.6 130.5M 130.5M 30K 1172 649" [ref=e1610] [cursor=pointer]:
+          - cell "Feb 12 aiNewsAlertFrontEnd" [ref=e1611]:
+            - text: Feb 12
+            - generic "aiNewsAlertFrontEnd" [ref=e1612]
+          - cell "exact steps for gmail access" [ref=e1613]:
+            - generic "exact steps for gmail access" [ref=e1614]
+          - cell "Opus 4.6" [ref=e1615]:
+            - generic [ref=e1616]: Opus 4.6
+          - cell "130.5M" [ref=e1618]
+          - cell "130.5M" [ref=e1619]
+          - cell "30K" [ref=e1620]
+          - cell "1172" [ref=e1621]
+          - cell "649" [ref=e1622]
+        - row "Feb 1 Passive-Income-Ideas Create a HTML5 front end which takes in a video (e.g. youtube) URL, downloads the video, speaker diarizes the monologue / dialoague with karoake style subtitling using any online DGX Spark. The video Opus 4.5 128.2M 128.2M 4.3K 1213 495" [ref=e1623] [cursor=pointer]:
+          - cell "Feb 1 Passive-Income-Ideas" [ref=e1624]:
+            - text: Feb 1
+            - generic "Passive-Income-Ideas" [ref=e1625]
+          - cell "Create a HTML5 front end which takes in a video (e.g. youtube) URL, downloads the video, speaker diarizes the monologue / dialoague with karoake style subtitling using any online DGX Spark. The video" [ref=e1626]:
+            - generic "Create a HTML5 front end which takes in a video (e.g. youtube) URL, downloads the video, speaker diarizes the monologue / dialoague with karoake style subtitling using any online DGX Spark. The video" [ref=e1627]
+          - cell "Opus 4.5" [ref=e1628]:
+            - generic [ref=e1629]: Opus 4.5
+          - cell "128.2M" [ref=e1631]
+          - cell "128.2M" [ref=e1632]
+          - cell "4.3K" [ref=e1633]
+          - cell "1213" [ref=e1634]
+          - cell "495" [ref=e1635]
+        - row "Feb 20 researchRegRoadmap Restart AI search service and run tests Opus 4.6 120.6M 120.5M 42K 990 608" [ref=e1636] [cursor=pointer]:
+          - cell "Feb 20 researchRegRoadmap" [ref=e1637]:
+            - text: Feb 20
+            - generic "researchRegRoadmap" [ref=e1638]
+          - cell "Restart AI search service and run tests" [ref=e1639]:
+            - generic "Restart AI search service and run tests" [ref=e1640]
+          - cell "Opus 4.6" [ref=e1641]:
+            - generic [ref=e1642]: Opus 4.6
+          - cell "120.6M" [ref=e1644]
+          - cell "120.5M" [ref=e1645]
+          - cell "42K" [ref=e1646]
+          - cell "990" [ref=e1647]
+          - cell "608" [ref=e1648]
+        - row "Feb 3 video-diarization-app Execute the plan in docs/plans/2026-02-03-processing-mode-design.md Opus 4.5 113.7M 113.7M 2.6K 1040 439" [ref=e1649] [cursor=pointer]:
+          - cell "Feb 3 video-diarization-app" [ref=e1650]:
+            - text: Feb 3
+            - generic "video-diarization-app" [ref=e1651]
+          - cell "Execute the plan in docs/plans/2026-02-03-processing-mode-design.md" [ref=e1652]:
+            - generic "Execute the plan in docs/plans/2026-02-03-processing-mode-design.md" [ref=e1653]
+          - cell "Opus 4.5" [ref=e1654]:
+            - generic [ref=e1655]: Opus 4.5
+          - cell "113.7M" [ref=e1657]
+          - cell "113.7M" [ref=e1658]
+          - cell "2.6K" [ref=e1659]
+          - cell "1040" [ref=e1660]
+          - cell "439" [ref=e1661]
+        - row "Feb 11 projIndex Why when I right-click, summaries become \"Loading summary\"? Opus 4.6 113.4M 113.4M 64K 1060 578" [ref=e1662] [cursor=pointer]:
+          - cell "Feb 11 projIndex" [ref=e1663]:
+            - text: Feb 11
+            - generic "projIndex" [ref=e1664]
+          - cell "Why when I right-click, summaries become \"Loading summary\"?" [ref=e1665]:
+            - generic "Why when I right-click, summaries become" [ref=e1666]: Why when I right-click, summaries become "Loading summary"?
+          - cell "Opus 4.6" [ref=e1667]:
+            - generic [ref=e1668]: Opus 4.6
+          - cell "113.4M" [ref=e1670]
+          - cell "113.4M" [ref=e1671]
+          - cell "64K" [ref=e1672]
+          - cell "1060" [ref=e1673]
+          - cell "578" [ref=e1674]
+        - 'row "Feb 2 Passive-Income-Ideas Playwright Test it with a query like: What does Lustig suggest that I do biochemically-wise to heal from my trauma? Opus 4.5 103.1M 103.1M 2.4K 993 407" [ref=e1675] [cursor=pointer]':
+          - cell "Feb 2 Passive-Income-Ideas" [ref=e1676]:
+            - text: Feb 2
+            - generic "Passive-Income-Ideas" [ref=e1677]
+          - 'cell "Playwright Test it with a query like: What does Lustig suggest that I do biochemically-wise to heal from my trauma?" [ref=e1678]':
+            - 'generic "Playwright Test it with a query like: What does Lustig suggest that I do biochemically-wise to heal from my trauma?" [ref=e1679]'
+          - cell "Opus 4.5" [ref=e1680]:
+            - generic [ref=e1681]: Opus 4.5
+          - cell "103.1M" [ref=e1683]
+          - cell "103.1M" [ref=e1684]
+          - cell "2.4K" [ref=e1685]
+          - cell "993" [ref=e1686]
+          - cell "407" [ref=e1687]
+        - row "Feb 5 drAimieApigian based on the resilience skill, make an assessment if the project needs to be enhanced? Opus 4.5 102.7M 102.7M 91K 945 419" [ref=e1688] [cursor=pointer]:
+          - cell "Feb 5 drAimieApigian" [ref=e1689]:
+            - text: Feb 5
+            - generic "drAimieApigian" [ref=e1690]
+          - cell "based on the resilience skill, make an assessment if the project needs to be enhanced?" [ref=e1691]:
+            - generic "based on the resilience skill, make an assessment if the project needs to be enhanced?" [ref=e1692]
+          - cell "Opus 4.5" [ref=e1693]:
+            - generic [ref=e1694]: Opus 4.5
+          - cell "102.7M" [ref=e1696]
+          - cell "102.7M" [ref=e1697]
+          - cell "91K" [ref=e1698]
+          - cell "945" [ref=e1699]
+          - cell "419" [ref=e1700]
+        - row "Feb 19 researchRegRoadmap commit this Opus 4.6 99.6M 99.5M 34K 874 476" [ref=e1701] [cursor=pointer]:
+          - cell "Feb 19 researchRegRoadmap" [ref=e1702]:
+            - text: Feb 19
+            - generic "researchRegRoadmap" [ref=e1703]
+          - cell "commit this" [ref=e1704]:
+            - generic "commit this" [ref=e1705]
+          - cell "Opus 4.6" [ref=e1706]:
+            - generic [ref=e1707]: Opus 4.6
+          - cell "99.6M" [ref=e1709]
+          - cell "99.5M" [ref=e1710]
+          - cell "34K" [ref=e1711]
+          - cell "874" [ref=e1712]
+          - cell "476" [ref=e1713]
+        - row "Jan 26 subtitleAndTranslate review the code in this repo Opus 4.5 92.7M 92.7M 2.7K 956 377" [ref=e1714] [cursor=pointer]:
+          - cell "Jan 26 subtitleAndTranslate" [ref=e1715]:
+            - text: Jan 26
+            - generic "subtitleAndTranslate" [ref=e1716]
+          - cell "review the code in this repo" [ref=e1717]:
+            - generic "review the code in this repo" [ref=e1718]
+          - cell "Opus 4.5" [ref=e1719]:
+            - generic [ref=e1720]: Opus 4.5
+          - cell "92.7M" [ref=e1722]
+          - cell "92.7M" [ref=e1723]
+          - cell "2.7K" [ref=e1724]
+          - cell "956" [ref=e1725]
+          - cell "377" [ref=e1726]
+        - 'row "Feb 9 researchRegRoadmap [Pasted text #1 +9 lines] Research using multiple agents, putting the research in MD files according to country (subfolder) and regulations (sub sub folder) Opus 4.6 92.1M 92.1M 25K 957 451" [ref=e1727] [cursor=pointer]':
+          - cell "Feb 9 researchRegRoadmap" [ref=e1728]:
+            - text: Feb 9
+            - generic "researchRegRoadmap" [ref=e1729]
+          - 'cell "[Pasted text #1 +9 lines] Research using multiple agents, putting the research in MD files according to country (subfolder) and regulations (sub sub folder)" [ref=e1730]':
+            - 'generic "[Pasted text #1 +9 lines] Research using multiple agents, putting the research in MD files according to country (subfolder) and regulations (sub sub folder)" [ref=e1731]'
+          - cell "Opus 4.6" [ref=e1732]:
+            - generic [ref=e1733]: Opus 4.6
+          - cell "92.1M" [ref=e1735]
+          - cell "92.1M" [ref=e1736]
+          - cell "25K" [ref=e1737]
+          - cell "957" [ref=e1738]
+          - cell "451" [ref=e1739]
+        - row "Feb 15 projIndex For repos which are git enabled, have an option to show the last 2 summarised git commit changes Opus 4.6 86.8M 86.8M 30K 802 467" [ref=e1740] [cursor=pointer]:
+          - cell "Feb 15 projIndex" [ref=e1741]:
+            - text: Feb 15
+            - generic "projIndex" [ref=e1742]
+          - cell "For repos which are git enabled, have an option to show the last 2 summarised git commit changes" [ref=e1743]:
+            - generic "For repos which are git enabled, have an option to show the last 2 summarised git commit changes" [ref=e1744]
+          - cell "Opus 4.6" [ref=e1745]:
+            - generic [ref=e1746]: Opus 4.6
+          - cell "86.8M" [ref=e1748]
+          - cell "86.8M" [ref=e1749]
+          - cell "30K" [ref=e1750]
+          - cell "802" [ref=e1751]
+          - cell "467" [ref=e1752]
+        - row "Feb 6 drAimieApigian Rewrite the processing scripts on both DGX Sparks in a more resilient fashion Opus 4.6 78.7M 78.6M 91K 721 400" [ref=e1753] [cursor=pointer]:
+          - cell "Feb 6 drAimieApigian" [ref=e1754]:
+            - text: Feb 6
+            - generic "drAimieApigian" [ref=e1755]
+          - cell "Rewrite the processing scripts on both DGX Sparks in a more resilient fashion" [ref=e1756]:
+            - generic "Rewrite the processing scripts on both DGX Sparks in a more resilient fashion" [ref=e1757]
+          - cell "Opus 4.6" [ref=e1758]:
+            - generic [ref=e1759]: Opus 4.6
+          - cell "78.7M" [ref=e1761]
+          - cell "78.6M" [ref=e1762]
+          - cell "91K" [ref=e1763]
+          - cell "721" [ref=e1764]
+          - cell "400" [ref=e1765]
+        - 'row "Feb 3 nvidiaDGXSpark I want to create a macOS app which when run lodges itself in the menubar. The app tells me which DGX Spark is currently online, and the best way to reach it (directly: .local or by hostname, tailscale Opus 4.5 78.0M 78.0M 2.4K 774 311" [ref=e1766] [cursor=pointer]':
+          - cell "Feb 3 nvidiaDGXSpark" [ref=e1767]:
+            - text: Feb 3
+            - generic "nvidiaDGXSpark" [ref=e1768]
+          - 'cell "I want to create a macOS app which when run lodges itself in the menubar. The app tells me which DGX Spark is currently online, and the best way to reach it (directly: .local or by hostname, tailscale" [ref=e1769]':
+            - 'generic "I want to create a macOS app which when run lodges itself in the menubar. The app tells me which DGX Spark is currently online, and the best way to reach it (directly: .local or by hostname, tailscale" [ref=e1770]'
+          - cell "Opus 4.5" [ref=e1771]:
+            - generic [ref=e1772]: Opus 4.5
+          - cell "78.0M" [ref=e1774]
+          - cell "78.0M" [ref=e1775]
+          - cell "2.4K" [ref=e1776]
+          - cell "774" [ref=e1777]
+          - cell "311" [ref=e1778]
+        - row "Feb 1 theBiologyOfTrauma For diagrams, create a section \"Diagrams\" at the bank of the book and place them there referenced by their captions Opus 4.5 76.3M 76.3M 1.6K 807 337" [ref=e1779] [cursor=pointer]:
+          - cell "Feb 1 theBiologyOfTrauma" [ref=e1780]:
+            - text: Feb 1
+            - generic "theBiologyOfTrauma" [ref=e1781]
+          - cell "For diagrams, create a section \"Diagrams\" at the bank of the book and place them there referenced by their captions" [ref=e1782]:
+            - generic "For diagrams, create a section" [ref=e1783]: For diagrams, create a section "Diagrams" at the bank of the book and place them there referenced by their captions
+          - cell "Opus 4.5" [ref=e1784]:
+            - generic [ref=e1785]: Opus 4.5
+          - cell "76.3M" [ref=e1787]
+          - cell "76.3M" [ref=e1788]
+          - cell "1.6K" [ref=e1789]
+          - cell "807" [ref=e1790]
+          - cell "337" [ref=e1791]
+        - 'row "Jan 24 learningChineseApp [Pasted text #1 +253 lines] Opus 4.5 65.4M 65.4M 3.0K 651 334" [ref=e1792] [cursor=pointer]':
+          - cell "Jan 24 learningChineseApp" [ref=e1793]:
+            - text: Jan 24
+            - generic "learningChineseApp" [ref=e1794]
+          - 'cell "[Pasted text #1 +253 lines]" [ref=e1795]':
+            - 'generic "[Pasted text #1 +253 lines]" [ref=e1796]'
+          - cell "Opus 4.5" [ref=e1797]:
+            - generic [ref=e1798]: Opus 4.5
+          - cell "65.4M" [ref=e1800]
+          - cell "65.4M" [ref=e1801]
+          - cell "3.0K" [ref=e1802]
+          - cell "651" [ref=e1803]
+          - cell "334" [ref=e1804]
+        - row "Feb 7 drAimieApigian I have multiple neo4j and qrant instances running locally - for this, make both services run on high ports Opus 4.6 64.4M 64.3M 51K 577 342" [ref=e1805] [cursor=pointer]:
+          - cell "Feb 7 drAimieApigian" [ref=e1806]:
+            - text: Feb 7
+            - generic "drAimieApigian" [ref=e1807]
+          - cell "I have multiple neo4j and qrant instances running locally - for this, make both services run on high ports" [ref=e1808]:
+            - generic "I have multiple neo4j and qrant instances running locally - for this, make both services run on high ports" [ref=e1809]
+          - cell "Opus 4.6" [ref=e1810]:
+            - generic [ref=e1811]: Opus 4.6
+          - cell "64.4M" [ref=e1813]
+          - cell "64.3M" [ref=e1814]
+          - cell "51K" [ref=e1815]
+          - cell "577" [ref=e1816]
+          - cell "342" [ref=e1817]
+        - 'row "Feb 12 trackLocation iOS: build Live Activities notification which comes up when the iPHone is locked and the app is running Opus 4.6 64.2M 64.2M 23K 527 323" [ref=e1818] [cursor=pointer]':
+          - cell "Feb 12 trackLocation" [ref=e1819]:
+            - text: Feb 12
+            - generic "trackLocation" [ref=e1820]
+          - 'cell "iOS: build Live Activities notification which comes up when the iPHone is locked and the app is running" [ref=e1821]':
+            - 'generic "iOS: build Live Activities notification which comes up when the iPHone is locked and the app is running" [ref=e1822]'
+          - cell "Opus 4.6" [ref=e1823]:
+            - generic [ref=e1824]: Opus 4.6
+          - cell "64.2M" [ref=e1826]
+          - cell "64.2M" [ref=e1827]
+          - cell "23K" [ref=e1828]
+          - cell "527" [ref=e1829]
+          - cell "323" [ref=e1830]
+        - row "Feb 4 drAimieApigian start the service and open the front end Opus 4.5 62.5M 62.5M 85K 586 294" [ref=e1831] [cursor=pointer]:
+          - cell "Feb 4 drAimieApigian" [ref=e1832]:
+            - text: Feb 4
+            - generic "drAimieApigian" [ref=e1833]
+          - cell "start the service and open the front end" [ref=e1834]:
+            - generic "start the service and open the front end" [ref=e1835]
+          - cell "Opus 4.5" [ref=e1836]:
+            - generic [ref=e1837]: Opus 4.5
+          - cell "62.5M" [ref=e1839]
+          - cell "62.5M" [ref=e1840]
+          - cell "85K" [ref=e1841]
+          - cell "586" [ref=e1842]
+          - cell "294" [ref=e1843]
+        - row "Feb 14 projIndex open frontend Opus 4.6 61.3M 61.3M 28K 606 348" [ref=e1844] [cursor=pointer]:
+          - cell "Feb 14 projIndex" [ref=e1845]:
+            - text: Feb 14
+            - generic "projIndex" [ref=e1846]
+          - cell "open frontend" [ref=e1847]:
+            - generic "open frontend" [ref=e1848]
+          - cell "Opus 4.6" [ref=e1849]:
+            - generic [ref=e1850]: Opus 4.6
+          - cell "61.3M" [ref=e1852]
+          - cell "61.3M" [ref=e1853]
+          - cell "28K" [ref=e1854]
+          - cell "606" [ref=e1855]
+          - cell "348" [ref=e1856]
+        - row "Feb 17 researchRegRoadmap commit this Opus 4.6 60.5M 60.4M 27K 595 353" [ref=e1857] [cursor=pointer]:
+          - cell "Feb 17 researchRegRoadmap" [ref=e1858]:
+            - text: Feb 17
+            - generic "researchRegRoadmap" [ref=e1859]
+          - cell "commit this" [ref=e1860]:
+            - generic "commit this" [ref=e1861]
+          - cell "Opus 4.6" [ref=e1862]:
+            - generic [ref=e1863]: Opus 4.6
+          - cell "60.5M" [ref=e1865]
+          - cell "60.4M" [ref=e1866]
+          - cell "27K" [ref=e1867]
+          - cell "595" [ref=e1868]
+          - cell "353" [ref=e1869]
+        - row "Feb 11 exo Deep dive this repo and give me a run down of key abilities Opus 4.6 50.2M 50.2M 25K 457 253" [ref=e1870] [cursor=pointer]:
+          - cell "Feb 11 exo" [ref=e1871]:
+            - text: Feb 11
+            - generic "exo" [ref=e1872]
+          - cell "Deep dive this repo and give me a run down of key abilities" [ref=e1873]:
+            - generic "Deep dive this repo and give me a run down of key abilities" [ref=e1874]
+          - cell "Opus 4.6" [ref=e1875]:
+            - generic [ref=e1876]: Opus 4.6
+          - cell "50.2M" [ref=e1878]
+          - cell "50.2M" [ref=e1879]
+          - cell "25K" [ref=e1880]
+          - cell "457" [ref=e1881]
+          - cell "253" [ref=e1882]
+        - row "Feb 16 websiteTranslationTool Build a website translation tool which takes a URL as input e.g. localhost:12345/websiteTranslate/<URL content to be translated> and returns to the user the translated content overlaid on the same web Opus 4.6 48.3M 48.3M 41K 462 251" [ref=e1883] [cursor=pointer]:
+          - cell "Feb 16 websiteTranslationTool" [ref=e1884]:
+            - text: Feb 16
+            - generic "websiteTranslationTool" [ref=e1885]
+          - cell "Build a website translation tool which takes a URL as input e.g. localhost:12345/websiteTranslate/<URL content to be translated> and returns to the user the translated content overlaid on the same web" [ref=e1886]:
+            - generic "Build a website translation tool which takes a URL as input e.g. localhost:12345/websiteTranslate/<URL content to be translated> and returns to the user the translated content overlaid on the same web" [ref=e1887]
+          - cell "Opus 4.6" [ref=e1888]:
+            - generic [ref=e1889]: Opus 4.6
+          - cell "48.3M" [ref=e1891]
+          - cell "48.3M" [ref=e1892]
+          - cell "41K" [ref=e1893]
+          - cell "462" [ref=e1894]
+          - cell "251" [ref=e1895]
+        - row "Feb 3 video-diarization-app where are we at? Opus 4.5 47.9M 47.9M 1.1K 461 195" [ref=e1896] [cursor=pointer]:
+          - cell "Feb 3 video-diarization-app" [ref=e1897]:
+            - text: Feb 3
+            - generic "video-diarization-app" [ref=e1898]
+          - cell "where are we at?" [ref=e1899]:
+            - generic "where are we at?" [ref=e1900]
+          - cell "Opus 4.5" [ref=e1901]:
+            - generic [ref=e1902]: Opus 4.5
+          - cell "47.9M" [ref=e1904]
+          - cell "47.9M" [ref=e1905]
+          - cell "1.1K" [ref=e1906]
+          - cell "461" [ref=e1907]
+          - cell "195" [ref=e1908]
+        - row "Feb 8 Passive-Income-Ideas I want this repo to be all about OCR, especially models which can run on Ollama and on the DGX Spark. Document everything learnt incrementally (claude code skill) to ~/Library/CloudStorage/Dropbox/cla Opus 4.6 47.8M 47.8M 28K 470 250" [ref=e1909] [cursor=pointer]:
+          - cell "Feb 8 Passive-Income-Ideas" [ref=e1910]:
+            - text: Feb 8
+            - generic "Passive-Income-Ideas" [ref=e1911]
+          - cell "I want this repo to be all about OCR, especially models which can run on Ollama and on the DGX Spark. Document everything learnt incrementally (claude code skill) to ~/Library/CloudStorage/Dropbox/cla" [ref=e1912]:
+            - generic "I want this repo to be all about OCR, especially models which can run on Ollama and on the DGX Spark. Document everything learnt incrementally (claude code skill) to ~/Library/CloudStorage/Dropbox/cla" [ref=e1913]
+          - cell "Opus 4.6" [ref=e1914]:
+            - generic [ref=e1915]: Opus 4.6
+          - cell "47.8M" [ref=e1917]
+          - cell "47.8M" [ref=e1918]
+          - cell "28K" [ref=e1919]
+          - cell "470" [ref=e1920]
+          - cell "250" [ref=e1921]
+        - row "Feb 8 drAimieApigian Restart the service Opus 4.6 44.5M 44.5M 11K 419 229" [ref=e1922] [cursor=pointer]:
+          - cell "Feb 8 drAimieApigian" [ref=e1923]:
+            - text: Feb 8
+            - generic "drAimieApigian" [ref=e1924]
+          - cell "Restart the service" [ref=e1925]:
+            - generic "Restart the service" [ref=e1926]
+          - cell "Opus 4.6" [ref=e1927]:
+            - generic [ref=e1928]: Opus 4.6
+          - cell "44.5M" [ref=e1930]
+          - cell "44.5M" [ref=e1931]
+          - cell "11K" [ref=e1932]
+          - cell "419" [ref=e1933]
+          - cell "229" [ref=e1934]
+        - row "Jan 23 exploreOllamaTelemetry open dmg Opus 4.5 43.6M 43.6M 2.6K 553 225" [ref=e1935] [cursor=pointer]:
+          - cell "Jan 23 exploreOllamaTelemetry" [ref=e1936]:
+            - text: Jan 23
+            - generic "exploreOllamaTelemetry" [ref=e1937]
+          - cell "open dmg" [ref=e1938]:
+            - generic "open dmg" [ref=e1939]
+          - cell "Opus 4.5" [ref=e1940]:
+            - generic [ref=e1941]: Opus 4.5
+          - cell "43.6M" [ref=e1943]
+          - cell "43.6M" [ref=e1944]
+          - cell "2.6K" [ref=e1945]
+          - cell "553" [ref=e1946]
+          - cell "225" [ref=e1947]
+        - row "Feb 11 researchOpenMed Deep dive and learn all about https://openmed.life/, especially the AI models featured and how to deploy them. Create a claude code skill around your learnings, especially with regards to deploying an Opus 4.6 42.2M 42.2M 44K 403 214" [ref=e1948] [cursor=pointer]:
+          - cell "Feb 11 researchOpenMed" [ref=e1949]:
+            - text: Feb 11
+            - generic "researchOpenMed" [ref=e1950]
+          - cell "Deep dive and learn all about https://openmed.life/, especially the AI models featured and how to deploy them. Create a claude code skill around your learnings, especially with regards to deploying an" [ref=e1951]:
+            - generic "Deep dive and learn all about https://openmed.life/, especially the AI models featured and how to deploy them. Create a claude code skill around your learnings, especially with regards to deploying an" [ref=e1952]
+          - cell "Opus 4.6" [ref=e1953]:
+            - generic [ref=e1954]: Opus 4.6
+          - cell "42.2M" [ref=e1956]
+          - cell "42.2M" [ref=e1957]
+          - cell "44K" [ref=e1958]
+          - cell "403" [ref=e1959]
+          - cell "214" [ref=e1960]
+        - row "Feb 20 distillVideo commit this Opus 4.6 41.5M 41.5M 17K 377 205" [ref=e1961] [cursor=pointer]:
+          - cell "Feb 20 distillVideo" [ref=e1962]:
+            - text: Feb 20
+            - generic "distillVideo" [ref=e1963]
+          - cell "commit this" [ref=e1964]:
+            - generic "commit this" [ref=e1965]
+          - cell "Opus 4.6" [ref=e1966]:
+            - generic [ref=e1967]: Opus 4.6
+          - cell "41.5M" [ref=e1969]
+          - cell "41.5M" [ref=e1970]
+          - cell "17K" [ref=e1971]
+          - cell "377" [ref=e1972]
+          - cell "205" [ref=e1973]
+        - row "Feb 22 nvidiaDGXSpark continue with deployment Opus 4.6 34.5M 34.5M 24K 349 190" [ref=e1974] [cursor=pointer]:
+          - cell "Feb 22 nvidiaDGXSpark" [ref=e1975]:
+            - text: Feb 22
+            - generic "nvidiaDGXSpark" [ref=e1976]
+          - cell "continue with deployment" [ref=e1977]:
+            - generic "continue with deployment" [ref=e1978]
+          - cell "Opus 4.6" [ref=e1979]:
+            - generic [ref=e1980]: Opus 4.6
+          - cell "34.5M" [ref=e1982]
+          - cell "34.5M" [ref=e1983]
+          - cell "24K" [ref=e1984]
+          - cell "349" [ref=e1985]
+          - cell "190" [ref=e1986]
+        - row "Feb 22 researchRegRoadmap continue with batch 2 Opus 4.6 34.4M 34.4M 13K 289 157" [ref=e1987] [cursor=pointer]:
+          - cell "Feb 22 researchRegRoadmap" [ref=e1988]:
+            - text: Feb 22
+            - generic "researchRegRoadmap" [ref=e1989]
+          - cell "continue with batch 2" [ref=e1990]:
+            - generic "continue with batch 2" [ref=e1991]
+          - cell "Opus 4.6" [ref=e1992]:
+            - generic [ref=e1993]: Opus 4.6
+          - cell "34.4M" [ref=e1995]
+          - cell "34.4M" [ref=e1996]
+          - cell "13K" [ref=e1997]
+          - cell "289" [ref=e1998]
+          - cell "157" [ref=e1999]
+        - row "Jan 31 cloneVoice Clone the voice in this video using NVIDIA DGX Spark and native libraries (NeMo). Do research on how to do so. https://www.youtube.com/watch?v=ujROu2filpo Opus 4.5 32.9M 32.9M 812 357 149" [ref=e2000] [cursor=pointer]:
+          - cell "Jan 31 cloneVoice" [ref=e2001]:
+            - text: Jan 31
+            - generic "cloneVoice" [ref=e2002]
+          - cell "Clone the voice in this video using NVIDIA DGX Spark and native libraries (NeMo). Do research on how to do so. https://www.youtube.com/watch?v=ujROu2filpo" [ref=e2003]:
+            - generic "Clone the voice in this video using NVIDIA DGX Spark and native libraries (NeMo). Do research on how to do so. https://www.youtube.com/watch?v=ujROu2filpo" [ref=e2004]
+          - cell "Opus 4.5" [ref=e2005]:
+            - generic [ref=e2006]: Opus 4.5
+          - cell "32.9M" [ref=e2008]
+          - cell "32.9M" [ref=e2009]
+          - cell "812" [ref=e2010]
+          - cell "357" [ref=e2011]
+          - cell "149" [ref=e2012]
+        - 'row "Jan 18 rideSGBuses iOS: Once the user indicates the boarding of a bus (and the intended stop), use Priority Notifications (which appear on the iOS device locked screen) during the boarding period Opus 4.5 32.0M 32.0M 2.6K 381 184" [ref=e2013] [cursor=pointer]':
+          - cell "Jan 18 rideSGBuses" [ref=e2014]:
+            - text: Jan 18
+            - generic "rideSGBuses" [ref=e2015]
+          - 'cell "iOS: Once the user indicates the boarding of a bus (and the intended stop), use Priority Notifications (which appear on the iOS device locked screen) during the boarding period" [ref=e2016]':
+            - 'generic "iOS: Once the user indicates the boarding of a bus (and the intended stop), use Priority Notifications (which appear on the iOS device locked screen) during the boarding period" [ref=e2017]'
+          - cell "Opus 4.5" [ref=e2018]:
+            - generic [ref=e2019]: Opus 4.5
+          - cell "32.0M" [ref=e2021]
+          - cell "32.0M" [ref=e2022]
+          - cell "2.6K" [ref=e2023]
+          - cell "381" [ref=e2024]
+          - cell "184" [ref=e2025]
+        - row "Feb 12 nvidiaDGXSpark you have anything on dgx menu bar? Opus 4.6 31.1M 31.1M 32K 301 160" [ref=e2026] [cursor=pointer]:
+          - cell "Feb 12 nvidiaDGXSpark" [ref=e2027]:
+            - text: Feb 12
+            - generic "nvidiaDGXSpark" [ref=e2028]
+          - cell "you have anything on dgx menu bar?" [ref=e2029]:
+            - generic "you have anything on dgx menu bar?" [ref=e2030]
+          - cell "Opus 4.6" [ref=e2031]:
+            - generic [ref=e2032]: Opus 4.6
+          - cell "31.1M" [ref=e2034]
+          - cell "31.1M" [ref=e2035]
+          - cell "32K" [ref=e2036]
+          - cell "301" [ref=e2037]
+          - cell "160" [ref=e2038]
+        - row "Feb 22 researchRegRoadmap where do I put the proxy configs? Opus 4.6 29.8M 29.7M 16K 284 161" [ref=e2039] [cursor=pointer]:
+          - cell "Feb 22 researchRegRoadmap" [ref=e2040]:
+            - text: Feb 22
+            - generic "researchRegRoadmap" [ref=e2041]
+          - cell "where do I put the proxy configs?" [ref=e2042]:
+            - generic "where do I put the proxy configs?" [ref=e2043]
+          - cell "Opus 4.6" [ref=e2044]:
+            - generic [ref=e2045]: Opus 4.6
+          - cell "29.8M" [ref=e2047]
+          - cell "29.7M" [ref=e2048]
+          - cell "16K" [ref=e2049]
+          - cell "284" [ref=e2050]
+          - cell "161" [ref=e2051]
+        - row "Feb 5 video-diarization-app Based on the resilience skill, review this app for enhancement Opus 4.5 29.2M 29.2M 25K 267 114" [ref=e2052] [cursor=pointer]:
+          - cell "Feb 5 video-diarization-app" [ref=e2053]:
+            - text: Feb 5
+            - generic "video-diarization-app" [ref=e2054]
+          - cell "Based on the resilience skill, review this app for enhancement" [ref=e2055]:
+            - generic "Based on the resilience skill, review this app for enhancement" [ref=e2056]
+          - cell "Opus 4.5" [ref=e2057]:
+            - generic [ref=e2058]: Opus 4.5
+          - cell "29.2M" [ref=e2060]
+          - cell "29.2M" [ref=e2061]
+          - cell "25K" [ref=e2062]
+          - cell "267" [ref=e2063]
+          - cell "114" [ref=e2064]
+        - row "Feb 8 nvidiaDGXSpark Research if host-to-host connection via thunderbolt / USB3 is possible between a M4 macbook air and the ASUS OEM DGX Spark. If so, how to do so? Opus 4.6 26.4M 26.4M 13K 269 139" [ref=e2065] [cursor=pointer]:
+          - cell "Feb 8 nvidiaDGXSpark" [ref=e2066]:
+            - text: Feb 8
+            - generic "nvidiaDGXSpark" [ref=e2067]
+          - cell "Research if host-to-host connection via thunderbolt / USB3 is possible between a M4 macbook air and the ASUS OEM DGX Spark. If so, how to do so?" [ref=e2068]:
+            - generic "Research if host-to-host connection via thunderbolt / USB3 is possible between a M4 macbook air and the ASUS OEM DGX Spark. If so, how to do so?" [ref=e2069]
+          - cell "Opus 4.6" [ref=e2070]:
+            - generic [ref=e2071]: Opus 4.6
+          - cell "26.4M" [ref=e2073]
+          - cell "26.4M" [ref=e2074]
+          - cell "13K" [ref=e2075]
+          - cell "269" [ref=e2076]
+          - cell "139" [ref=e2077]
+        - row "Feb 7 rideSGBuses open xcode Opus 4.6 26.3M 26.3M 19K 257 133" [ref=e2078] [cursor=pointer]:
+          - cell "Feb 7 rideSGBuses" [ref=e2079]:
+            - text: Feb 7
+            - generic "rideSGBuses" [ref=e2080]
+          - cell "open xcode" [ref=e2081]:
+            - generic "open xcode" [ref=e2082]
+          - cell "Opus 4.6" [ref=e2083]:
+            - generic [ref=e2084]: Opus 4.6
+          - cell "26.3M" [ref=e2086]
+          - cell "26.3M" [ref=e2087]
+          - cell "19K" [ref=e2088]
+          - cell "257" [ref=e2089]
+          - cell "133" [ref=e2090]
+        - 'row "Feb 23 distillVideo [Pasted text #1 +70 lines] Write the implementation plan to perform the replacement Opus 4.6 23.7M 23.7M 15K 204 125" [ref=e2091] [cursor=pointer]':
+          - cell "Feb 23 distillVideo" [ref=e2092]:
+            - text: Feb 23
+            - generic "distillVideo" [ref=e2093]
+          - 'cell "[Pasted text #1 +70 lines] Write the implementation plan to perform the replacement" [ref=e2094]':
+            - 'generic "[Pasted text #1 +70 lines] Write the implementation plan to perform the replacement" [ref=e2095]'
+          - cell "Opus 4.6" [ref=e2096]:
+            - generic [ref=e2097]: Opus 4.6
+          - cell "23.7M" [ref=e2099]
+          - cell "23.7M" [ref=e2100]
+          - cell "15K" [ref=e2101]
+          - cell "204" [ref=e2102]
+          - cell "125" [ref=e2103]
+        - row "Feb 19 researchRegRoadmap make sure dmg has /Applications symlink in it Opus 4.6 23.1M 23.1M 9.2K 227 127" [ref=e2104] [cursor=pointer]:
+          - cell "Feb 19 researchRegRoadmap" [ref=e2105]:
+            - text: Feb 19
+            - generic "researchRegRoadmap" [ref=e2106]
+          - cell "make sure dmg has /Applications symlink in it" [ref=e2107]:
+            - generic "make sure dmg has /Applications symlink in it" [ref=e2108]
+          - cell "Opus 4.6" [ref=e2109]:
+            - generic [ref=e2110]: Opus 4.6
+          - cell "23.1M" [ref=e2112]
+          - cell "23.1M" [ref=e2113]
+          - cell "9.2K" [ref=e2114]
+          - cell "227" [ref=e2115]
+          - cell "127" [ref=e2116]
+        - row "Feb 4 drAimieApigian I want to create an AI-enabled learning hub (HTML frontend) on the works of Dr Aimie Apigian. She has written a book (The Biology of Trauma) which I've broken down here (/Users/jansentang/Dropbox/DrAi Opus 4.5 22.1M 22.0M 13K 213 93" [ref=e2117] [cursor=pointer]:
+          - cell "Feb 4 drAimieApigian" [ref=e2118]:
+            - text: Feb 4
+            - generic "drAimieApigian" [ref=e2119]
+          - cell "I want to create an AI-enabled learning hub (HTML frontend) on the works of Dr Aimie Apigian. She has written a book (The Biology of Trauma) which I've broken down here (/Users/jansentang/Dropbox/DrAi" [ref=e2120]:
+            - generic "I want to create an AI-enabled learning hub (HTML frontend) on the works of Dr Aimie Apigian. She has written a book (The Biology of Trauma) which I've broken down here (/Users/jansentang/Dropbox/DrAi" [ref=e2121]
+          - cell "Opus 4.5" [ref=e2122]:
+            - generic [ref=e2123]: Opus 4.5
+          - cell "22.1M" [ref=e2125]
+          - cell "22.0M" [ref=e2126]
+          - cell "13K" [ref=e2127]
+          - cell "213" [ref=e2128]
+          - cell "93" [ref=e2129]
+        - row "Feb 4 video-diarization-app start for me Opus 4.5 21.8M 21.8M 35K 210 151" [ref=e2130] [cursor=pointer]:
+          - cell "Feb 4 video-diarization-app" [ref=e2131]:
+            - text: Feb 4
+            - generic "video-diarization-app" [ref=e2132]
+          - cell "start for me" [ref=e2133]:
+            - generic "start for me" [ref=e2134]
+          - cell "Opus 4.5" [ref=e2135]:
+            - generic [ref=e2136]: Opus 4.5
+          - cell "21.8M" [ref=e2138]
+          - cell "21.8M" [ref=e2139]
+          - cell "35K" [ref=e2140]
+          - cell "210" [ref=e2141]
+          - cell "151" [ref=e2142]
+        - row "Feb 7 cleanUpOllama Review this repo in depth Opus 4.6 21.3M 21.3M 41K 238 124" [ref=e2143] [cursor=pointer]:
+          - cell "Feb 7 cleanUpOllama" [ref=e2144]:
+            - text: Feb 7
+            - generic "cleanUpOllama" [ref=e2145]
+          - cell "Review this repo in depth" [ref=e2146]:
+            - generic "Review this repo in depth" [ref=e2147]
+          - cell "Opus 4.6" [ref=e2148]:
+            - generic [ref=e2149]: Opus 4.6
+          - cell "21.3M" [ref=e2151]
+          - cell "21.3M" [ref=e2152]
+          - cell "41K" [ref=e2153]
+          - cell "238" [ref=e2154]
+          - cell "124" [ref=e2155]
+        - row "Feb 22 researchRegRoadmap where are we at? Opus 4.6 21.2M 21.2M 17K 220 129" [ref=e2156] [cursor=pointer]:
+          - cell "Feb 22 researchRegRoadmap" [ref=e2157]:
+            - text: Feb 22
+            - generic "researchRegRoadmap" [ref=e2158]
+          - cell "where are we at?" [ref=e2159]:
+            - generic "where are we at?" [ref=e2160]
+          - cell "Opus 4.6" [ref=e2161]:
+            - generic [ref=e2162]: Opus 4.6
+          - cell "21.2M" [ref=e2164]
+          - cell "21.2M" [ref=e2165]
+          - cell "17K" [ref=e2166]
+          - cell "220" [ref=e2167]
+          - cell "129" [ref=e2168]
+        - row "Feb 11 projIndex Run the web server as a system job which starts upon login Opus 4.6 19.0M 19.0M 5.5K 192 108" [ref=e2169] [cursor=pointer]:
+          - cell "Feb 11 projIndex" [ref=e2170]:
+            - text: Feb 11
+            - generic "projIndex" [ref=e2171]
+          - cell "Run the web server as a system job which starts upon login" [ref=e2172]:
+            - generic "Run the web server as a system job which starts upon login" [ref=e2173]
+          - cell "Opus 4.6" [ref=e2174]:
+            - generic [ref=e2175]: Opus 4.6
+          - cell "19.0M" [ref=e2177]
+          - cell "19.0M" [ref=e2178]
+          - cell "5.5K" [ref=e2179]
+          - cell "192" [ref=e2180]
+          - cell "108" [ref=e2181]
+        - row "Feb 15 aiSherpaIO Is there an ai-sherpa claude code skill? Opus 4.6 18.9M 18.9M 21K 202 125" [ref=e2182] [cursor=pointer]:
+          - cell "Feb 15 aiSherpaIO" [ref=e2183]:
+            - text: Feb 15
+            - generic "aiSherpaIO" [ref=e2184]
+          - cell "Is there an ai-sherpa claude code skill?" [ref=e2185]:
+            - generic "Is there an ai-sherpa claude code skill?" [ref=e2186]
+          - cell "Opus 4.6" [ref=e2187]:
+            - generic [ref=e2188]: Opus 4.6
+          - cell "18.9M" [ref=e2190]
+          - cell "18.9M" [ref=e2191]
+          - cell "21K" [ref=e2192]
+          - cell "202" [ref=e2193]
+          - cell "125" [ref=e2194]
+        - row "Feb 20 trackLocation-qwen-coder when app is running, implement \"Live Activities\" on locked screen qwen3-coder-next:cloud 18.2M 18.2M 542 180 109" [ref=e2195] [cursor=pointer]:
+          - cell "Feb 20 trackLocation-qwen-coder" [ref=e2196]:
+            - text: Feb 20
+            - generic "trackLocation-qwen-coder" [ref=e2197]
+          - cell "when app is running, implement \"Live Activities\" on locked screen" [ref=e2198]:
+            - generic "when app is running, implement" [ref=e2199]: when app is running, implement "Live Activities" on locked screen
+          - cell "qwen3-coder-next:cloud" [ref=e2200]:
+            - generic [ref=e2201]: qwen3-coder-next:cloud
+          - cell "18.2M" [ref=e2203]
+          - cell "18.2M" [ref=e2204]
+          - cell "542" [ref=e2205]
+          - cell "180" [ref=e2206]
+          - cell "109" [ref=e2207]
+        - row "Jan 27 subtitleAndTranslate For videos like this, what are the best models to transcribe and translate? Opus 4.6 17.9M 17.9M 5.8K 182 89" [ref=e2208] [cursor=pointer]:
+          - cell "Jan 27 subtitleAndTranslate" [ref=e2209]:
+            - text: Jan 27
+            - generic "subtitleAndTranslate" [ref=e2210]
+          - cell "For videos like this, what are the best models to transcribe and translate?" [ref=e2211]:
+            - generic "For videos like this, what are the best models to transcribe and translate?" [ref=e2212]
+          - cell "Opus 4.6" [ref=e2213]:
+            - generic [ref=e2214]: Opus 4.6
+          - cell "17.9M" [ref=e2216]
+          - cell "17.9M" [ref=e2217]
+          - cell "5.8K" [ref=e2218]
+          - cell "182" [ref=e2219]
+          - cell "89" [ref=e2220]
+        - row "Feb 24 claude-spend Under \"Today vs 7-day average\" can we have an indication of which sessions belonging to which repos / projects? Opus 4.6 16.9M 16.9M 7.8K 195 126" [ref=e2221] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e2222]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e2223]
+          - cell "Under \"Today vs 7-day average\" can we have an indication of which sessions belonging to which repos / projects?" [ref=e2224]:
+            - generic "Under" [ref=e2225]: Under "Today vs 7-day average" can we have an indication of which sessions belonging to which repos / projects?
+          - cell "Opus 4.6" [ref=e2226]:
+            - generic [ref=e2227]: Opus 4.6
+          - cell "16.9M" [ref=e2229]
+          - cell "16.9M" [ref=e2230]
+          - cell "7.8K" [ref=e2231]
+          - cell "195" [ref=e2232]
+          - cell "126" [ref=e2233]
+        - row "Feb 11 projIndex the archive script should also make them \"online\" since they are on Dropbox. Use the appropriate Dropbox CLI commands Opus 4.6 16.5M 16.5M 6.8K 162 96" [ref=e2234] [cursor=pointer]:
+          - cell "Feb 11 projIndex" [ref=e2235]:
+            - text: Feb 11
+            - generic "projIndex" [ref=e2236]
+          - cell "the archive script should also make them \"online\" since they are on Dropbox. Use the appropriate Dropbox CLI commands" [ref=e2237]:
+            - generic "the archive script should also make them" [ref=e2238]: the archive script should also make them "online" since they are on Dropbox. Use the appropriate Dropbox CLI commands
+          - cell "Opus 4.6" [ref=e2239]:
+            - generic [ref=e2240]: Opus 4.6
+          - cell "16.5M" [ref=e2242]
+          - cell "16.5M" [ref=e2243]
+          - cell "6.8K" [ref=e2244]
+          - cell "162" [ref=e2245]
+          - cell "96" [ref=e2246]
+        - row "Feb 23 distillVideo execute docs/plans/2026-02-23-parakeet-reprocess.md using Subagent-Driven execution Opus 4.6 16.2M 16.2M 5.5K 154 88" [ref=e2247] [cursor=pointer]:
+          - cell "Feb 23 distillVideo" [ref=e2248]:
+            - text: Feb 23
+            - generic "distillVideo" [ref=e2249]
+          - cell "execute docs/plans/2026-02-23-parakeet-reprocess.md using Subagent-Driven execution" [ref=e2250]:
+            - generic "execute docs/plans/2026-02-23-parakeet-reprocess.md using Subagent-Driven execution" [ref=e2251]
+          - cell "Opus 4.6" [ref=e2252]:
+            - generic [ref=e2253]: Opus 4.6
+          - cell "16.2M" [ref=e2255]
+          - cell "16.2M" [ref=e2256]
+          - cell "5.5K" [ref=e2257]
+          - cell "154" [ref=e2258]
+          - cell "88" [ref=e2259]
+        - row "Feb 14 researchOpenMed register service for projIndex Opus 4.6 15.5M 15.5M 4.9K 158 100" [ref=e2260] [cursor=pointer]:
+          - cell "Feb 14 researchOpenMed" [ref=e2261]:
+            - text: Feb 14
+            - generic "researchOpenMed" [ref=e2262]
+          - cell "register service for projIndex" [ref=e2263]:
+            - generic "register service for projIndex" [ref=e2264]
+          - cell "Opus 4.6" [ref=e2265]:
+            - generic [ref=e2266]: Opus 4.6
+          - cell "15.5M" [ref=e2268]
+          - cell "15.5M" [ref=e2269]
+          - cell "4.9K" [ref=e2270]
+          - cell "158" [ref=e2271]
+          - cell "100" [ref=e2272]
+        - row "Jan 26 exploreOllamaTelemetry what's the sidecar port number for ollama telemetry? Opus 4.5 15.2M 15.2M 967 236 100" [ref=e2273] [cursor=pointer]:
+          - cell "Jan 26 exploreOllamaTelemetry" [ref=e2274]:
+            - text: Jan 26
+            - generic "exploreOllamaTelemetry" [ref=e2275]
+          - cell "what's the sidecar port number for ollama telemetry?" [ref=e2276]:
+            - generic "what's the sidecar port number for ollama telemetry?" [ref=e2277]
+          - cell "Opus 4.5" [ref=e2278]:
+            - generic [ref=e2279]: Opus 4.5
+          - cell "15.2M" [ref=e2281]
+          - cell "15.2M" [ref=e2282]
+          - cell "967" [ref=e2283]
+          - cell "236" [ref=e2284]
+          - cell "100" [ref=e2285]
+        - row "Feb 21 trackLocation continue Opus 4.6 15.2M 15.2M 3.9K 188 114" [ref=e2286] [cursor=pointer]:
+          - cell "Feb 21 trackLocation" [ref=e2287]:
+            - text: Feb 21
+            - generic "trackLocation" [ref=e2288]
+          - cell "continue" [ref=e2289]:
+            - generic "continue" [ref=e2290]
+          - cell "Opus 4.6" [ref=e2291]:
+            - generic [ref=e2292]: Opus 4.6
+          - cell "15.2M" [ref=e2294]
+          - cell "15.2M" [ref=e2295]
+          - cell "3.9K" [ref=e2296]
+          - cell "188" [ref=e2297]
+          - cell "114" [ref=e2298]
+        - row "Feb 7 theBiologyOfTrauma For the returned youtube video references, can we summarise what we was discussed in case the user doesn't want to click through to the video? Opus 4.6 14.5M 14.5M 11K 161 87" [ref=e2299] [cursor=pointer]:
+          - cell "Feb 7 theBiologyOfTrauma" [ref=e2300]:
+            - text: Feb 7
+            - generic "theBiologyOfTrauma" [ref=e2301]
+          - cell "For the returned youtube video references, can we summarise what we was discussed in case the user doesn't want to click through to the video?" [ref=e2302]:
+            - generic "For the returned youtube video references, can we summarise what we was discussed in case the user doesn't want to click through to the video?" [ref=e2303]
+          - cell "Opus 4.6" [ref=e2304]:
+            - generic [ref=e2305]: Opus 4.6
+          - cell "14.5M" [ref=e2307]
+          - cell "14.5M" [ref=e2308]
+          - cell "11K" [ref=e2309]
+          - cell "161" [ref=e2310]
+          - cell "87" [ref=e2311]
+        - row "Feb 19 distillVideo check progress of distilling videos Opus 4.6 14.5M 14.5M 11K 164 102" [ref=e2312] [cursor=pointer]:
+          - cell "Feb 19 distillVideo" [ref=e2313]:
+            - text: Feb 19
+            - generic "distillVideo" [ref=e2314]
+          - cell "check progress of distilling videos" [ref=e2315]:
+            - generic "check progress of distilling videos" [ref=e2316]
+          - cell "Opus 4.6" [ref=e2317]:
+            - generic [ref=e2318]: Opus 4.6
+          - cell "14.5M" [ref=e2320]
+          - cell "14.5M" [ref=e2321]
+          - cell "11K" [ref=e2322]
+          - cell "164" [ref=e2323]
+          - cell "102" [ref=e2324]
+        - row "Feb 10 translateGemma Research https://ollama.com/library/translategemma as a local translation ollama model and write an ollama claude code skill for it. Opus 4.6 14.3M 14.3M 2.2K 175 92" [ref=e2325] [cursor=pointer]:
+          - cell "Feb 10 translateGemma" [ref=e2326]:
+            - text: Feb 10
+            - generic "translateGemma" [ref=e2327]
+          - cell "Research https://ollama.com/library/translategemma as a local translation ollama model and write an ollama claude code skill for it." [ref=e2328]:
+            - generic "Research https://ollama.com/library/translategemma as a local translation ollama model and write an ollama claude code skill for it." [ref=e2329]
+          - cell "Opus 4.6" [ref=e2330]:
+            - generic [ref=e2331]: Opus 4.6
+          - cell "14.3M" [ref=e2333]
+          - cell "14.3M" [ref=e2334]
+          - cell "2.2K" [ref=e2335]
+          - cell "175" [ref=e2336]
+          - cell "92" [ref=e2337]
+        - row "Feb 24 distillVideo run \"cd apps/api && npx tsx src/scripts/reprocess-parakeet.ts\" Opus 4.6 13.5M 13.5M 3.9K 122 69" [ref=e2338] [cursor=pointer]:
+          - cell "Feb 24 distillVideo" [ref=e2339]:
+            - text: Feb 24
+            - generic "distillVideo" [ref=e2340]
+          - cell "run \"cd apps/api && npx tsx src/scripts/reprocess-parakeet.ts\"" [ref=e2341]:
+            - generic "run" [ref=e2342]: run "cd apps/api && npx tsx src/scripts/reprocess-parakeet.ts"
+          - cell "Opus 4.6" [ref=e2343]:
+            - generic [ref=e2344]: Opus 4.6
+          - cell "13.5M" [ref=e2346]
+          - cell "13.5M" [ref=e2347]
+          - cell "3.9K" [ref=e2348]
+          - cell "122" [ref=e2349]
+          - cell "69" [ref=e2350]
+        - row "Feb 23 claude-spend Enhance the logic to track behavior changes around the recommendations e.g. too much context embedded and usage of \"/clear\" has increased. Call out if behavior changes leading to token usage optimisat Opus 4.6 13.3M 13.3M 15K 122 84" [ref=e2351] [cursor=pointer]:
+          - cell "Feb 23 claude-spend" [ref=e2352]:
+            - text: Feb 23
+            - generic "claude-spend" [ref=e2353]
+          - cell "Enhance the logic to track behavior changes around the recommendations e.g. too much context embedded and usage of \"/clear\" has increased. Call out if behavior changes leading to token usage optimisat" [ref=e2354]:
+            - generic "Enhance the logic to track behavior changes around the recommendations e.g. too much context embedded and usage of" [ref=e2355]: Enhance the logic to track behavior changes around the recommendations e.g. too much context embedded and usage of "/clear" has increased. Call out if behavior changes leading to token usage optimisat
+          - cell "Opus 4.6" [ref=e2356]:
+            - generic [ref=e2357]: Opus 4.6
+          - cell "13.3M" [ref=e2359]
+          - cell "13.3M" [ref=e2360]
+          - cell "15K" [ref=e2361]
+          - cell "122" [ref=e2362]
+          - cell "84" [ref=e2363]
+        - row "Feb 7 nvidiaDGXSpark Both the DGX Sparks are online. Research via the official NVIDIA repositories on the most updated version of PyTorch (probably NVIDIA customed) and update both the Sparks. Opus 4.6 10.9M 10.8M 8.1K 135 79" [ref=e2364] [cursor=pointer]:
+          - cell "Feb 7 nvidiaDGXSpark" [ref=e2365]:
+            - text: Feb 7
+            - generic "nvidiaDGXSpark" [ref=e2366]
+          - cell "Both the DGX Sparks are online. Research via the official NVIDIA repositories on the most updated version of PyTorch (probably NVIDIA customed) and update both the Sparks." [ref=e2367]:
+            - generic "Both the DGX Sparks are online. Research via the official NVIDIA repositories on the most updated version of PyTorch (probably NVIDIA customed) and update both the Sparks." [ref=e2368]
+          - cell "Opus 4.6" [ref=e2369]:
+            - generic [ref=e2370]: Opus 4.6
+          - cell "10.9M" [ref=e2372]
+          - cell "10.8M" [ref=e2373]
+          - cell "8.1K" [ref=e2374]
+          - cell "135" [ref=e2375]
+          - cell "79" [ref=e2376]
+        - row "Feb 21 researchRegRoadmap Describe thr robots.txt Opus 4.6 9.4M 9.4M 9.8K 115 57" [ref=e2377] [cursor=pointer]:
+          - cell "Feb 21 researchRegRoadmap" [ref=e2378]:
+            - text: Feb 21
+            - generic "researchRegRoadmap" [ref=e2379]
+          - cell "Describe thr robots.txt" [ref=e2380]:
+            - generic "Describe thr robots.txt" [ref=e2381]
+          - cell "Opus 4.6" [ref=e2382]:
+            - generic [ref=e2383]: Opus 4.6
+          - cell "9.4M" [ref=e2385]
+          - cell "9.4M" [ref=e2386]
+          - cell "9.8K" [ref=e2387]
+          - cell "115" [ref=e2388]
+          - cell "57" [ref=e2389]
+        - row "Feb 6 aiNewsAlertFrontEnd Copy the claude code skills from ~/Library/CloudStorage/Dropbox/claude-plugins/ Opus 4.6 9.1M 9.1M 23K 121 85" [ref=e2390] [cursor=pointer]:
+          - cell "Feb 6 aiNewsAlertFrontEnd" [ref=e2391]:
+            - text: Feb 6
+            - generic "aiNewsAlertFrontEnd" [ref=e2392]
+          - cell "Copy the claude code skills from ~/Library/CloudStorage/Dropbox/claude-plugins/" [ref=e2393]:
+            - generic "Copy the claude code skills from ~/Library/CloudStorage/Dropbox/claude-plugins/" [ref=e2394]
+          - cell "Opus 4.6" [ref=e2395]:
+            - generic [ref=e2396]: Opus 4.6
+          - cell "9.1M" [ref=e2398]
+          - cell "9.1M" [ref=e2399]
+          - cell "23K" [ref=e2400]
+          - cell "121" [ref=e2401]
+          - cell "85" [ref=e2402]
+        - row "Feb 11 projIndex restart server Opus 4.6 9.0M 9.0M 8.1K 110 56" [ref=e2403] [cursor=pointer]:
+          - cell "Feb 11 projIndex" [ref=e2404]:
+            - text: Feb 11
+            - generic "projIndex" [ref=e2405]
+          - cell "restart server" [ref=e2406]:
+            - generic "restart server" [ref=e2407]
+          - cell "Opus 4.6" [ref=e2408]:
+            - generic [ref=e2409]: Opus 4.6
+          - cell "9.0M" [ref=e2411]
+          - cell "9.0M" [ref=e2412]
+          - cell "8.1K" [ref=e2413]
+          - cell "110" [ref=e2414]
+          - cell "56" [ref=e2415]
+        - row "Feb 22 researchRegRoadmap run the live test against MAS Opus 4.6 7.7M 7.7M 3.6K 94 57" [ref=e2416] [cursor=pointer]:
+          - cell "Feb 22 researchRegRoadmap" [ref=e2417]:
+            - text: Feb 22
+            - generic "researchRegRoadmap" [ref=e2418]
+          - cell "run the live test against MAS" [ref=e2419]:
+            - generic "run the live test against MAS" [ref=e2420]
+          - cell "Opus 4.6" [ref=e2421]:
+            - generic [ref=e2422]: Opus 4.6
+          - cell "7.7M" [ref=e2424]
+          - cell "7.7M" [ref=e2425]
+          - cell "3.6K" [ref=e2426]
+          - cell "94" [ref=e2427]
+          - cell "57" [ref=e2428]
+        - row "Feb 23 distillVideo what's the transcription algo on both local and DGX nodes? Opus 4.6 6.9M 6.9M 3.0K 87 64" [ref=e2429] [cursor=pointer]:
+          - cell "Feb 23 distillVideo" [ref=e2430]:
+            - text: Feb 23
+            - generic "distillVideo" [ref=e2431]
+          - cell "what's the transcription algo on both local and DGX nodes?" [ref=e2432]:
+            - generic "what's the transcription algo on both local and DGX nodes?" [ref=e2433]
+          - cell "Opus 4.6" [ref=e2434]:
+            - generic [ref=e2435]: Opus 4.6
+          - cell "6.9M" [ref=e2437]
+          - cell "6.9M" [ref=e2438]
+          - cell "3.0K" [ref=e2439]
+          - cell "87" [ref=e2440]
+          - cell "64" [ref=e2441]
+        - row "Feb 12 translateGemma Research if translategemma can run on vllm on dgx spark Opus 4.6 6.9M 6.8M 6.1K 104 52" [ref=e2442] [cursor=pointer]:
+          - cell "Feb 12 translateGemma" [ref=e2443]:
+            - text: Feb 12
+            - generic "translateGemma" [ref=e2444]
+          - cell "Research if translategemma can run on vllm on dgx spark" [ref=e2445]:
+            - generic "Research if translategemma can run on vllm on dgx spark" [ref=e2446]
+          - cell "Opus 4.6" [ref=e2447]:
+            - generic [ref=e2448]: Opus 4.6
+          - cell "6.9M" [ref=e2450]
+          - cell "6.8M" [ref=e2451]
+          - cell "6.1K" [ref=e2452]
+          - cell "104" [ref=e2453]
+          - cell "52" [ref=e2454]
+        - row "Feb 24 researchRegRoadmap Subagent-Driven execution of docs/plans/2026-02-24-oom-fix-shared-embedder-impl-plan.md Opus 4.6 6.5M 6.5M 5.2K 111 61" [ref=e2455] [cursor=pointer]:
+          - cell "Feb 24 researchRegRoadmap" [ref=e2456]:
+            - text: Feb 24
+            - generic "researchRegRoadmap" [ref=e2457]
+          - cell "Subagent-Driven execution of docs/plans/2026-02-24-oom-fix-shared-embedder-impl-plan.md" [ref=e2458]:
+            - generic "Subagent-Driven execution of docs/plans/2026-02-24-oom-fix-shared-embedder-impl-plan.md" [ref=e2459]
+          - cell "Opus 4.6" [ref=e2460]:
+            - generic [ref=e2461]: Opus 4.6
+          - cell "6.5M" [ref=e2463]
+          - cell "6.5M" [ref=e2464]
+          - cell "5.2K" [ref=e2465]
+          - cell "111" [ref=e2466]
+          - cell "61" [ref=e2467]
+        - row "Feb 24 claude-spend subagent-driven - execute docs/plans/2026-02-24-day-on-day-trends-impl.md Opus 4.6 6.3M 6.3M 658 99 56" [ref=e2468] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e2469]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e2470]
+          - cell "subagent-driven - execute docs/plans/2026-02-24-day-on-day-trends-impl.md" [ref=e2471]:
+            - generic "subagent-driven - execute docs/plans/2026-02-24-day-on-day-trends-impl.md" [ref=e2472]
+          - cell "Opus 4.6" [ref=e2473]:
+            - generic [ref=e2474]: Opus 4.6
+          - cell "6.3M" [ref=e2476]
+          - cell "6.3M" [ref=e2477]
+          - cell "658" [ref=e2478]
+          - cell "99" [ref=e2479]
+          - cell "56" [ref=e2480]
+        - 'row "Feb 24 claude-spend Regardless of whether I click on sessions=13 (Today) or sessions=3 (yesterday) I get the same sessions drill down (image #2) Opus 4.6 5.5M 5.5M 1.0K 99 57" [ref=e2481] [cursor=pointer]':
+          - cell "Feb 24 claude-spend" [ref=e2482]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e2483]
+          - 'cell "Regardless of whether I click on sessions=13 (Today) or sessions=3 (yesterday) I get the same sessions drill down (image #2)" [ref=e2484]':
+            - 'generic "Regardless of whether I click on sessions=13 (Today) or sessions=3 (yesterday) I get the same sessions drill down (image #2)" [ref=e2485]'
+          - cell "Opus 4.6" [ref=e2486]:
+            - generic [ref=e2487]: Opus 4.6
+          - cell "5.5M" [ref=e2489]
+          - cell "5.5M" [ref=e2490]
+          - cell "1.0K" [ref=e2491]
+          - cell "99" [ref=e2492]
+          - cell "57" [ref=e2493]
+        - 'row "Feb 20 rideSGBuses Live Activity card: change look and feel to that of \"../trackLocation\" Opus 4.6 5.2M 5.2M 5.2K 59 34" [ref=e2494] [cursor=pointer]':
+          - cell "Feb 20 rideSGBuses" [ref=e2495]:
+            - text: Feb 20
+            - generic "rideSGBuses" [ref=e2496]
+          - 'cell "Live Activity card: change look and feel to that of \"../trackLocation\"" [ref=e2497]':
+            - 'generic "Live Activity card: change look and feel to that of" [ref=e2498]': "Live Activity card: change look and feel to that of \"../trackLocation\""
+          - cell "Opus 4.6" [ref=e2499]:
+            - generic [ref=e2500]: Opus 4.6
+          - cell "5.2M" [ref=e2502]
+          - cell "5.2M" [ref=e2503]
+          - cell "5.2K" [ref=e2504]
+          - cell "59" [ref=e2505]
+          - cell "34" [ref=e2506]
+        - 'row "Jan 23 nvidiaDGXSpark DGX Spark: research on vLLM, and check if vLLM is installed Opus 4.5 4.8M 4.8M 409 96 42" [ref=e2507] [cursor=pointer]':
+          - cell "Jan 23 nvidiaDGXSpark" [ref=e2508]:
+            - text: Jan 23
+            - generic "nvidiaDGXSpark" [ref=e2509]
+          - 'cell "DGX Spark: research on vLLM, and check if vLLM is installed" [ref=e2510]':
+            - 'generic "DGX Spark: research on vLLM, and check if vLLM is installed" [ref=e2511]'
+          - cell "Opus 4.5" [ref=e2512]:
+            - generic [ref=e2513]: Opus 4.5
+          - cell "4.8M" [ref=e2515]
+          - cell "4.8M" [ref=e2516]
+          - cell "409" [ref=e2517]
+          - cell "96" [ref=e2518]
+          - cell "42" [ref=e2519]
+        - row "Feb 24 nvidiaDGXSpark b5e5 died earlier. Now is online. ssh into it and find out root cause Opus 4.6 4.6M 4.6M 2.7K 67 43" [ref=e2520] [cursor=pointer]:
+          - cell "Feb 24 nvidiaDGXSpark" [ref=e2521]:
+            - text: Feb 24
+            - generic "nvidiaDGXSpark" [ref=e2522]
+          - cell "b5e5 died earlier. Now is online. ssh into it and find out root cause" [ref=e2523]:
+            - generic "b5e5 died earlier. Now is online. ssh into it and find out root cause" [ref=e2524]
+          - cell "Opus 4.6" [ref=e2525]:
+            - generic [ref=e2526]: Opus 4.6
+          - cell "4.6M" [ref=e2528]
+          - cell "4.6M" [ref=e2529]
+          - cell "2.7K" [ref=e2530]
+          - cell "67" [ref=e2531]
+          - cell "43" [ref=e2532]
+        - row "Feb 11 projIndex In the directory \"/Users/jansentang/Dropbox/Passive-Income-Ideas\", there are project subdirs / code repos which are developed with claude code. I want to identify these, categorise them with labels, d Opus 4.6 4.2M 4.2M 14K 44 18" [ref=e2533] [cursor=pointer]:
+          - cell "Feb 11 projIndex" [ref=e2534]:
+            - text: Feb 11
+            - generic "projIndex" [ref=e2535]
+          - cell "In the directory \"/Users/jansentang/Dropbox/Passive-Income-Ideas\", there are project subdirs / code repos which are developed with claude code. I want to identify these, categorise them with labels, d" [ref=e2536]:
+            - generic "In the directory" [ref=e2537]: In the directory "/Users/jansentang/Dropbox/Passive-Income-Ideas", there are project subdirs / code repos which are developed with claude code. I want to identify these, categorise them with labels, d
+          - cell "Opus 4.6" [ref=e2538]:
+            - generic [ref=e2539]: Opus 4.6
+          - cell "4.2M" [ref=e2541]
+          - cell "4.2M" [ref=e2542]
+          - cell "14K" [ref=e2543]
+          - cell "44" [ref=e2544]
+          - cell "18" [ref=e2545]
+        - row "Feb 24 claude-spend For each project in this category, include total tokens / sessions / queries for Today and Yesterday Opus 4.6 3.9M 3.9M 2.0K 79 53" [ref=e2546] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e2547]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e2548]
+          - cell "For each project in this category, include total tokens / sessions / queries for Today and Yesterday" [ref=e2549]:
+            - generic "For each project in this category, include total tokens / sessions / queries for Today and Yesterday" [ref=e2550]
+          - cell "Opus 4.6" [ref=e2551]:
+            - generic [ref=e2552]: Opus 4.6
+          - cell "3.9M" [ref=e2554]
+          - cell "3.9M" [ref=e2555]
+          - cell "2.0K" [ref=e2556]
+          - cell "79" [ref=e2557]
+          - cell "53" [ref=e2558]
+        - 'row "Feb 24 researchRegRoadmap The following caused kernel OOM panics (NVIDIA driver) on both DGX Sparks: regroad-search, regroad-ai-search, regroad-graph, regroad-specs, regroad-swarm. Review, re-design, refactor. Opus 4.6 3.8M 3.8M 3.0K 67 50" [ref=e2559] [cursor=pointer]':
+          - cell "Feb 24 researchRegRoadmap" [ref=e2560]:
+            - text: Feb 24
+            - generic "researchRegRoadmap" [ref=e2561]
+          - 'cell "The following caused kernel OOM panics (NVIDIA driver) on both DGX Sparks: regroad-search, regroad-ai-search, regroad-graph, regroad-specs, regroad-swarm. Review, re-design, refactor." [ref=e2562]':
+            - 'generic "The following caused kernel OOM panics (NVIDIA driver) on both DGX Sparks: regroad-search, regroad-ai-search, regroad-graph, regroad-specs, regroad-swarm. Review, re-design, refactor." [ref=e2563]'
+          - cell "Opus 4.6" [ref=e2564]:
+            - generic [ref=e2565]: Opus 4.6
+          - cell "3.8M" [ref=e2567]
+          - cell "3.8M" [ref=e2568]
+          - cell "3.0K" [ref=e2569]
+          - cell "67" [ref=e2570]
+          - cell "50" [ref=e2571]
+        - row "Feb 14 projIndex Troubleshoot why trying to launch claude code via the card icon results in the error message. Opus 4.6 3.3M 3.3M 2.3K 62 30" [ref=e2572] [cursor=pointer]:
+          - cell "Feb 14 projIndex" [ref=e2573]:
+            - text: Feb 14
+            - generic "projIndex" [ref=e2574]
+          - cell "Troubleshoot why trying to launch claude code via the card icon results in the error message." [ref=e2575]:
+            - generic "Troubleshoot why trying to launch claude code via the card icon results in the error message." [ref=e2576]
+          - cell "Opus 4.6" [ref=e2577]:
+            - generic [ref=e2578]: Opus 4.6
+          - cell "3.3M" [ref=e2580]
+          - cell "3.3M" [ref=e2581]
+          - cell "2.3K" [ref=e2582]
+          - cell "62" [ref=e2583]
+          - cell "30" [ref=e2584]
+        - 'row "Feb 14 theBiologyOfTrauma parallel agent: create a favicon Opus 4.6 3.0M 3.0M 353 51 21" [ref=e2585] [cursor=pointer]':
+          - cell "Feb 14 theBiologyOfTrauma" [ref=e2586]:
+            - text: Feb 14
+            - generic "theBiologyOfTrauma" [ref=e2587]
+          - 'cell "parallel agent: create a favicon" [ref=e2588]':
+            - 'generic "parallel agent: create a favicon" [ref=e2589]'
+          - cell "Opus 4.6" [ref=e2590]:
+            - generic [ref=e2591]: Opus 4.6
+          - cell "3.0M" [ref=e2593]
+          - cell "3.0M" [ref=e2594]
+          - cell "353" [ref=e2595]
+          - cell "51" [ref=e2596]
+          - cell "21" [ref=e2597]
+        - row "Feb 12 RiskRegAI <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 2.8M 2.8M 181 37 29" [ref=e2598] [cursor=pointer]:
+          - cell "Feb 12 RiskRegAI" [ref=e2599]:
+            - text: Feb 12
+            - generic "RiskRegAI" [ref=e2600]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2601]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2602]
+          - cell "Opus 4.6" [ref=e2603]:
+            - generic [ref=e2604]: Opus 4.6
+          - cell "2.8M" [ref=e2606]
+          - cell "2.8M" [ref=e2607]
+          - cell "181" [ref=e2608]
+          - cell "37" [ref=e2609]
+          - cell "29" [ref=e2610]
+        - row "Feb 12 video-diarization-app register services Opus 4.6 2.7M 2.7M 472 47 21" [ref=e2611] [cursor=pointer]:
+          - cell "Feb 12 video-diarization-app" [ref=e2612]:
+            - text: Feb 12
+            - generic "video-diarization-app" [ref=e2613]
+          - cell "register services" [ref=e2614]:
+            - generic "register services" [ref=e2615]
+          - cell "Opus 4.6" [ref=e2616]:
+            - generic [ref=e2617]: Opus 4.6
+          - cell "2.7M" [ref=e2619]
+          - cell "2.7M" [ref=e2620]
+          - cell "472" [ref=e2621]
+          - cell "47" [ref=e2622]
+          - cell "21" [ref=e2623]
+        - row "Feb 6 nvidiaDGXSpark Is there a macOS app? Opus 4.6 2.6M 2.6M 2.0K 49 25" [ref=e2624] [cursor=pointer]:
+          - cell "Feb 6 nvidiaDGXSpark" [ref=e2625]:
+            - text: Feb 6
+            - generic "nvidiaDGXSpark" [ref=e2626]
+          - cell "Is there a macOS app?" [ref=e2627]:
+            - generic "Is there a macOS app?" [ref=e2628]
+          - cell "Opus 4.6" [ref=e2629]:
+            - generic [ref=e2630]: Opus 4.6
+          - cell "2.6M" [ref=e2632]
+          - cell "2.6M" [ref=e2633]
+          - cell "2.0K" [ref=e2634]
+          - cell "49" [ref=e2635]
+          - cell "25" [ref=e2636]
+        - row "Feb 24 distillVideo audio chuck 7kfykswH6Io and send it to 3b79. Make sure not to exceed memory usage Opus 4.6 2.5M 2.5M 482 38 24" [ref=e2637] [cursor=pointer]:
+          - cell "Feb 24 distillVideo" [ref=e2638]:
+            - text: Feb 24
+            - generic "distillVideo" [ref=e2639]
+          - cell "audio chuck 7kfykswH6Io and send it to 3b79. Make sure not to exceed memory usage" [ref=e2640]:
+            - generic "audio chuck 7kfykswH6Io and send it to 3b79. Make sure not to exceed memory usage" [ref=e2641]
+          - cell "Opus 4.6" [ref=e2642]:
+            - generic [ref=e2643]: Opus 4.6
+          - cell "2.5M" [ref=e2645]
+          - cell "2.5M" [ref=e2646]
+          - cell "482" [ref=e2647]
+          - cell "38" [ref=e2648]
+          - cell "24" [ref=e2649]
+        - row "Feb 24 nvidiaDGXSpark whats the tailscale IP of b5e5? Opus 4.6 2.4M 2.4M 2.6K 47 30" [ref=e2650] [cursor=pointer]:
+          - cell "Feb 24 nvidiaDGXSpark" [ref=e2651]:
+            - text: Feb 24
+            - generic "nvidiaDGXSpark" [ref=e2652]
+          - cell "whats the tailscale IP of b5e5?" [ref=e2653]:
+            - generic "whats the tailscale IP of b5e5?" [ref=e2654]
+          - cell "Opus 4.6" [ref=e2655]:
+            - generic [ref=e2656]: Opus 4.6
+          - cell "2.4M" [ref=e2658]
+          - cell "2.4M" [ref=e2659]
+          - cell "2.6K" [ref=e2660]
+          - cell "47" [ref=e2661]
+          - cell "30" [ref=e2662]
+        - row "Feb 8 researchAdultContent I want to develop and / or use models which can detect adult content. Do research and tell me what is out there. Opus 4.6 2.4M 2.4M 1.2K 43 26" [ref=e2663] [cursor=pointer]:
+          - cell "Feb 8 researchAdultContent" [ref=e2664]:
+            - text: Feb 8
+            - generic "researchAdultContent" [ref=e2665]
+          - cell "I want to develop and / or use models which can detect adult content. Do research and tell me what is out there." [ref=e2666]:
+            - generic "I want to develop and / or use models which can detect adult content. Do research and tell me what is out there." [ref=e2667]
+          - cell "Opus 4.6" [ref=e2668]:
+            - generic [ref=e2669]: Opus 4.6
+          - cell "2.4M" [ref=e2671]
+          - cell "2.4M" [ref=e2672]
+          - cell "1.2K" [ref=e2673]
+          - cell "43" [ref=e2674]
+          - cell "26" [ref=e2675]
+        - row "Feb 23 claude-spend Explain how it works Opus 4.6 2.2M 2.2M 1.9K 36 19" [ref=e2676] [cursor=pointer]:
+          - cell "Feb 23 claude-spend" [ref=e2677]:
+            - text: Feb 23
+            - generic "claude-spend" [ref=e2678]
+          - cell "Explain how it works" [ref=e2679]:
+            - generic "Explain how it works" [ref=e2680]
+          - cell "Opus 4.6" [ref=e2681]:
+            - generic [ref=e2682]: Opus 4.6
+          - cell "2.2M" [ref=e2684]
+          - cell "2.2M" [ref=e2685]
+          - cell "1.9K" [ref=e2686]
+          - cell "36" [ref=e2687]
+          - cell "19" [ref=e2688]
+        - row "Feb 24 distillVideo On gx10-3b79 at /tmp/7kfykswH6Io_chunks/, process it through nemo on each chunk Opus 4.6 2.1M 2.1M 1.3K 38 19" [ref=e2689] [cursor=pointer]:
+          - cell "Feb 24 distillVideo" [ref=e2690]:
+            - text: Feb 24
+            - generic "distillVideo" [ref=e2691]
+          - cell "On gx10-3b79 at /tmp/7kfykswH6Io_chunks/, process it through nemo on each chunk" [ref=e2692]:
+            - generic "On gx10-3b79 at /tmp/7kfykswH6Io_chunks/, process it through nemo on each chunk" [ref=e2693]
+          - cell "Opus 4.6" [ref=e2694]:
+            - generic [ref=e2695]: Opus 4.6
+          - cell "2.1M" [ref=e2697]
+          - cell "2.1M" [ref=e2698]
+          - cell "1.3K" [ref=e2699]
+          - cell "38" [ref=e2700]
+          - cell "19" [ref=e2701]
+        - row "Feb 24 claude-spend I have week-on-week behavioral tracking. Since I'm active on claude code, let's do day-on-day tracking Opus 4.6 1.9M 1.9M 740 38 30" [ref=e2702] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e2703]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e2704]
+          - cell "I have week-on-week behavioral tracking. Since I'm active on claude code, let's do day-on-day tracking" [ref=e2705]:
+            - generic "I have week-on-week behavioral tracking. Since I'm active on claude code, let's do day-on-day tracking" [ref=e2706]
+          - cell "Opus 4.6" [ref=e2707]:
+            - generic [ref=e2708]: Opus 4.6
+          - cell "1.9M" [ref=e2710]
+          - cell "1.9M" [ref=e2711]
+          - cell "740" [ref=e2712]
+          - cell "38" [ref=e2713]
+          - cell "30" [ref=e2714]
+        - row "Feb 12 musicGen <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.7M 1.7M 30 26 20" [ref=e2715] [cursor=pointer]:
+          - cell "Feb 12 musicGen" [ref=e2716]:
+            - text: Feb 12
+            - generic "musicGen" [ref=e2717]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2718]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2719]
+          - cell "Opus 4.6" [ref=e2720]:
+            - generic [ref=e2721]: Opus 4.6
+          - cell "1.7M" [ref=e2723]
+          - cell "1.7M" [ref=e2724]
+          - cell "30" [ref=e2725]
+          - cell "26" [ref=e2726]
+          - cell "20" [ref=e2727]
+        - row "Feb 12 scanMyLinkedInFeed <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.6M 1.6M 284 31 26" [ref=e2728] [cursor=pointer]:
+          - cell "Feb 12 scanMyLinkedInFeed" [ref=e2729]:
+            - text: Feb 12
+            - generic "scanMyLinkedInFeed" [ref=e2730]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2731]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2732]
+          - cell "Opus 4.6" [ref=e2733]:
+            - generic [ref=e2734]: Opus 4.6
+          - cell "1.6M" [ref=e2736]
+          - cell "1.6M" [ref=e2737]
+          - cell "284" [ref=e2738]
+          - cell "31" [ref=e2739]
+          - cell "26" [ref=e2740]
+        - row "Feb 12 summarizeVideoMMM <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.6M 1.6M 299 32 27" [ref=e2741] [cursor=pointer]:
+          - cell "Feb 12 summarizeVideoMMM" [ref=e2742]:
+            - text: Feb 12
+            - generic "summarizeVideoMMM" [ref=e2743]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2744]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2745]
+          - cell "Opus 4.6" [ref=e2746]:
+            - generic [ref=e2747]: Opus 4.6
+          - cell "1.6M" [ref=e2749]
+          - cell "1.6M" [ref=e2750]
+          - cell "299" [ref=e2751]
+          - cell "32" [ref=e2752]
+          - cell "27" [ref=e2753]
+        - row "Feb 12 VersaCore-AI <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.5M 1.5M 40 28 23" [ref=e2754] [cursor=pointer]:
+          - cell "Feb 12 VersaCore-AI" [ref=e2755]:
+            - text: Feb 12
+            - generic "VersaCore-AI" [ref=e2756]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2757]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2758]
+          - cell "Opus 4.6" [ref=e2759]:
+            - generic [ref=e2760]: Opus 4.6
+          - cell "1.5M" [ref=e2762]
+          - cell "1.5M" [ref=e2763]
+          - cell "40" [ref=e2764]
+          - cell "28" [ref=e2765]
+          - cell "23" [ref=e2766]
+        - row "Feb 16 testEbookVerify Use the AI Content Enhancer skill to process the e-book at https://read.amazon.com/sample. Start with Stage 1 (content acquisition using Playwright to capture pages), then Stage 2 (OCR with diagram de Opus 4.6 1.4M 1.4M 2.0K 31 22" [ref=e2767] [cursor=pointer]:
+          - cell "Feb 16 testEbookVerify" [ref=e2768]:
+            - text: Feb 16
+            - generic "testEbookVerify" [ref=e2769]
+          - cell "Use the AI Content Enhancer skill to process the e-book at https://read.amazon.com/sample. Start with Stage 1 (content acquisition using Playwright to capture pages), then Stage 2 (OCR with diagram de" [ref=e2770]:
+            - generic "Use the AI Content Enhancer skill to process the e-book at https://read.amazon.com/sample. Start with Stage 1 (content acquisition using Playwright to capture pages), then Stage 2 (OCR with diagram de" [ref=e2771]
+          - cell "Opus 4.6" [ref=e2772]:
+            - generic [ref=e2773]: Opus 4.6
+          - cell "1.4M" [ref=e2775]
+          - cell "1.4M" [ref=e2776]
+          - cell "2.0K" [ref=e2777]
+          - cell "31" [ref=e2778]
+          - cell "22" [ref=e2779]
+        - row "Feb 12 iOSTranslateVideo <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.4M 1.4M 202 29 23" [ref=e2780] [cursor=pointer]:
+          - cell "Feb 12 iOSTranslateVideo" [ref=e2781]:
+            - text: Feb 12
+            - generic "iOSTranslateVideo" [ref=e2782]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2783]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2784]
+          - cell "Opus 4.6" [ref=e2785]:
+            - generic [ref=e2786]: Opus 4.6
+          - cell "1.4M" [ref=e2788]
+          - cell "1.4M" [ref=e2789]
+          - cell "202" [ref=e2790]
+          - cell "29" [ref=e2791]
+          - cell "23" [ref=e2792]
+        - row "Feb 12 toolWatchYoutube <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.4M 1.4M 100 25 19" [ref=e2793] [cursor=pointer]:
+          - cell "Feb 12 toolWatchYoutube" [ref=e2794]:
+            - text: Feb 12
+            - generic "toolWatchYoutube" [ref=e2795]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2796]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2797]
+          - cell "Opus 4.6" [ref=e2798]:
+            - generic [ref=e2799]: Opus 4.6
+          - cell "1.4M" [ref=e2801]
+          - cell "1.4M" [ref=e2802]
+          - cell "100" [ref=e2803]
+          - cell "25" [ref=e2804]
+          - cell "19" [ref=e2805]
+        - row "Feb 12 awsCostMonitoring <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.4M 1.4M 163 26 20" [ref=e2806] [cursor=pointer]:
+          - cell "Feb 12 awsCostMonitoring" [ref=e2807]:
+            - text: Feb 12
+            - generic "awsCostMonitoring" [ref=e2808]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2809]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2810]
+          - cell "Opus 4.6" [ref=e2811]:
+            - generic [ref=e2812]: Opus 4.6
+          - cell "1.4M" [ref=e2814]
+          - cell "1.4M" [ref=e2815]
+          - cell "163" [ref=e2816]
+          - cell "26" [ref=e2817]
+          - cell "20" [ref=e2818]
+        - row "Feb 12 awsCostMonitoring <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.4M 1.4M 223 26 21" [ref=e2819] [cursor=pointer]:
+          - cell "Feb 12 awsCostMonitoring" [ref=e2820]:
+            - text: Feb 12
+            - generic "awsCostMonitoring" [ref=e2821]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2822]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2823]
+          - cell "Opus 4.6" [ref=e2824]:
+            - generic [ref=e2825]: Opus 4.6
+          - cell "1.4M" [ref=e2827]
+          - cell "1.4M" [ref=e2828]
+          - cell "223" [ref=e2829]
+          - cell "26" [ref=e2830]
+          - cell "21" [ref=e2831]
+        - row "Feb 12 ollamaBench <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.4M 1.4M 42 23 18" [ref=e2832] [cursor=pointer]:
+          - cell "Feb 12 ollamaBench" [ref=e2833]:
+            - text: Feb 12
+            - generic "ollamaBench" [ref=e2834]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2835]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2836]
+          - cell "Opus 4.6" [ref=e2837]:
+            - generic [ref=e2838]: Opus 4.6
+          - cell "1.4M" [ref=e2840]
+          - cell "1.4M" [ref=e2841]
+          - cell "42" [ref=e2842]
+          - cell "23" [ref=e2843]
+          - cell "18" [ref=e2844]
+        - row "Feb 6 drAimieApigian copy the claude code skills from ~/Library/CloudStorage/Dropbox/claude-plugins to this repo Opus 4.6 1.3M 1.3M 535 30 19" [ref=e2845] [cursor=pointer]:
+          - cell "Feb 6 drAimieApigian" [ref=e2846]:
+            - text: Feb 6
+            - generic "drAimieApigian" [ref=e2847]
+          - cell "copy the claude code skills from ~/Library/CloudStorage/Dropbox/claude-plugins to this repo" [ref=e2848]:
+            - generic "copy the claude code skills from ~/Library/CloudStorage/Dropbox/claude-plugins to this repo" [ref=e2849]
+          - cell "Opus 4.6" [ref=e2850]:
+            - generic [ref=e2851]: Opus 4.6
+          - cell "1.3M" [ref=e2853]
+          - cell "1.3M" [ref=e2854]
+          - cell "535" [ref=e2855]
+          - cell "30" [ref=e2856]
+          - cell "19" [ref=e2857]
+        - row "Feb 12 healingJourney <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.3M 1.3M 41 26 19" [ref=e2858] [cursor=pointer]:
+          - cell "Feb 12 healingJourney" [ref=e2859]:
+            - text: Feb 12
+            - generic "healingJourney" [ref=e2860]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2861]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2862]
+          - cell "Opus 4.6" [ref=e2863]:
+            - generic [ref=e2864]: Opus 4.6
+          - cell "1.3M" [ref=e2866]
+          - cell "1.3M" [ref=e2867]
+          - cell "41" [ref=e2868]
+          - cell "26" [ref=e2869]
+          - cell "19" [ref=e2870]
+        - row "Feb 24 claude-spend Breakdown Sessions by each session show token telemetry, queries, and number of tools calls in this order Opus 4.6 1.3M 1.3M 583 34 20" [ref=e2871] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e2872]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e2873]
+          - cell "Breakdown Sessions by each session show token telemetry, queries, and number of tools calls in this order" [ref=e2874]:
+            - generic "Breakdown Sessions by each session show token telemetry, queries, and number of tools calls in this order" [ref=e2875]
+          - cell "Opus 4.6" [ref=e2876]:
+            - generic [ref=e2877]: Opus 4.6
+          - cell "1.3M" [ref=e2879]
+          - cell "1.3M" [ref=e2880]
+          - cell "583" [ref=e2881]
+          - cell "34" [ref=e2882]
+          - cell "20" [ref=e2883]
+        - row "Feb 12 mlx-examples <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.3M 1.3M 252 27 22" [ref=e2884] [cursor=pointer]:
+          - cell "Feb 12 mlx-examples" [ref=e2885]:
+            - text: Feb 12
+            - generic "mlx-examples" [ref=e2886]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2887]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2888]
+          - cell "Opus 4.6" [ref=e2889]:
+            - generic [ref=e2890]: Opus 4.6
+          - cell "1.3M" [ref=e2892]
+          - cell "1.3M" [ref=e2893]
+          - cell "252" [ref=e2894]
+          - cell "27" [ref=e2895]
+          - cell "22" [ref=e2896]
+        - row "Feb 24 claude-spend Under Projects, show only projects with activity today (top talkers by tokens) and then yesterday (top talkers by tokens). Inactive projects are hidden by default via a toggle on/off Opus 4.6 1.3M 1.3M 991 32 19" [ref=e2897] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e2898]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e2899]
+          - cell "Under Projects, show only projects with activity today (top talkers by tokens) and then yesterday (top talkers by tokens). Inactive projects are hidden by default via a toggle on/off" [ref=e2900]:
+            - generic "Under Projects, show only projects with activity today (top talkers by tokens) and then yesterday (top talkers by tokens). Inactive projects are hidden by default via a toggle on/off" [ref=e2901]
+          - cell "Opus 4.6" [ref=e2902]:
+            - generic [ref=e2903]: Opus 4.6
+          - cell "1.3M" [ref=e2905]
+          - cell "1.3M" [ref=e2906]
+          - cell "991" [ref=e2907]
+          - cell "32" [ref=e2908]
+          - cell "19" [ref=e2909]
+        - row "Feb 12 VersaCore <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.2M 1.2M 341 26 22" [ref=e2910] [cursor=pointer]:
+          - cell "Feb 12 VersaCore" [ref=e2911]:
+            - text: Feb 12
+            - generic "VersaCore" [ref=e2912]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2913]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2914]
+          - cell "Opus 4.6" [ref=e2915]:
+            - generic [ref=e2916]: Opus 4.6
+          - cell "1.2M" [ref=e2918]
+          - cell "1.2M" [ref=e2919]
+          - cell "341" [ref=e2920]
+          - cell "26" [ref=e2921]
+          - cell "22" [ref=e2922]
+        - row "Feb 12 localizePaywallContent <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.2M 1.2M 239 20 17" [ref=e2923] [cursor=pointer]:
+          - cell "Feb 12 localizePaywallContent" [ref=e2924]:
+            - text: Feb 12
+            - generic "localizePaywallContent" [ref=e2925]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2926]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2927]
+          - cell "Opus 4.6" [ref=e2928]:
+            - generic [ref=e2929]: Opus 4.6
+          - cell "1.2M" [ref=e2931]
+          - cell "1.2M" [ref=e2932]
+          - cell "239" [ref=e2933]
+          - cell "20" [ref=e2934]
+          - cell "17" [ref=e2935]
+        - row "Feb 12 musicGen <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.2M 1.2M 47 20 16" [ref=e2936] [cursor=pointer]:
+          - cell "Feb 12 musicGen" [ref=e2937]:
+            - text: Feb 12
+            - generic "musicGen" [ref=e2938]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2939]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2940]
+          - cell "Opus 4.6" [ref=e2941]:
+            - generic [ref=e2942]: Opus 4.6
+          - cell "1.2M" [ref=e2944]
+          - cell "1.2M" [ref=e2945]
+          - cell "47" [ref=e2946]
+          - cell "20" [ref=e2947]
+          - cell "16" [ref=e2948]
+        - row "Feb 12 browserless <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.1M 1.1M 409 22 19" [ref=e2949] [cursor=pointer]:
+          - cell "Feb 12 browserless" [ref=e2950]:
+            - text: Feb 12
+            - generic "browserless" [ref=e2951]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2952]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2953]
+          - cell "Opus 4.6" [ref=e2954]:
+            - generic [ref=e2955]: Opus 4.6
+          - cell "1.1M" [ref=e2957]
+          - cell "1.1M" [ref=e2958]
+          - cell "409" [ref=e2959]
+          - cell "22" [ref=e2960]
+          - cell "19" [ref=e2961]
+        - row "Feb 12 channelVigil <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.1M 1.1M 37 19 14" [ref=e2962] [cursor=pointer]:
+          - cell "Feb 12 channelVigil" [ref=e2963]:
+            - text: Feb 12
+            - generic "channelVigil" [ref=e2964]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2965]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2966]
+          - cell "Opus 4.6" [ref=e2967]:
+            - generic [ref=e2968]: Opus 4.6
+          - cell "1.1M" [ref=e2970]
+          - cell "1.1M" [ref=e2971]
+          - cell "37" [ref=e2972]
+          - cell "19" [ref=e2973]
+          - cell "14" [ref=e2974]
+        - row "Feb 12 exploreISACAAACISM <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.1M 1.1M 1.1K 19 14" [ref=e2975] [cursor=pointer]:
+          - cell "Feb 12 exploreISACAAACISM" [ref=e2976]:
+            - text: Feb 12
+            - generic "exploreISACAAACISM" [ref=e2977]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2978]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2979]
+          - cell "Opus 4.6" [ref=e2980]:
+            - generic [ref=e2981]: Opus 4.6
+          - cell "1.1M" [ref=e2983]
+          - cell "1.1M" [ref=e2984]
+          - cell "1.1K" [ref=e2985]
+          - cell "19" [ref=e2986]
+          - cell "14" [ref=e2987]
+        - row "Feb 12 quickquery <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.1M 1.1M 320 23 20" [ref=e2988] [cursor=pointer]:
+          - cell "Feb 12 quickquery" [ref=e2989]:
+            - text: Feb 12
+            - generic "quickquery" [ref=e2990]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2991]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e2992]
+          - cell "Opus 4.6" [ref=e2993]:
+            - generic [ref=e2994]: Opus 4.6
+          - cell "1.1M" [ref=e2996]
+          - cell "1.1M" [ref=e2997]
+          - cell "320" [ref=e2998]
+          - cell "23" [ref=e2999]
+          - cell "20" [ref=e3000]
+        - row "Feb 12 itineraryHangzhou <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.0M 1.0M 145 20 15" [ref=e3001] [cursor=pointer]:
+          - cell "Feb 12 itineraryHangzhou" [ref=e3002]:
+            - text: Feb 12
+            - generic "itineraryHangzhou" [ref=e3003]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3004]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3005]
+          - cell "Opus 4.6" [ref=e3006]:
+            - generic [ref=e3007]: Opus 4.6
+          - cell "1.0M" [ref=e3009]
+          - cell "1.0M" [ref=e3010]
+          - cell "145" [ref=e3011]
+          - cell "20" [ref=e3012]
+          - cell "15" [ref=e3013]
+        - row "Feb 12 cleanUpOllama <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.0M 1.0M 158 21 17" [ref=e3014] [cursor=pointer]:
+          - cell "Feb 12 cleanUpOllama" [ref=e3015]:
+            - text: Feb 12
+            - generic "cleanUpOllama" [ref=e3016]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3017]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3018]
+          - cell "Opus 4.6" [ref=e3019]:
+            - generic [ref=e3020]: Opus 4.6
+          - cell "1.0M" [ref=e3022]
+          - cell "1.0M" [ref=e3023]
+          - cell "158" [ref=e3024]
+          - cell "21" [ref=e3025]
+          - cell "17" [ref=e3026]
+        - row "Feb 12 2ndMountain <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 1.0M 1.0M 29 22 16" [ref=e3027] [cursor=pointer]:
+          - cell "Feb 12 2ndMountain" [ref=e3028]:
+            - text: Feb 12
+            - generic "2ndMountain" [ref=e3029]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3030]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3031]
+          - cell "Opus 4.6" [ref=e3032]:
+            - generic [ref=e3033]: Opus 4.6
+          - cell "1.0M" [ref=e3035]
+          - cell "1.0M" [ref=e3036]
+          - cell "29" [ref=e3037]
+          - cell "22" [ref=e3038]
+          - cell "16" [ref=e3039]
+        - row "Feb 12 gptExcel <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 996K 995K 115 20 15" [ref=e3040] [cursor=pointer]:
+          - cell "Feb 12 gptExcel" [ref=e3041]:
+            - text: Feb 12
+            - generic "gptExcel" [ref=e3042]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3043]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3044]
+          - cell "Opus 4.6" [ref=e3045]:
+            - generic [ref=e3046]: Opus 4.6
+          - cell "996K" [ref=e3048]
+          - cell "995K" [ref=e3049]
+          - cell "115" [ref=e3050]
+          - cell "20" [ref=e3051]
+          - cell "15" [ref=e3052]
+        - row "Feb 24 claude-spend Sessions are wrongly map under \"Today\" Opus 4.6 933K 933K 359 24 12" [ref=e3053] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e3054]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e3055]
+          - cell "Sessions are wrongly map under \"Today\"" [ref=e3056]:
+            - generic "Sessions are wrongly map under" [ref=e3057]: Sessions are wrongly map under "Today"
+          - cell "Opus 4.6" [ref=e3058]:
+            - generic [ref=e3059]: Opus 4.6
+          - cell "933K" [ref=e3061]
+          - cell "933K" [ref=e3062]
+          - cell "359" [ref=e3063]
+          - cell "24" [ref=e3064]
+          - cell "12" [ref=e3065]
+        - row "Feb 12 channelVigil-r <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 914K 914K 24 19 14" [ref=e3066] [cursor=pointer]:
+          - cell "Feb 12 channelVigil-r" [ref=e3067]:
+            - text: Feb 12
+            - generic "channelVigil-r" [ref=e3068]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3069]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3070]
+          - cell "Opus 4.6" [ref=e3071]:
+            - generic [ref=e3072]: Opus 4.6
+          - cell "914K" [ref=e3074]
+          - cell "914K" [ref=e3075]
+          - cell "24" [ref=e3076]
+          - cell "19" [ref=e3077]
+          - cell "14" [ref=e3078]
+        - row "Feb 12 subtitleAndTranslate <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 889K 889K 242 17 14" [ref=e3079] [cursor=pointer]:
+          - cell "Feb 12 subtitleAndTranslate" [ref=e3080]:
+            - text: Feb 12
+            - generic "subtitleAndTranslate" [ref=e3081]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3082]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3083]
+          - cell "Opus 4.6" [ref=e3084]:
+            - generic [ref=e3085]: Opus 4.6
+          - cell "889K" [ref=e3087]
+          - cell "889K" [ref=e3088]
+          - cell "242" [ref=e3089]
+          - cell "17" [ref=e3090]
+          - cell "14" [ref=e3091]
+        - row "Feb 12 researchRegRoadmap <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 885K 885K 30 18 13" [ref=e3092] [cursor=pointer]:
+          - cell "Feb 12 researchRegRoadmap" [ref=e3093]:
+            - text: Feb 12
+            - generic "researchRegRoadmap" [ref=e3094]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3095]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3096]
+          - cell "Opus 4.6" [ref=e3097]:
+            - generic [ref=e3098]: Opus 4.6
+          - cell "885K" [ref=e3100]
+          - cell "885K" [ref=e3101]
+          - cell "30" [ref=e3102]
+          - cell "18" [ref=e3103]
+          - cell "13" [ref=e3104]
+        - row "Feb 6 aiNewsAlertFrontEnd I have a gmail account with a bunch of emails related to AI news and technologies, and these emails are filled with links. Based on my filter and selection through a web frontend, visit those links an Opus 4.6 870K 868K 1.9K 20 7" [ref=e3105] [cursor=pointer]:
+          - cell "Feb 6 aiNewsAlertFrontEnd" [ref=e3106]:
+            - text: Feb 6
+            - generic "aiNewsAlertFrontEnd" [ref=e3107]
+          - cell "I have a gmail account with a bunch of emails related to AI news and technologies, and these emails are filled with links. Based on my filter and selection through a web frontend, visit those links an" [ref=e3108]:
+            - generic "I have a gmail account with a bunch of emails related to AI news and technologies, and these emails are filled with links. Based on my filter and selection through a web frontend, visit those links an" [ref=e3109]
+          - cell "Opus 4.6" [ref=e3110]:
+            - generic [ref=e3111]: Opus 4.6
+          - cell "870K" [ref=e3113]
+          - cell "868K" [ref=e3114]
+          - cell "1.9K" [ref=e3115]
+          - cell "20" [ref=e3116]
+          - cell "7" [ref=e3117]
+        - row "Feb 17 researchRegRoadmap <task-notification> <task-id>ad3cb11</task-id> <status>completed</status> <summary>Agent \"Full codebase architecture inventory\" completed</summary> <result>Excellent! Now I have a comprehensive unders Opus 4.6 863K 863K 129 15 5" [ref=e3118] [cursor=pointer]:
+          - cell "Feb 17 researchRegRoadmap" [ref=e3119]:
+            - text: Feb 17
+            - generic "researchRegRoadmap" [ref=e3120]
+          - cell "<task-notification> <task-id>ad3cb11</task-id> <status>completed</status> <summary>Agent \"Full codebase architecture inventory\" completed</summary> <result>Excellent! Now I have a comprehensive unders" [ref=e3121]:
+            - generic "<task-notification> <task-id>ad3cb11</task-id> <status>completed</status> <summary>Agent" [ref=e3122]: <task-notification> <task-id>ad3cb11</task-id> <status>completed</status> <summary>Agent "Full codebase architecture inventory" completed</summary> <result>Excellent! Now I have a comprehensive unders
+          - cell "Opus 4.6" [ref=e3123]:
+            - generic [ref=e3124]: Opus 4.6
+          - cell "863K" [ref=e3126]
+          - cell "863K" [ref=e3127]
+          - cell "129" [ref=e3128]
+          - cell "15" [ref=e3129]
+          - cell "5" [ref=e3130]
+        - row "Feb 12 researchOCR <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 858K 858K 23 18 13" [ref=e3131] [cursor=pointer]:
+          - cell "Feb 12 researchOCR" [ref=e3132]:
+            - text: Feb 12
+            - generic "researchOCR" [ref=e3133]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3134]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3135]
+          - cell "Opus 4.6" [ref=e3136]:
+            - generic [ref=e3137]: Opus 4.6
+          - cell "858K" [ref=e3139]
+          - cell "858K" [ref=e3140]
+          - cell "23" [ref=e3141]
+          - cell "18" [ref=e3142]
+          - cell "13" [ref=e3143]
+        - row "Feb 12 readBookPDF <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 847K 847K 119 16 12" [ref=e3144] [cursor=pointer]:
+          - cell "Feb 12 readBookPDF" [ref=e3145]:
+            - text: Feb 12
+            - generic "readBookPDF" [ref=e3146]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3147]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3148]
+          - cell "Opus 4.6" [ref=e3149]:
+            - generic [ref=e3150]: Opus 4.6
+          - cell "847K" [ref=e3152]
+          - cell "847K" [ref=e3153]
+          - cell "119" [ref=e3154]
+          - cell "16" [ref=e3155]
+          - cell "12" [ref=e3156]
+        - row "Feb 24 claude-spend output vs input tokens in % under in / out tokens Opus 4.6 818K 817K 891 26 15" [ref=e3157] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e3158]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e3159]
+          - cell "output vs input tokens in % under in / out tokens" [ref=e3160]:
+            - generic "output vs input tokens in % under in / out tokens" [ref=e3161]
+          - cell "Opus 4.6" [ref=e3162]:
+            - generic [ref=e3163]: Opus 4.6
+          - cell "818K" [ref=e3165]
+          - cell "817K" [ref=e3166]
+          - cell "891" [ref=e3167]
+          - cell "26" [ref=e3168]
+          - cell "15" [ref=e3169]
+        - row "Feb 12 VersaCoreLLMChatAPI <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 816K 816K 214 18 14" [ref=e3170] [cursor=pointer]:
+          - cell "Feb 12 VersaCoreLLMChatAPI" [ref=e3171]:
+            - text: Feb 12
+            - generic "VersaCoreLLMChatAPI" [ref=e3172]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3173]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3174]
+          - cell "Opus 4.6" [ref=e3175]:
+            - generic [ref=e3176]: Opus 4.6
+          - cell "816K" [ref=e3178]
+          - cell "816K" [ref=e3179]
+          - cell "214" [ref=e3180]
+          - cell "18" [ref=e3181]
+          - cell "14" [ref=e3182]
+        - row "Feb 12 exploreOllamaTelemetry <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 782K 781K 1.2K 21 16" [ref=e3183] [cursor=pointer]:
+          - cell "Feb 12 exploreOllamaTelemetry" [ref=e3184]:
+            - text: Feb 12
+            - generic "exploreOllamaTelemetry" [ref=e3185]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3186]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3187]
+          - cell "Opus 4.6" [ref=e3188]:
+            - generic [ref=e3189]: Opus 4.6
+          - cell "782K" [ref=e3191]
+          - cell "781K" [ref=e3192]
+          - cell "1.2K" [ref=e3193]
+          - cell "21" [ref=e3194]
+          - cell "16" [ref=e3195]
+        - row "Feb 24 claude-spend The sessions drill down is incorrect Opus 4.6 770K 770K 304 22 14" [ref=e3196] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e3197]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e3198]
+          - cell "The sessions drill down is incorrect" [ref=e3199]:
+            - generic "The sessions drill down is incorrect" [ref=e3200]
+          - cell "Opus 4.6" [ref=e3201]:
+            - generic [ref=e3202]: Opus 4.6
+          - cell "770K" [ref=e3204]
+          - cell "770K" [ref=e3205]
+          - cell "304" [ref=e3206]
+          - cell "22" [ref=e3207]
+          - cell "14" [ref=e3208]
+        - row "Feb 24 claude-spend move (% out vs in tokens) below in tokens / out tokens to make display more balanced Opus 4.6 746K 745K 598 25 15" [ref=e3209] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e3210]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e3211]
+          - cell "move (% out vs in tokens) below in tokens / out tokens to make display more balanced" [ref=e3212]:
+            - generic "move (% out vs in tokens) below in tokens / out tokens to make display more balanced" [ref=e3213]
+          - cell "Opus 4.6" [ref=e3214]:
+            - generic [ref=e3215]: Opus 4.6
+          - cell "746K" [ref=e3217]
+          - cell "745K" [ref=e3218]
+          - cell "598" [ref=e3219]
+          - cell "25" [ref=e3220]
+          - cell "15" [ref=e3221]
+        - row "Feb 12 BH-pivot <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 739K 738K 172 16 12" [ref=e3222] [cursor=pointer]:
+          - cell "Feb 12 BH-pivot" [ref=e3223]:
+            - text: Feb 12
+            - generic "BH-pivot" [ref=e3224]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3225]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3226]
+          - cell "Opus 4.6" [ref=e3227]:
+            - generic [ref=e3228]: Opus 4.6
+          - cell "739K" [ref=e3230]
+          - cell "738K" [ref=e3231]
+          - cell "172" [ref=e3232]
+          - cell "16" [ref=e3233]
+          - cell "12" [ref=e3234]
+        - row "Feb 24 researchRegRoadmap Restart all services Opus 4.6 737K 736K 144 25 14" [ref=e3235] [cursor=pointer]:
+          - cell "Feb 24 researchRegRoadmap" [ref=e3236]:
+            - text: Feb 24
+            - generic "researchRegRoadmap" [ref=e3237]
+          - cell "Restart all services" [ref=e3238]:
+            - generic "Restart all services" [ref=e3239]
+          - cell "Opus 4.6" [ref=e3240]:
+            - generic [ref=e3241]: Opus 4.6
+          - cell "737K" [ref=e3243]
+          - cell "736K" [ref=e3244]
+          - cell "144" [ref=e3245]
+          - cell "25" [ref=e3246]
+          - cell "14" [ref=e3247]
+        - row "Feb 12 searxng-docker <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 722K 722K 49 16 12" [ref=e3248] [cursor=pointer]:
+          - cell "Feb 12 searxng-docker" [ref=e3249]:
+            - text: Feb 12
+            - generic "searxng-docker" [ref=e3250]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3251]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3252]
+          - cell "Opus 4.6" [ref=e3253]:
+            - generic [ref=e3254]: Opus 4.6
+          - cell "722K" [ref=e3256]
+          - cell "722K" [ref=e3257]
+          - cell "49" [ref=e3258]
+          - cell "16" [ref=e3259]
+          - cell "12" [ref=e3260]
+        - row "Feb 12 chipper <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 699K 698K 276 14 10" [ref=e3261] [cursor=pointer]:
+          - cell "Feb 12 chipper" [ref=e3262]:
+            - text: Feb 12
+            - generic "chipper" [ref=e3263]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3264]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3265]
+          - cell "Opus 4.6" [ref=e3266]:
+            - generic [ref=e3267]: Opus 4.6
+          - cell "699K" [ref=e3269]
+          - cell "698K" [ref=e3270]
+          - cell "276" [ref=e3271]
+          - cell "14" [ref=e3272]
+          - cell "10" [ref=e3273]
+        - row "Feb 12 resume-insights <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 669K 668K 209 14 11" [ref=e3274] [cursor=pointer]:
+          - cell "Feb 12 resume-insights" [ref=e3275]:
+            - text: Feb 12
+            - generic "resume-insights" [ref=e3276]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3277]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3278]
+          - cell "Opus 4.6" [ref=e3279]:
+            - generic [ref=e3280]: Opus 4.6
+          - cell "669K" [ref=e3282]
+          - cell "668K" [ref=e3283]
+          - cell "209" [ref=e3284]
+          - cell "14" [ref=e3285]
+          - cell "11" [ref=e3286]
+        - row "Feb 5 nvidiaDGXSpark claude Opus 4.5 634K 634K 269 16 7" [ref=e3287] [cursor=pointer]:
+          - cell "Feb 5 nvidiaDGXSpark" [ref=e3288]:
+            - text: Feb 5
+            - generic "nvidiaDGXSpark" [ref=e3289]
+          - cell "claude" [ref=e3290]:
+            - generic "claude" [ref=e3291]
+          - cell "Opus 4.5" [ref=e3292]:
+            - generic [ref=e3293]: Opus 4.5
+          - cell "634K" [ref=e3295]
+          - cell "634K" [ref=e3296]
+          - cell "269" [ref=e3297]
+          - cell "16" [ref=e3298]
+          - cell "7" [ref=e3299]
+        - row "Feb 12 whisper-metal <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 620K 620K 137 14 10" [ref=e3300] [cursor=pointer]:
+          - cell "Feb 12 whisper-metal" [ref=e3301]:
+            - text: Feb 12
+            - generic "whisper-metal" [ref=e3302]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3303]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3304]
+          - cell "Opus 4.6" [ref=e3305]:
+            - generic [ref=e3306]: Opus 4.6
+          - cell "620K" [ref=e3308]
+          - cell "620K" [ref=e3309]
+          - cell "137" [ref=e3310]
+          - cell "14" [ref=e3311]
+          - cell "10" [ref=e3312]
+        - row "Feb 12 agentic-ai-search <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 611K 611K 89 13 9" [ref=e3313] [cursor=pointer]:
+          - cell "Feb 12 agentic-ai-search" [ref=e3314]:
+            - text: Feb 12
+            - generic "agentic-ai-search" [ref=e3315]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3316]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3317]
+          - cell "Opus 4.6" [ref=e3318]:
+            - generic [ref=e3319]: Opus 4.6
+          - cell "611K" [ref=e3321]
+          - cell "611K" [ref=e3322]
+          - cell "89" [ref=e3323]
+          - cell "13" [ref=e3324]
+          - cell "9" [ref=e3325]
+        - row "Feb 12 photogmuse <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 575K 575K 44 13 9" [ref=e3326] [cursor=pointer]:
+          - cell "Feb 12 photogmuse" [ref=e3327]:
+            - text: Feb 12
+            - generic "photogmuse" [ref=e3328]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3329]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3330]
+          - cell "Opus 4.6" [ref=e3331]:
+            - generic [ref=e3332]: Opus 4.6
+          - cell "575K" [ref=e3334]
+          - cell "575K" [ref=e3335]
+          - cell "44" [ref=e3336]
+          - cell "13" [ref=e3337]
+          - cell "9" [ref=e3338]
+        - row "Feb 12 the-writers-muse <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 574K 574K 136 13 9" [ref=e3339] [cursor=pointer]:
+          - cell "Feb 12 the-writers-muse" [ref=e3340]:
+            - text: Feb 12
+            - generic "the-writers-muse" [ref=e3341]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3342]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3343]
+          - cell "Opus 4.6" [ref=e3344]:
+            - generic [ref=e3345]: Opus 4.6
+          - cell "574K" [ref=e3347]
+          - cell "574K" [ref=e3348]
+          - cell "136" [ref=e3349]
+          - cell "13" [ref=e3350]
+          - cell "9" [ref=e3351]
+        - row "Feb 12 researchOllama <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 574K 574K 19 11 7" [ref=e3352] [cursor=pointer]:
+          - cell "Feb 12 researchOllama" [ref=e3353]:
+            - text: Feb 12
+            - generic "researchOllama" [ref=e3354]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3355]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3356]
+          - cell "Opus 4.6" [ref=e3357]:
+            - generic [ref=e3358]: Opus 4.6
+          - cell "574K" [ref=e3360]
+          - cell "574K" [ref=e3361]
+          - cell "19" [ref=e3362]
+          - cell "11" [ref=e3363]
+          - cell "7" [ref=e3364]
+        - row "Feb 12 scrapegraphai <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 542K 542K 65 11 7" [ref=e3365] [cursor=pointer]:
+          - cell "Feb 12 scrapegraphai" [ref=e3366]:
+            - text: Feb 12
+            - generic "scrapegraphai" [ref=e3367]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3368]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3369]
+          - cell "Opus 4.6" [ref=e3370]:
+            - generic [ref=e3371]: Opus 4.6
+          - cell "542K" [ref=e3373]
+          - cell "542K" [ref=e3374]
+          - cell "65" [ref=e3375]
+          - cell "11" [ref=e3376]
+          - cell "7" [ref=e3377]
+        - row "Jan 25 nvidiaDGXSpark are the DGX Sparks online? Opus 4.5 541K 541K 61 18 8" [ref=e3378] [cursor=pointer]:
+          - cell "Jan 25 nvidiaDGXSpark" [ref=e3379]:
+            - text: Jan 25
+            - generic "nvidiaDGXSpark" [ref=e3380]
+          - cell "are the DGX Sparks online?" [ref=e3381]:
+            - generic "are the DGX Sparks online?" [ref=e3382]
+          - cell "Opus 4.5" [ref=e3383]:
+            - generic [ref=e3384]: Opus 4.5
+          - cell "541K" [ref=e3386]
+          - cell "541K" [ref=e3387]
+          - cell "61" [ref=e3388]
+          - cell "18" [ref=e3389]
+          - cell "8" [ref=e3390]
+        - row "Feb 12 researchAH-comp <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 528K 528K 87 12 8" [ref=e3391] [cursor=pointer]:
+          - cell "Feb 12 researchAH-comp" [ref=e3392]:
+            - text: Feb 12
+            - generic "researchAH-comp" [ref=e3393]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3394]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3395]
+          - cell "Opus 4.6" [ref=e3396]:
+            - generic [ref=e3397]: Opus 4.6
+          - cell "528K" [ref=e3399]
+          - cell "528K" [ref=e3400]
+          - cell "87" [ref=e3401]
+          - cell "12" [ref=e3402]
+          - cell "8" [ref=e3403]
+        - row "Feb 8 nvidiaDGXSpark for DGX Spark 3b79, what's the top process using the GPU now? Opus 4.6 527K 527K 227 12 6" [ref=e3404] [cursor=pointer]:
+          - cell "Feb 8 nvidiaDGXSpark" [ref=e3405]:
+            - text: Feb 8
+            - generic "nvidiaDGXSpark" [ref=e3406]
+          - cell "for DGX Spark 3b79, what's the top process using the GPU now?" [ref=e3407]:
+            - generic "for DGX Spark 3b79, what's the top process using the GPU now?" [ref=e3408]
+          - cell "Opus 4.6" [ref=e3409]:
+            - generic [ref=e3410]: Opus 4.6
+          - cell "527K" [ref=e3412]
+          - cell "527K" [ref=e3413]
+          - cell "227" [ref=e3414]
+          - cell "12" [ref=e3415]
+          - cell "6" [ref=e3416]
+        - row "Feb 12 cloneVoice <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 458K 457K 384 10 5" [ref=e3417] [cursor=pointer]:
+          - cell "Feb 12 cloneVoice" [ref=e3418]:
+            - text: Feb 12
+            - generic "cloneVoice" [ref=e3419]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3420]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3421]
+          - cell "Opus 4.6" [ref=e3422]:
+            - generic [ref=e3423]: Opus 4.6
+          - cell "458K" [ref=e3425]
+          - cell "457K" [ref=e3426]
+          - cell "384" [ref=e3427]
+          - cell "10" [ref=e3428]
+          - cell "5" [ref=e3429]
+        - row "Feb 12 iOSOllamaCloudAPI <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 453K 453K 12 9 5" [ref=e3430] [cursor=pointer]:
+          - cell "Feb 12 iOSOllamaCloudAPI" [ref=e3431]:
+            - text: Feb 12
+            - generic "iOSOllamaCloudAPI" [ref=e3432]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3433]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3434]
+          - cell "Opus 4.6" [ref=e3435]:
+            - generic [ref=e3436]: Opus 4.6
+          - cell "453K" [ref=e3438]
+          - cell "453K" [ref=e3439]
+          - cell "12" [ref=e3440]
+          - cell "9" [ref=e3441]
+          - cell "5" [ref=e3442]
+        - row "Feb 12 Google-search---LLM-security <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 451K 451K 87 10 7" [ref=e3443] [cursor=pointer]:
+          - cell "Feb 12 Google-search---LLM-security" [ref=e3444]:
+            - text: Feb 12
+            - generic "Google-search---LLM-security" [ref=e3445]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3446]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3447]
+          - cell "Opus 4.6" [ref=e3448]:
+            - generic [ref=e3449]: Opus 4.6
+          - cell "451K" [ref=e3451]
+          - cell "451K" [ref=e3452]
+          - cell "87" [ref=e3453]
+          - cell "10" [ref=e3454]
+          - cell "7" [ref=e3455]
+        - row "Feb 12 KB-OpenAI-LangChain-LlamaIndex <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 433K 433K 63 10 7" [ref=e3456] [cursor=pointer]:
+          - cell "Feb 12 KB-OpenAI-LangChain-LlamaIndex" [ref=e3457]:
+            - text: Feb 12
+            - generic "KB-OpenAI-LangChain-LlamaIndex" [ref=e3458]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3459]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3460]
+          - cell "Opus 4.6" [ref=e3461]:
+            - generic [ref=e3462]: Opus 4.6
+          - cell "433K" [ref=e3464]
+          - cell "433K" [ref=e3465]
+          - cell "63" [ref=e3466]
+          - cell "10" [ref=e3467]
+          - cell "7" [ref=e3468]
+        - row "Feb 12 open-webui <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 421K 421K 11 9 6" [ref=e3469] [cursor=pointer]:
+          - cell "Feb 12 open-webui" [ref=e3470]:
+            - text: Feb 12
+            - generic "open-webui" [ref=e3471]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3472]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3473]
+          - cell "Opus 4.6" [ref=e3474]:
+            - generic [ref=e3475]: Opus 4.6
+          - cell "421K" [ref=e3477]
+          - cell "421K" [ref=e3478]
+          - cell "11" [ref=e3479]
+          - cell "9" [ref=e3480]
+          - cell "6" [ref=e3481]
+        - row "Feb 12 Perplexica <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 407K 407K 11 9 5" [ref=e3482] [cursor=pointer]:
+          - cell "Feb 12 Perplexica" [ref=e3483]:
+            - text: Feb 12
+            - generic "Perplexica" [ref=e3484]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3485]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3486]
+          - cell "Opus 4.6" [ref=e3487]:
+            - generic [ref=e3488]: Opus 4.6
+          - cell "407K" [ref=e3490]
+          - cell "407K" [ref=e3491]
+          - cell "11" [ref=e3492]
+          - cell "9" [ref=e3493]
+          - cell "5" [ref=e3494]
+        - row "Feb 12 researchLadakhHiking <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 407K 407K 69 9 6" [ref=e3495] [cursor=pointer]:
+          - cell "Feb 12 researchLadakhHiking" [ref=e3496]:
+            - text: Feb 12
+            - generic "researchLadakhHiking" [ref=e3497]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3498]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3499]
+          - cell "Opus 4.6" [ref=e3500]:
+            - generic [ref=e3501]: Opus 4.6
+          - cell "407K" [ref=e3503]
+          - cell "407K" [ref=e3504]
+          - cell "69" [ref=e3505]
+          - cell "9" [ref=e3506]
+          - cell "6" [ref=e3507]
+        - 'row "Jan 26 subtitleAndTranslate I have a claude code plugin on a local directory but there is not marketplace.json file: ~/Library/CloudStorage/Dropbox/claude-plugins/dgx-spark-plugin Opus 4.5 400K 400K 44 14 6" [ref=e3508] [cursor=pointer]':
+          - cell "Jan 26 subtitleAndTranslate" [ref=e3509]:
+            - text: Jan 26
+            - generic "subtitleAndTranslate" [ref=e3510]
+          - 'cell "I have a claude code plugin on a local directory but there is not marketplace.json file: ~/Library/CloudStorage/Dropbox/claude-plugins/dgx-spark-plugin" [ref=e3511]':
+            - 'generic "I have a claude code plugin on a local directory but there is not marketplace.json file: ~/Library/CloudStorage/Dropbox/claude-plugins/dgx-spark-plugin" [ref=e3512]'
+          - cell "Opus 4.5" [ref=e3513]:
+            - generic [ref=e3514]: Opus 4.5
+          - cell "400K" [ref=e3516]
+          - cell "400K" [ref=e3517]
+          - cell "44" [ref=e3518]
+          - cell "14" [ref=e3519]
+          - cell "6" [ref=e3520]
+        - row "Feb 12 versacore-frontend <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 399K 399K 11 9 5" [ref=e3521] [cursor=pointer]:
+          - cell "Feb 12 versacore-frontend" [ref=e3522]:
+            - text: Feb 12
+            - generic "versacore-frontend" [ref=e3523]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3524]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3525]
+          - cell "Opus 4.6" [ref=e3526]:
+            - generic [ref=e3527]: Opus 4.6
+          - cell "399K" [ref=e3529]
+          - cell "399K" [ref=e3530]
+          - cell "11" [ref=e3531]
+          - cell "9" [ref=e3532]
+          - cell "5" [ref=e3533]
+        - row "Feb 12 SimpleStaticWebPage <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 393K 393K 84 9 6" [ref=e3534] [cursor=pointer]:
+          - cell "Feb 12 SimpleStaticWebPage" [ref=e3535]:
+            - text: Feb 12
+            - generic "SimpleStaticWebPage" [ref=e3536]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3537]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3538]
+          - cell "Opus 4.6" [ref=e3539]:
+            - generic [ref=e3540]: Opus 4.6
+          - cell "393K" [ref=e3542]
+          - cell "393K" [ref=e3543]
+          - cell "84" [ref=e3544]
+          - cell "9" [ref=e3545]
+          - cell "6" [ref=e3546]
+        - row "Feb 12 researchFoodVibes <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 381K 381K 11 8 4" [ref=e3547] [cursor=pointer]:
+          - cell "Feb 12 researchFoodVibes" [ref=e3548]:
+            - text: Feb 12
+            - generic "researchFoodVibes" [ref=e3549]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3550]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3551]
+          - cell "Opus 4.6" [ref=e3552]:
+            - generic [ref=e3553]: Opus 4.6
+          - cell "381K" [ref=e3555]
+          - cell "381K" [ref=e3556]
+          - cell "11" [ref=e3557]
+          - cell "8" [ref=e3558]
+          - cell "4" [ref=e3559]
+        - row "Feb 12 Google-search---Boutique-Hotels-SG <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 367K 366K 314 8 7" [ref=e3560] [cursor=pointer]:
+          - cell "Feb 12 Google-search---Boutique-Hotels-SG" [ref=e3561]:
+            - text: Feb 12
+            - generic "Google-search---Boutique-Hotels-SG" [ref=e3562]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3563]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3564]
+          - cell "Opus 4.6" [ref=e3565]:
+            - generic [ref=e3566]: Opus 4.6
+          - cell "367K" [ref=e3568]
+          - cell "366K" [ref=e3569]
+          - cell "314" [ref=e3570]
+          - cell "8" [ref=e3571]
+          - cell "7" [ref=e3572]
+        - row "Feb 12 conda-env-manager <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 355K 355K 45 8 5" [ref=e3573] [cursor=pointer]:
+          - cell "Feb 12 conda-env-manager" [ref=e3574]:
+            - text: Feb 12
+            - generic "conda-env-manager" [ref=e3575]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3576]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3577]
+          - cell "Opus 4.6" [ref=e3578]:
+            - generic [ref=e3579]: Opus 4.6
+          - cell "355K" [ref=e3581]
+          - cell "355K" [ref=e3582]
+          - cell "45" [ref=e3583]
+          - cell "8" [ref=e3584]
+          - cell "5" [ref=e3585]
+        - row "Feb 12 ImageUpsizer <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 353K 353K 45 8 5" [ref=e3586] [cursor=pointer]:
+          - cell "Feb 12 ImageUpsizer" [ref=e3587]:
+            - text: Feb 12
+            - generic "ImageUpsizer" [ref=e3588]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3589]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3590]
+          - cell "Opus 4.6" [ref=e3591]:
+            - generic [ref=e3592]: Opus 4.6
+          - cell "353K" [ref=e3594]
+          - cell "353K" [ref=e3595]
+          - cell "45" [ref=e3596]
+          - cell "8" [ref=e3597]
+          - cell "5" [ref=e3598]
+        - row "Feb 12 ImageDownsizer <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 352K 352K 45 8 5" [ref=e3599] [cursor=pointer]:
+          - cell "Feb 12 ImageDownsizer" [ref=e3600]:
+            - text: Feb 12
+            - generic "ImageDownsizer" [ref=e3601]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3602]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3603]
+          - cell "Opus 4.6" [ref=e3604]:
+            - generic [ref=e3605]: Opus 4.6
+          - cell "352K" [ref=e3607]
+          - cell "352K" [ref=e3608]
+          - cell "45" [ref=e3609]
+          - cell "8" [ref=e3610]
+          - cell "5" [ref=e3611]
+        - row "Feb 12 AWS-account-admin-scripts <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 347K 347K 11 8 4" [ref=e3612] [cursor=pointer]:
+          - cell "Feb 12 AWS-account-admin-scripts" [ref=e3613]:
+            - text: Feb 12
+            - generic "AWS-account-admin-scripts" [ref=e3614]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3615]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3616]
+          - cell "Opus 4.6" [ref=e3617]:
+            - generic [ref=e3618]: Opus 4.6
+          - cell "347K" [ref=e3620]
+          - cell "347K" [ref=e3621]
+          - cell "11" [ref=e3622]
+          - cell "8" [ref=e3623]
+          - cell "4" [ref=e3624]
+        - row "Feb 12 SFR-Embedding-Mistral <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 342K 341K 96 8 6" [ref=e3625] [cursor=pointer]:
+          - cell "Feb 12 SFR-Embedding-Mistral" [ref=e3626]:
+            - text: Feb 12
+            - generic "SFR-Embedding-Mistral" [ref=e3627]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3628]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3629]
+          - cell "Opus 4.6" [ref=e3630]:
+            - generic [ref=e3631]: Opus 4.6
+          - cell "342K" [ref=e3633]
+          - cell "341K" [ref=e3634]
+          - cell "96" [ref=e3635]
+          - cell "8" [ref=e3636]
+          - cell "6" [ref=e3637]
+        - row "Feb 12 RiskRegAI <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 341K 341K 106 8 7" [ref=e3638] [cursor=pointer]:
+          - cell "Feb 12 RiskRegAI" [ref=e3639]:
+            - text: Feb 12
+            - generic "RiskRegAI" [ref=e3640]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3641]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3642]
+          - cell "Opus 4.6" [ref=e3643]:
+            - generic [ref=e3644]: Opus 4.6
+          - cell "341K" [ref=e3646]
+          - cell "341K" [ref=e3647]
+          - cell "106" [ref=e3648]
+          - cell "8" [ref=e3649]
+          - cell "7" [ref=e3650]
+        - row "Feb 12 kotaemon <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 320K 320K 27 7 4" [ref=e3651] [cursor=pointer]:
+          - cell "Feb 12 kotaemon" [ref=e3652]:
+            - text: Feb 12
+            - generic "kotaemon" [ref=e3653]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3654]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3655]
+          - cell "Opus 4.6" [ref=e3656]:
+            - generic [ref=e3657]: Opus 4.6
+          - cell "320K" [ref=e3659]
+          - cell "320K" [ref=e3660]
+          - cell "27" [ref=e3661]
+          - cell "7" [ref=e3662]
+          - cell "4" [ref=e3663]
+        - row "Feb 12 conda-env-recreate-envs <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 302K 302K 34 7 4" [ref=e3664] [cursor=pointer]:
+          - cell "Feb 12 conda-env-recreate-envs" [ref=e3665]:
+            - text: Feb 12
+            - generic "conda-env-recreate-envs" [ref=e3666]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3667]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3668]
+          - cell "Opus 4.6" [ref=e3669]:
+            - generic [ref=e3670]: Opus 4.6
+          - cell "302K" [ref=e3672]
+          - cell "302K" [ref=e3673]
+          - cell "34" [ref=e3674]
+          - cell "7" [ref=e3675]
+          - cell "4" [ref=e3676]
+        - row "Feb 12 researchHikes <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 300K 300K 34 7 4" [ref=e3677] [cursor=pointer]:
+          - cell "Feb 12 researchHikes" [ref=e3678]:
+            - text: Feb 12
+            - generic "researchHikes" [ref=e3679]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3680]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3681]
+          - cell "Opus 4.6" [ref=e3682]:
+            - generic [ref=e3683]: Opus 4.6
+          - cell "300K" [ref=e3685]
+          - cell "300K" [ref=e3686]
+          - cell "34" [ref=e3687]
+          - cell "7" [ref=e3688]
+          - cell "4" [ref=e3689]
+        - row "Feb 12 researchAdultContent <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 298K 298K 34 7 4" [ref=e3690] [cursor=pointer]:
+          - cell "Feb 12 researchAdultContent" [ref=e3691]:
+            - text: Feb 12
+            - generic "researchAdultContent" [ref=e3692]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3693]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3694]
+          - cell "Opus 4.6" [ref=e3695]:
+            - generic [ref=e3696]: Opus 4.6
+          - cell "298K" [ref=e3698]
+          - cell "298K" [ref=e3699]
+          - cell "34" [ref=e3700]
+          - cell "7" [ref=e3701]
+          - cell "4" [ref=e3702]
+        - row "Feb 11 testClaudeRepo Write python script to tell system time Opus 4.6 295K 294K 43 7 2" [ref=e3703] [cursor=pointer]:
+          - cell "Feb 11 testClaudeRepo" [ref=e3704]:
+            - text: Feb 11
+            - generic "testClaudeRepo" [ref=e3705]
+          - cell "Write python script to tell system time" [ref=e3706]:
+            - generic "Write python script to tell system time" [ref=e3707]
+          - cell "Opus 4.6" [ref=e3708]:
+            - generic [ref=e3709]: Opus 4.6
+          - cell "295K" [ref=e3711]
+          - cell "294K" [ref=e3712]
+          - cell "43" [ref=e3713]
+          - cell "7" [ref=e3714]
+          - cell "2" [ref=e3715]
+        - row "Feb 10 translateGemma where are the ollama skills stored? Opus 4.6 292K 292K 72 7 3" [ref=e3716] [cursor=pointer]:
+          - cell "Feb 10 translateGemma" [ref=e3717]:
+            - text: Feb 10
+            - generic "translateGemma" [ref=e3718]
+          - cell "where are the ollama skills stored?" [ref=e3719]:
+            - generic "where are the ollama skills stored?" [ref=e3720]
+          - cell "Opus 4.6" [ref=e3721]:
+            - generic [ref=e3722]: Opus 4.6
+          - cell "292K" [ref=e3724]
+          - cell "292K" [ref=e3725]
+          - cell "72" [ref=e3726]
+          - cell "7" [ref=e3727]
+          - cell "3" [ref=e3728]
+        - row "Feb 22 researchRegRoadmap if something I pasted causes context to be exceeded, how do I go back to the previous instruction and ignore what I've pasted? Opus 4.6 255K 255K 37 5 1" [ref=e3729] [cursor=pointer]:
+          - cell "Feb 22 researchRegRoadmap" [ref=e3730]:
+            - text: Feb 22
+            - generic "researchRegRoadmap" [ref=e3731]
+          - cell "if something I pasted causes context to be exceeded, how do I go back to the previous instruction and ignore what I've pasted?" [ref=e3732]:
+            - generic "if something I pasted causes context to be exceeded, how do I go back to the previous instruction and ignore what I've pasted?" [ref=e3733]
+          - cell "Opus 4.6" [ref=e3734]:
+            - generic [ref=e3735]: Opus 4.6
+          - cell "255K" [ref=e3737]
+          - cell "255K" [ref=e3738]
+          - cell "37" [ref=e3739]
+          - cell "5" [ref=e3740]
+          - cell "1" [ref=e3741]
+        - row "Feb 24 claude-spend Move Projects above Insights Opus 4.6 241K 240K 247 9 4" [ref=e3742] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e3743]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e3744]
+          - cell "Move Projects above Insights" [ref=e3745]:
+            - generic "Move Projects above Insights" [ref=e3746]
+          - cell "Opus 4.6" [ref=e3747]:
+            - generic [ref=e3748]: Opus 4.6
+          - cell "241K" [ref=e3750]
+          - cell "240K" [ref=e3751]
+          - cell "247" [ref=e3752]
+          - cell "9" [ref=e3753]
+          - cell "4" [ref=e3754]
+        - row "Feb 12 kotaemon <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 240K 240K 7 5 2" [ref=e3755] [cursor=pointer]:
+          - cell "Feb 12 kotaemon" [ref=e3756]:
+            - text: Feb 12
+            - generic "kotaemon" [ref=e3757]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3758]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3759]
+          - cell "Opus 4.6" [ref=e3760]:
+            - generic [ref=e3761]: Opus 4.6
+          - cell "240K" [ref=e3763]
+          - cell "240K" [ref=e3764]
+          - cell "7" [ref=e3765]
+          - cell "5" [ref=e3766]
+          - cell "2" [ref=e3767]
+        - row "Jan 29 testOllamaClaude research ollama official docs to run claude from ollama using open source models Opus 4.5 226K 226K 16 8 3" [ref=e3768] [cursor=pointer]:
+          - cell "Jan 29 testOllamaClaude" [ref=e3769]:
+            - text: Jan 29
+            - generic "testOllamaClaude" [ref=e3770]
+          - cell "research ollama official docs to run claude from ollama using open source models" [ref=e3771]:
+            - generic "research ollama official docs to run claude from ollama using open source models" [ref=e3772]
+          - cell "Opus 4.5" [ref=e3773]:
+            - generic [ref=e3774]: Opus 4.5
+          - cell "226K" [ref=e3776]
+          - cell "226K" [ref=e3777]
+          - cell "16" [ref=e3778]
+          - cell "8" [ref=e3779]
+          - cell "3" [ref=e3780]
+        - row "Feb 12 ai-sherpaContentTray <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 222K 222K 7 5 2" [ref=e3781] [cursor=pointer]:
+          - cell "Feb 12 ai-sherpaContentTray" [ref=e3782]:
+            - text: Feb 12
+            - generic "ai-sherpaContentTray" [ref=e3783]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3784]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3785]
+          - cell "Opus 4.6" [ref=e3786]:
+            - generic [ref=e3787]: Opus 4.6
+          - cell "222K" [ref=e3789]
+          - cell "222K" [ref=e3790]
+          - cell "7" [ref=e3791]
+          - cell "5" [ref=e3792]
+          - cell "2" [ref=e3793]
+        - row "Feb 12 pgvector <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 222K 222K 11 5 2" [ref=e3794] [cursor=pointer]:
+          - cell "Feb 12 pgvector" [ref=e3795]:
+            - text: Feb 12
+            - generic "pgvector" [ref=e3796]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3797]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3798]
+          - cell "Opus 4.6" [ref=e3799]:
+            - generic [ref=e3800]: Opus 4.6
+          - cell "222K" [ref=e3802]
+          - cell "222K" [ref=e3803]
+          - cell "11" [ref=e3804]
+          - cell "5" [ref=e3805]
+          - cell "2" [ref=e3806]
+        - row "Feb 23 claude-spend I want to share back my enhancement to the author of this git repo. How can I do this? Opus 4.6 220K 220K 53 5 2" [ref=e3807] [cursor=pointer]:
+          - cell "Feb 23 claude-spend" [ref=e3808]:
+            - text: Feb 23
+            - generic "claude-spend" [ref=e3809]
+          - cell "I want to share back my enhancement to the author of this git repo. How can I do this?" [ref=e3810]:
+            - generic "I want to share back my enhancement to the author of this git repo. How can I do this?" [ref=e3811]
+          - cell "Opus 4.6" [ref=e3812]:
+            - generic [ref=e3813]: Opus 4.6
+          - cell "220K" [ref=e3815]
+          - cell "220K" [ref=e3816]
+          - cell "53" [ref=e3817]
+          - cell "5" [ref=e3818]
+          - cell "2" [ref=e3819]
+        - row "Feb 24 researchRegRoadmap push to orgin Opus 4.6 220K 220K 88 8 4" [ref=e3820] [cursor=pointer]:
+          - cell "Feb 24 researchRegRoadmap" [ref=e3821]:
+            - text: Feb 24
+            - generic "researchRegRoadmap" [ref=e3822]
+          - cell "push to orgin" [ref=e3823]:
+            - generic "push to orgin" [ref=e3824]
+          - cell "Opus 4.6" [ref=e3825]:
+            - generic [ref=e3826]: Opus 4.6
+          - cell "220K" [ref=e3828]
+          - cell "220K" [ref=e3829]
+          - cell "88" [ref=e3830]
+          - cell "8" [ref=e3831]
+          - cell "4" [ref=e3832]
+        - row "Feb 12 testOllamaClaude <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 212K 212K 32 5 3" [ref=e3833] [cursor=pointer]:
+          - cell "Feb 12 testOllamaClaude" [ref=e3834]:
+            - text: Feb 12
+            - generic "testOllamaClaude" [ref=e3835]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3836]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3837]
+          - cell "Opus 4.6" [ref=e3838]:
+            - generic [ref=e3839]: Opus 4.6
+          - cell "212K" [ref=e3841]
+          - cell "212K" [ref=e3842]
+          - cell "32" [ref=e3843]
+          - cell "5" [ref=e3844]
+          - cell "3" [ref=e3845]
+        - row "Jan 27 subtitleAndTranslate-videos review all the mp4 files and tell me about them Opus 4.5 196K 196K 7 7 3" [ref=e3846] [cursor=pointer]:
+          - cell "Jan 27 subtitleAndTranslate-videos" [ref=e3847]:
+            - text: Jan 27
+            - generic "subtitleAndTranslate-videos" [ref=e3848]
+          - cell "review all the mp4 files and tell me about them" [ref=e3849]:
+            - generic "review all the mp4 files and tell me about them" [ref=e3850]
+          - cell "Opus 4.5" [ref=e3851]:
+            - generic [ref=e3852]: Opus 4.5
+          - cell "196K" [ref=e3854]
+          - cell "196K" [ref=e3855]
+          - cell "7" [ref=e3856]
+          - cell "7" [ref=e3857]
+          - cell "3" [ref=e3858]
+        - row "Feb 24 claude-spend restart server Opus 4.6 180K 180K 169 7 4" [ref=e3859] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e3860]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e3861]
+          - cell "restart server" [ref=e3862]:
+            - generic "restart server" [ref=e3863]
+          - cell "Opus 4.6" [ref=e3864]:
+            - generic [ref=e3865]: Opus 4.6
+          - cell "180K" [ref=e3867]
+          - cell "180K" [ref=e3868]
+          - cell "169" [ref=e3869]
+          - cell "7" [ref=e3870]
+          - cell "4" [ref=e3871]
+        - row "Feb 12 enhanceCV <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 169K 169K 7 4 2" [ref=e3872] [cursor=pointer]:
+          - cell "Feb 12 enhanceCV" [ref=e3873]:
+            - text: Feb 12
+            - generic "enhanceCV" [ref=e3874]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3875]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3876]
+          - cell "Opus 4.6" [ref=e3877]:
+            - generic [ref=e3878]: Opus 4.6
+          - cell "169K" [ref=e3880]
+          - cell "169K" [ref=e3881]
+          - cell "7" [ref=e3882]
+          - cell "4" [ref=e3883]
+          - cell "2" [ref=e3884]
+        - row "Feb 12 ogg2mp3 <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 169K 169K 8 4 2" [ref=e3885] [cursor=pointer]:
+          - cell "Feb 12 ogg2mp3" [ref=e3886]:
+            - text: Feb 12
+            - generic "ogg2mp3" [ref=e3887]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3888]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3889]
+          - cell "Opus 4.6" [ref=e3890]:
+            - generic [ref=e3891]: Opus 4.6
+          - cell "169K" [ref=e3893]
+          - cell "169K" [ref=e3894]
+          - cell "8" [ref=e3895]
+          - cell "4" [ref=e3896]
+          - cell "2" [ref=e3897]
+        - row "Feb 11 testClaudeRepo Write and save a python script to tell system time Opus 4.6 168K 168K 40 4 1" [ref=e3898] [cursor=pointer]:
+          - cell "Feb 11 testClaudeRepo" [ref=e3899]:
+            - text: Feb 11
+            - generic "testClaudeRepo" [ref=e3900]
+          - cell "Write and save a python script to tell system time" [ref=e3901]:
+            - generic "Write and save a python script to tell system time" [ref=e3902]
+          - cell "Opus 4.6" [ref=e3903]:
+            - generic [ref=e3904]: Opus 4.6
+          - cell "168K" [ref=e3906]
+          - cell "168K" [ref=e3907]
+          - cell "40" [ref=e3908]
+          - cell "4" [ref=e3909]
+          - cell "1" [ref=e3910]
+        - row "Feb 24 claude-spend restart server Opus 4.6 154K 154K 82 6 4" [ref=e3911] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e3912]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e3913]
+          - cell "restart server" [ref=e3914]:
+            - generic "restart server" [ref=e3915]
+          - cell "Opus 4.6" [ref=e3916]:
+            - generic [ref=e3917]: Opus 4.6
+          - cell "154K" [ref=e3919]
+          - cell "154K" [ref=e3920]
+          - cell "82" [ref=e3921]
+          - cell "6" [ref=e3922]
+          - cell "4" [ref=e3923]
+        - row "Jan 26 subtitleAndTranslate See attached. Trying to add marketplace failed. Opus 4.5 142K 142K 7 5 1" [ref=e3924] [cursor=pointer]:
+          - cell "Jan 26 subtitleAndTranslate" [ref=e3925]:
+            - text: Jan 26
+            - generic "subtitleAndTranslate" [ref=e3926]
+          - cell "See attached. Trying to add marketplace failed." [ref=e3927]:
+            - generic "See attached. Trying to add marketplace failed." [ref=e3928]
+          - cell "Opus 4.5" [ref=e3929]:
+            - generic [ref=e3930]: Opus 4.5
+          - cell "142K" [ref=e3932]
+          - cell "142K" [ref=e3933]
+          - cell "7" [ref=e3934]
+          - cell "5" [ref=e3935]
+          - cell "1" [ref=e3936]
+        - row "Feb 12 enhanceCV <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 127K 127K 5 3 1" [ref=e3937] [cursor=pointer]:
+          - cell "Feb 12 enhanceCV" [ref=e3938]:
+            - text: Feb 12
+            - generic "enhanceCV" [ref=e3939]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3940]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3941]
+          - cell "Opus 4.6" [ref=e3942]:
+            - generic [ref=e3943]: Opus 4.6
+          - cell "127K" [ref=e3945]
+          - cell "127K" [ref=e3946]
+          - cell "5" [ref=e3947]
+          - cell "3" [ref=e3948]
+          - cell "1" [ref=e3949]
+        - row "Feb 12 scanMyLinkedInFeed <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 126K 126K 6 3 2" [ref=e3950] [cursor=pointer]:
+          - cell "Feb 12 scanMyLinkedInFeed" [ref=e3951]:
+            - text: Feb 12
+            - generic "scanMyLinkedInFeed" [ref=e3952]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3953]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e3954]
+          - cell "Opus 4.6" [ref=e3955]:
+            - generic [ref=e3956]: Opus 4.6
+          - cell "126K" [ref=e3958]
+          - cell "126K" [ref=e3959]
+          - cell "6" [ref=e3960]
+          - cell "3" [ref=e3961]
+          - cell "2" [ref=e3962]
+        - row "Feb 11 testGhosttyLaunch2 Write a python script that prints the current system time Opus 4.6 126K 126K 30 3 1" [ref=e3963] [cursor=pointer]:
+          - cell "Feb 11 testGhosttyLaunch2" [ref=e3964]:
+            - text: Feb 11
+            - generic "testGhosttyLaunch2" [ref=e3965]
+          - cell "Write a python script that prints the current system time" [ref=e3966]:
+            - generic "Write a python script that prints the current system time" [ref=e3967]
+          - cell "Opus 4.6" [ref=e3968]:
+            - generic [ref=e3969]: Opus 4.6
+          - cell "126K" [ref=e3971]
+          - cell "126K" [ref=e3972]
+          - cell "30" [ref=e3973]
+          - cell "3" [ref=e3974]
+          - cell "1" [ref=e3975]
+        - row "Feb 11 projIndex Write a python script to tell localtime Opus 4.6 125K 125K 36 3 0" [ref=e3976] [cursor=pointer]:
+          - cell "Feb 11 projIndex" [ref=e3977]:
+            - text: Feb 11
+            - generic "projIndex" [ref=e3978]
+          - cell "Write a python script to tell localtime" [ref=e3979]:
+            - generic "Write a python script to tell localtime" [ref=e3980]
+          - cell "Opus 4.6" [ref=e3981]:
+            - generic [ref=e3982]: Opus 4.6
+          - cell "125K" [ref=e3984]
+          - cell "125K" [ref=e3985]
+          - cell "36" [ref=e3986]
+          - cell "3" [ref=e3987]
+          - cell "0" [ref=e3988]
+        - row "Feb 11 projIndex Write a python script to tell system time Opus 4.6 125K 125K 36 3 0" [ref=e3989] [cursor=pointer]:
+          - cell "Feb 11 projIndex" [ref=e3990]:
+            - text: Feb 11
+            - generic "projIndex" [ref=e3991]
+          - cell "Write a python script to tell system time" [ref=e3992]:
+            - generic "Write a python script to tell system time" [ref=e3993]
+          - cell "Opus 4.6" [ref=e3994]:
+            - generic [ref=e3995]: Opus 4.6
+          - cell "125K" [ref=e3997]
+          - cell "125K" [ref=e3998]
+          - cell "36" [ref=e3999]
+          - cell "3" [ref=e4000]
+          - cell "0" [ref=e4001]
+        - row "Feb 8 Users-jansentang claude code opus 4.6 what does fast mode do? Opus 4.6 124K 124K 27 3 0" [ref=e4002] [cursor=pointer]:
+          - cell "Feb 8 Users-jansentang" [ref=e4003]:
+            - text: Feb 8
+            - generic "Users-jansentang" [ref=e4004]
+          - cell "claude code opus 4.6 what does fast mode do?" [ref=e4005]:
+            - generic "claude code opus 4.6 what does fast mode do?" [ref=e4006]
+          - cell "Opus 4.6" [ref=e4007]:
+            - generic [ref=e4008]: Opus 4.6
+          - cell "124K" [ref=e4010]
+          - cell "124K" [ref=e4011]
+          - cell "27" [ref=e4012]
+          - cell "3" [ref=e4013]
+          - cell "0" [ref=e4014]
+        - row "Feb 12 researchOllama <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 85K 85K 4 2 1" [ref=e4015] [cursor=pointer]:
+          - cell "Feb 12 researchOllama" [ref=e4016]:
+            - text: Feb 12
+            - generic "researchOllama" [ref=e4017]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e4018]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e4019]
+          - cell "Opus 4.6" [ref=e4020]:
+            - generic [ref=e4021]: Opus 4.6
+          - cell "85K" [ref=e4023]
+          - cell "85K" [ref=e4024]
+          - cell "4" [ref=e4025]
+          - cell "2" [ref=e4026]
+          - cell "1" [ref=e4027]
+        - row "Feb 12 pgvector <command-message>init</command-message> <command-name>/init</command-name> Opus 4.6 85K 85K 4 2 1" [ref=e4028] [cursor=pointer]:
+          - cell "Feb 12 pgvector" [ref=e4029]:
+            - text: Feb 12
+            - generic "pgvector" [ref=e4030]
+          - cell "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e4031]:
+            - generic "<command-message>init</command-message> <command-name>/init</command-name>" [ref=e4032]
+          - cell "Opus 4.6" [ref=e4033]:
+            - generic [ref=e4034]: Opus 4.6
+          - cell "85K" [ref=e4036]
+          - cell "85K" [ref=e4037]
+          - cell "4" [ref=e4038]
+          - cell "2" [ref=e4039]
+          - cell "1" [ref=e4040]
+        - row "Feb 5 drAimieApigian do you see the resilience skill? Opus 4.5 81K 81K 10 2 0" [ref=e4041] [cursor=pointer]:
+          - cell "Feb 5 drAimieApigian" [ref=e4042]:
+            - text: Feb 5
+            - generic "drAimieApigian" [ref=e4043]
+          - cell "do you see the resilience skill?" [ref=e4044]:
+            - generic "do you see the resilience skill?" [ref=e4045]
+          - cell "Opus 4.5" [ref=e4046]:
+            - generic [ref=e4047]: Opus 4.5
+          - cell "81K" [ref=e4049]
+          - cell "81K" [ref=e4050]
+          - cell "10" [ref=e4051]
+          - cell "2" [ref=e4052]
+          - cell "0" [ref=e4053]
+        - row "Feb 3 nvidiaDGXSpark--worktrees-dgx-menubar cd .. Opus 4.5 80K 80K 8 2 1" [ref=e4054] [cursor=pointer]:
+          - cell "Feb 3 nvidiaDGXSpark--worktrees-dgx-menubar" [ref=e4055]:
+            - text: Feb 3
+            - generic "nvidiaDGXSpark--worktrees-dgx-menubar" [ref=e4056]
+          - cell "cd .." [ref=e4057]:
+            - generic "cd .." [ref=e4058]
+          - cell "Opus 4.5" [ref=e4059]:
+            - generic [ref=e4060]: Opus 4.5
+          - cell "80K" [ref=e4062]
+          - cell "80K" [ref=e4063]
+          - cell "8" [ref=e4064]
+          - cell "2" [ref=e4065]
+          - cell "1" [ref=e4066]
+        - row "Feb 24 claude-spend restart Opus 4.6 50K 50K 18 2 0" [ref=e4067] [cursor=pointer]:
+          - cell "Feb 24 claude-spend" [ref=e4068]:
+            - text: Feb 24
+            - generic "claude-spend" [ref=e4069]
+          - cell "restart" [ref=e4070]:
+            - generic "restart" [ref=e4071]
+          - cell "Opus 4.6" [ref=e4072]:
+            - generic [ref=e4073]: Opus 4.6
+          - cell "50K" [ref=e4075]
+          - cell "50K" [ref=e4076]
+          - cell "18" [ref=e4077]
+          - cell "2" [ref=e4078]
+          - cell "0" [ref=e4079]
+        - row "Jan 26 subtitleAndTranslate Create a HTML frontend which takes in a URL containing a video, download the video locally. Use playwright to ochestrate a user accessing the URL. minimax-m2:cloud 0 0 0 3 1" [ref=e4080] [cursor=pointer]:
+          - cell "Jan 26 subtitleAndTranslate" [ref=e4081]:
+            - text: Jan 26
+            - generic "subtitleAndTranslate" [ref=e4082]
+          - cell "Create a HTML frontend which takes in a URL containing a video, download the video locally. Use playwright to ochestrate a user accessing the URL." [ref=e4083]:
+            - generic "Create a HTML frontend which takes in a URL containing a video, download the video locally. Use playwright to ochestrate a user accessing the URL." [ref=e4084]
+          - cell "minimax-m2:cloud" [ref=e4085]:
+            - generic [ref=e4086]: minimax-m2:cloud
+          - cell "0" [ref=e4088]
+          - cell "0" [ref=e4089]
+          - cell "0" [ref=e4090]
+          - cell "3" [ref=e4091]
+          - cell "1" [ref=e4092]
+        - row "Jan 26 subtitleAndTranslate I have a claude code plugin on a local directory but there is not marketplace.json file minimax-m2:cloud 0 0 0 3 1" [ref=e4093] [cursor=pointer]:
+          - cell "Jan 26 subtitleAndTranslate" [ref=e4094]:
+            - text: Jan 26
+            - generic "subtitleAndTranslate" [ref=e4095]
+          - cell "I have a claude code plugin on a local directory but there is not marketplace.json file" [ref=e4096]:
+            - generic "I have a claude code plugin on a local directory but there is not marketplace.json file" [ref=e4097]
+          - cell "minimax-m2:cloud" [ref=e4098]:
+            - generic [ref=e4099]: minimax-m2:cloud
+          - cell "0" [ref=e4101]
+          - cell "0" [ref=e4102]
+          - cell "0" [ref=e4103]
+          - cell "3" [ref=e4104]
+          - cell "1" [ref=e4105]
+        - row "Jan 26 subtitleAndTranslate Create a HTML frontend which takes in a URL containing a video, download the video locally. Use playwright to ochestrate a user accessing the URL. qwen3-coder:480b-cloud 0 0 0 125 63" [ref=e4106] [cursor=pointer]:
+          - cell "Jan 26 subtitleAndTranslate" [ref=e4107]:
+            - text: Jan 26
+            - generic "subtitleAndTranslate" [ref=e4108]
+          - cell "Create a HTML frontend which takes in a URL containing a video, download the video locally. Use playwright to ochestrate a user accessing the URL." [ref=e4109]:
+            - generic "Create a HTML frontend which takes in a URL containing a video, download the video locally. Use playwright to ochestrate a user accessing the URL." [ref=e4110]
+          - cell "qwen3-coder:480b-cloud" [ref=e4111]:
+            - generic [ref=e4112]: qwen3-coder:480b-cloud
+          - cell "0" [ref=e4114]
+          - cell "0" [ref=e4115]
+          - cell "0" [ref=e4116]
+          - cell "125" [ref=e4117]
+          - cell "63" [ref=e4118]
+        - row "Jan 29 testOllamaClaude what model are you using? check env file? kimi-k2.5:cloud 0 0 0 61 19" [ref=e4119] [cursor=pointer]:
+          - cell "Jan 29 testOllamaClaude" [ref=e4120]:
+            - text: Jan 29
+            - generic "testOllamaClaude" [ref=e4121]
+          - cell "what model are you using? check env file?" [ref=e4122]:
+            - generic "what model are you using? check env file?" [ref=e4123]
+          - cell "kimi-k2.5:cloud" [ref=e4124]:
+            - generic [ref=e4125]: kimi-k2.5:cloud
+          - cell "0" [ref=e4127]
+          - cell "0" [ref=e4128]
+          - cell "0" [ref=e4129]
+          - cell "61" [ref=e4130]
+          - cell "19" [ref=e4131]
+        - row "Jan 29 trackLocation which model is being used? kimi-k2.5:cloud 0 0 0 611 201" [ref=e4132] [cursor=pointer]:
+          - cell "Jan 29 trackLocation" [ref=e4133]:
+            - text: Jan 29
+            - generic "trackLocation" [ref=e4134]
+          - cell "which model is being used?" [ref=e4135]:
+            - generic "which model is being used?" [ref=e4136]
+          - cell "kimi-k2.5:cloud" [ref=e4137]:
+            - generic [ref=e4138]: kimi-k2.5:cloud
+          - cell "0" [ref=e4140]
+          - cell "0" [ref=e4141]
+          - cell "0" [ref=e4142]
+          - cell "611" [ref=e4143]
+          - cell "201" [ref=e4144]
+        - row "Jan 29 trackLocation Restart all services, rebuild DMG and re-open kimi-k2.5:cloud 0 0 0 29 11" [ref=e4145] [cursor=pointer]:
+          - cell "Jan 29 trackLocation" [ref=e4146]:
+            - text: Jan 29
+            - generic "trackLocation" [ref=e4147]
+          - cell "Restart all services, rebuild DMG and re-open" [ref=e4148]:
+            - generic "Restart all services, rebuild DMG and re-open" [ref=e4149]
+          - cell "kimi-k2.5:cloud" [ref=e4150]:
+            - generic [ref=e4151]: kimi-k2.5:cloud
+          - cell "0" [ref=e4153]
+          - cell "0" [ref=e4154]
+          - cell "0" [ref=e4155]
+          - cell "29" [ref=e4156]
+          - cell "11" [ref=e4157]
+  - generic [ref=e4158]:
+    - text: Made with
+    - link "Claude Code" [ref=e4159] [cursor=pointer]:
+      - /url: https://claude.ai/code
+    - text: and ❤ by
+    - link "Aniket" [ref=e4160] [cursor=pointer]:
+      - /url: https://www.linkedin.com/in/aniketparihar/

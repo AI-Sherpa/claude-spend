@@ -242,6 +242,8 @@ async function parseAllSessions() {
         allPrompts: [],
         todayStats: { inputTokens: 0, outputTokens: 0, tokens: 0, sessions: 0, queries: 0 },
         yesterdayStats: { inputTokens: 0, outputTokens: 0, tokens: 0, sessions: 0, queries: 0 },
+        todaySessions: [],
+        yesterdaySessions: [],
       };
     }
     const p = projectMap[proj];
@@ -250,6 +252,44 @@ async function parseAllSessions() {
     p.totalTokens += session.totalTokens;
     p.sessionCount += 1;
     p.queryCount += session.queryCount;
+
+    // Helper to collect grouped prompts for a session
+    const collectSessionPrompts = () => {
+      const prompts = [];
+      let curPrompt = null, curInput = 0, curOutput = 0, curConts = 0;
+      let curModels = {}, curTools = {};
+      const flushPrompt = () => {
+        if (curPrompt && (curInput + curOutput) > 0) {
+          const topModel = Object.entries(curModels).sort((a, b) => b[1] - a[1])[0]?.[0] || session.model;
+          prompts.push({
+            prompt: curPrompt.substring(0, 300),
+            inputTokens: curInput,
+            outputTokens: curOutput,
+            totalTokens: curInput + curOutput,
+            continuations: curConts,
+            model: topModel,
+            toolCounts: { ...curTools },
+            sessionId: session.sessionId,
+          });
+        }
+      };
+      for (const q of session.queries) {
+        if (q.userPrompt && q.userPrompt !== curPrompt) {
+          flushPrompt();
+          curPrompt = q.userPrompt;
+          curInput = 0; curOutput = 0; curConts = 0;
+          curModels = {}; curTools = {};
+        } else if (!q.userPrompt) {
+          curConts++;
+        }
+        curInput += q.inputTokens;
+        curOutput += q.outputTokens;
+        if (q.model && q.model !== '<synthetic>') curModels[q.model] = (curModels[q.model] || 0) + 1;
+        for (const t of q.tools || []) curTools[t] = (curTools[t] || 0) + 1;
+      }
+      flushPrompt();
+      return prompts;
+    };
 
     // Track today/yesterday stats for project grouping in dashboard
     if (session.timestamp) {
@@ -260,12 +300,32 @@ async function parseAllSessions() {
         p.todayStats.tokens += session.totalTokens;
         p.todayStats.sessions += 1;
         p.todayStats.queries += session.queryCount;
+        p.todaySessions.push({
+          sessionId: session.sessionId,
+          name: session.firstPrompt || '(no prompt)',
+          model: session.model,
+          queryCount: session.queryCount,
+          totalTokens: session.totalTokens,
+          inputTokens: session.inputTokens,
+          outputTokens: session.outputTokens,
+          prompts: collectSessionPrompts(),
+        });
       } else if (sessionDate >= startOfYesterday && sessionDate < startOfToday) {
         p.yesterdayStats.inputTokens += session.inputTokens;
         p.yesterdayStats.outputTokens += session.outputTokens;
         p.yesterdayStats.tokens += session.totalTokens;
         p.yesterdayStats.sessions += 1;
         p.yesterdayStats.queries += session.queryCount;
+        p.yesterdaySessions.push({
+          sessionId: session.sessionId,
+          name: session.firstPrompt || '(no prompt)',
+          model: session.model,
+          queryCount: session.queryCount,
+          totalTokens: session.totalTokens,
+          inputTokens: session.inputTokens,
+          outputTokens: session.outputTokens,
+          prompts: collectSessionPrompts(),
+        });
       }
     }
 
@@ -326,6 +386,8 @@ async function parseAllSessions() {
     queryCount: p.queryCount,
     todayStats: p.todayStats,
     yesterdayStats: p.yesterdayStats,
+    todaySessions: p.todaySessions,
+    yesterdaySessions: p.yesterdaySessions,
     modelBreakdown: Object.values(p.modelMap).sort((a, b) => b.totalTokens - a.totalTokens),
     topPrompts: (p.allPrompts || []).sort((a, b) => b.totalTokens - a.totalTokens).slice(0, 10),
   })).sort((a, b) => b.totalTokens - a.totalTokens);
