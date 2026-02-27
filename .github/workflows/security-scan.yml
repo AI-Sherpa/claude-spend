@@ -1,0 +1,59 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  secrets:
+    name: Scan for secrets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          source: .
+          verbose: true
+
+  dependencies:
+    name: Check dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Run npm audit
+        run: npm audit --audit-level=moderate
+
+  package:
+    name: Validate npm package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Check .npmignore
+        run: |
+          test -f .npmignore && echo "✅ .npmignore exists" || (echo "❌ .npmignore not found" && exit 1)
+
+      - name: Verify package.json bin exists
+        run: |
+          grep -q '"bin"' package.json && echo "✅ bin entry present" || (echo "❌ bin entry missing in package.json" && exit 1)

@@ -1,0 +1,35 @@
+# Development
+.git
+.gitignore
+.github
+.claude
+.vscode
+.idea
+.DS_Store
+
+# Testing & Documentation
+.playwright-mcp
+.worktrees
+*.md
+!package.json
+
+# Screenshots / Media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.webm
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Plans & Notes
+docs/
+
+# CI/CD
+.github/
+.env*
