@@ -1,5 +1,64 @@
+# Dependencies
 node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-shrinkwrap.json
+
+# Environment variables
 .env
+.env.local
+.env.*.local
+
+# OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# Logs
 *.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime / Build
+dist/
+build/
+.next/
+.turbo/
+coverage/
+
+# Claude Code / Testing
+.claude/
+.claude/worktrees/
+.playwright-mcp/
+.git/
+
+# Development
 .worktrees/
+*.pid
+
+# Screenshots & media (dev/test documentation)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.webm
+
+# Project-specific plans
+docs/plans/
