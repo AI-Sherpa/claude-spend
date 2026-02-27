@@ -8,14 +8,15 @@ See where your Claude Code tokens go. One command, zero setup.
 
 ## How does it look
 
+### Light Theme
+Clean, minimal interface with full visibility into your token spending.
 
-<img width="1910" height="966" alt="Screenshot 2026-02-18 092727" src="https://github.com/user-attachments/assets/11cc7149-d4dd-4e44-a3a0-0b48e935b7bc" />
+![Claude Spend Dashboard - Light Theme](dashboard-light-overview.png)
 
-<img width="1906" height="966" alt="Screenshot 2026-02-18 093529" src="https://github.com/user-attachments/assets/537c3611-5794-41d2-864e-e368e6949812" />
+### Dark Theme
+Dark theme with adaptive colors for comfortable viewing in low-light environments.
 
-<img width="1908" height="969" alt="Screenshot 2026-02-18 093647" src="https://github.com/user-attachments/assets/aaaa8ce5-2025-407d-8596-ea1965748691" />
-
-<img width="1908" height="969" alt="Screenshot 2026-02-18 093647" src="https://github.com/user-attachments/assets/a9fde5e2-6e52-4bae-9b96-03655109aef6" />
+![Claude Spend Dashboard - Dark Theme](dashboard-dark-overview.png)
 
 
 
@@ -32,8 +33,13 @@ That's it. Opens a dashboard in your browser.
 
 - **Reads your local Claude Code session files** (nothing leaves your machine)
 - **Tracks token usage** across conversations, daily trends, and per-model breakdown
+  - Input, output, and cache tokens
+  - Cache creation and read metrics
+  - Token efficiency per session
+- **Intelligent project organization** with automatic time-based grouping (Today, Yesterday, Inactive)
+- **Query-level tracking** showing conversation activity alongside token metrics
 - **Surfaces actionable insights** like which prompts cost the most, usage patterns, and optimization opportunities
-- **Interactive dashboard** with charts, tables, and real-time refresh
+- **Interactive dashboard** with charts, tables, theme toggle (light/dark), and real-time refresh
 
 
 ## How it works
@@ -62,14 +68,24 @@ All processing happens locally on your machine. No data leaves your computer.
 ## Dashboard Sections
 
 ### Overview
-- **Grand totals** — Total tokens spent, sessions run, and queries made
-- **Daily usage** — Token consumption trend over time
-- **Model breakdown** — How many tokens each Claude model consumed
+- **Grand totals** — Lifetime statistics showing:
+  - Total tokens spent across all sessions
+  - Total sessions and queries executed
+  - Average tokens per session
+- **Daily usage chart** — Visual trend of token consumption over time with interactive hover details
+- **Model breakdown** — Token consumption by Claude model version with percentage breakdown
+- **Theme toggle** — Switch between light and dark themes for comfortable viewing at any time of day
 
 ### Projects
-- **Today/Yesterday/Inactive** — Projects grouped by when they were last active
-- **Per-project stats** — Sessions, queries, and token counts for each project
-- **Top prompts** — Most frequently used prompts from recent sessions
+- **Smart Time-Based Grouping** — Projects automatically grouped into:
+  - **Today** — Active projects from the current day with session and query counts
+  - **Yesterday** — Recently used projects from the previous day
+  - **Inactive** — All other projects organized by historical activity
+- **Per-project stats** — For each project, view:
+  - Total tokens spent (input + output)
+  - Number of sessions and queries
+  - Last active timestamp
+- **Top prompts** — Most frequently used prompts from recent sessions with token costs
 
 ### Insights
 Auto-generated analysis including:
