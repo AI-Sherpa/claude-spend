@@ -240,8 +240,8 @@ async function parseAllSessions() {
         sessionCount: 0, queryCount: 0,
         modelMap: {},
         allPrompts: [],
-        todayStats: { inputTokens: 0, outputTokens: 0, tokens: 0 },
-        yesterdayStats: { inputTokens: 0, outputTokens: 0, tokens: 0 },
+        todayStats: { inputTokens: 0, outputTokens: 0, tokens: 0, sessions: 0, queries: 0 },
+        yesterdayStats: { inputTokens: 0, outputTokens: 0, tokens: 0, sessions: 0, queries: 0 },
       };
     }
     const p = projectMap[proj];
@@ -258,10 +258,14 @@ async function parseAllSessions() {
         p.todayStats.inputTokens += session.inputTokens;
         p.todayStats.outputTokens += session.outputTokens;
         p.todayStats.tokens += session.totalTokens;
+        p.todayStats.sessions += 1;
+        p.todayStats.queries += session.queryCount;
       } else if (sessionDate >= startOfYesterday && sessionDate < startOfToday) {
         p.yesterdayStats.inputTokens += session.inputTokens;
         p.yesterdayStats.outputTokens += session.outputTokens;
         p.yesterdayStats.tokens += session.totalTokens;
+        p.yesterdayStats.sessions += 1;
+        p.yesterdayStats.queries += session.queryCount;
       }
     }
 
