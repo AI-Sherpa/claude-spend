@@ -52,9 +52,10 @@ function extractSessionData(entries) {
       const model = entry.message.model || 'unknown';
       if (model === '<synthetic>') continue;
 
-      const inputTokens = (usage.input_tokens || 0)
-        + (usage.cache_creation_input_tokens || 0)
-        + (usage.cache_read_input_tokens || 0);
+      const freshInputTokens = usage.input_tokens || 0;
+      const cacheCreationTokens = usage.cache_creation_input_tokens || 0;
+      const cacheReadTokens = usage.cache_read_input_tokens || 0;
+      const inputTokens = freshInputTokens + cacheCreationTokens + cacheReadTokens;
       const outputTokens = usage.output_tokens || 0;
 
       const tools = [];
@@ -72,6 +73,9 @@ function extractSessionData(entries) {
         inputTokens,
         outputTokens,
         totalTokens: inputTokens + outputTokens,
+        freshInputTokens,
+        cacheCreationTokens,
+        cacheReadTokens,
         tools,
       });
     }
@@ -131,9 +135,12 @@ async function parseAllSessions() {
       if (queries.length === 0) continue;
 
       let inputTokens = 0, outputTokens = 0;
+      let cacheReadTokens = 0, cacheCreationTokens = 0;
       for (const q of queries) {
         inputTokens += q.inputTokens;
         outputTokens += q.outputTokens;
+        cacheReadTokens += q.cacheReadTokens || 0;
+        cacheCreationTokens += q.cacheCreationTokens || 0;
       }
       const totalTokens = inputTokens + outputTokens;
 
@@ -155,6 +162,7 @@ async function parseAllSessions() {
       // Group consecutive queries under the same user prompt
       let currentPrompt = null;
       let promptInput = 0, promptOutput = 0;
+      let promptCacheRead = 0, promptCacheCreation = 0;
       const flushPrompt = () => {
         if (currentPrompt && (promptInput + promptOutput) > 0) {
           allPrompts.push({
@@ -162,6 +170,8 @@ async function parseAllSessions() {
             inputTokens: promptInput,
             outputTokens: promptOutput,
             totalTokens: promptInput + promptOutput,
+            cacheReadTokens: promptCacheRead,
+            cacheCreationTokens: promptCacheCreation,
             date,
             sessionId,
             model: primaryModel,
@@ -174,9 +184,13 @@ async function parseAllSessions() {
           currentPrompt = q.userPrompt;
           promptInput = 0;
           promptOutput = 0;
+          promptCacheRead = 0;
+          promptCacheCreation = 0;
         }
         promptInput += q.inputTokens;
         promptOutput += q.outputTokens;
+        promptCacheRead += q.cacheReadTokens || 0;
+        promptCacheCreation += q.cacheCreationTokens || 0;
       }
       flushPrompt();
 
@@ -193,16 +207,20 @@ async function parseAllSessions() {
         inputTokens,
         outputTokens,
         totalTokens,
+        cacheReadTokens,
+        cacheCreationTokens,
       });
 
       // Daily
       if (date !== 'unknown') {
         if (!dailyMap[date]) {
-          dailyMap[date] = { date, inputTokens: 0, outputTokens: 0, totalTokens: 0, sessions: 0, queries: 0 };
+          dailyMap[date] = { date, inputTokens: 0, outputTokens: 0, totalTokens: 0, cacheReadTokens: 0, cacheCreationTokens: 0, sessions: 0, queries: 0 };
         }
         dailyMap[date].inputTokens += inputTokens;
         dailyMap[date].outputTokens += outputTokens;
         dailyMap[date].totalTokens += totalTokens;
+        dailyMap[date].cacheReadTokens += cacheReadTokens;
+        dailyMap[date].cacheCreationTokens += cacheCreationTokens;
         dailyMap[date].sessions += 1;
         dailyMap[date].queries += queries.length;
       }
@@ -211,11 +229,13 @@ async function parseAllSessions() {
       for (const q of queries) {
         if (q.model === '<synthetic>' || q.model === 'unknown') continue;
         if (!modelMap[q.model]) {
-          modelMap[q.model] = { model: q.model, inputTokens: 0, outputTokens: 0, totalTokens: 0, queryCount: 0 };
+          modelMap[q.model] = { model: q.model, inputTokens: 0, outputTokens: 0, totalTokens: 0, cacheReadTokens: 0, cacheCreationTokens: 0, queryCount: 0 };
         }
         modelMap[q.model].inputTokens += q.inputTokens;
         modelMap[q.model].outputTokens += q.outputTokens;
         modelMap[q.model].totalTokens += q.totalTokens;
+        modelMap[q.model].cacheReadTokens += q.cacheReadTokens || 0;
+        modelMap[q.model].cacheCreationTokens += q.cacheCreationTokens || 0;
         modelMap[q.model].queryCount += 1;
       }
     }
@@ -237,11 +257,12 @@ async function parseAllSessions() {
       projectMap[proj] = {
         project: proj,
         inputTokens: 0, outputTokens: 0, totalTokens: 0,
+        cacheReadTokens: 0, cacheCreationTokens: 0,
         sessionCount: 0, queryCount: 0,
         modelMap: {},
         allPrompts: [],
-        todayStats: { inputTokens: 0, outputTokens: 0, tokens: 0, sessions: 0, queries: 0 },
-        yesterdayStats: { inputTokens: 0, outputTokens: 0, tokens: 0, sessions: 0, queries: 0 },
+        todayStats: { inputTokens: 0, outputTokens: 0, tokens: 0, cacheReadTokens: 0, cacheCreationTokens: 0, sessions: 0, queries: 0 },
+        yesterdayStats: { inputTokens: 0, outputTokens: 0, tokens: 0, cacheReadTokens: 0, cacheCreationTokens: 0, sessions: 0, queries: 0 },
         todaySessions: [],
         yesterdaySessions: [],
       };
@@ -250,6 +271,8 @@ async function parseAllSessions() {
     p.inputTokens += session.inputTokens;
     p.outputTokens += session.outputTokens;
     p.totalTokens += session.totalTokens;
+    p.cacheReadTokens += session.cacheReadTokens || 0;
+    p.cacheCreationTokens += session.cacheCreationTokens || 0;
     p.sessionCount += 1;
     p.queryCount += session.queryCount;
 
@@ -257,6 +280,7 @@ async function parseAllSessions() {
     const collectSessionPrompts = () => {
       const prompts = [];
       let curPrompt = null, curInput = 0, curOutput = 0, curConts = 0;
+      let curCacheRead = 0, curCacheCreation = 0;
       let curModels = {}, curTools = {};
       const flushPrompt = () => {
         if (curPrompt && (curInput + curOutput) > 0) {
@@ -266,6 +290,8 @@ async function parseAllSessions() {
             inputTokens: curInput,
             outputTokens: curOutput,
             totalTokens: curInput + curOutput,
+            cacheReadTokens: curCacheRead,
+            cacheCreationTokens: curCacheCreation,
             continuations: curConts,
             model: topModel,
             toolCounts: { ...curTools },
@@ -278,12 +304,15 @@ async function parseAllSessions() {
           flushPrompt();
           curPrompt = q.userPrompt;
           curInput = 0; curOutput = 0; curConts = 0;
+          curCacheRead = 0; curCacheCreation = 0;
           curModels = {}; curTools = {};
         } else if (!q.userPrompt) {
           curConts++;
         }
         curInput += q.inputTokens;
         curOutput += q.outputTokens;
+        curCacheRead += q.cacheReadTokens || 0;
+        curCacheCreation += q.cacheCreationTokens || 0;
         if (q.model && q.model !== '<synthetic>') curModels[q.model] = (curModels[q.model] || 0) + 1;
         for (const t of q.tools || []) curTools[t] = (curTools[t] || 0) + 1;
       }
@@ -298,6 +327,8 @@ async function parseAllSessions() {
         p.todayStats.inputTokens += session.inputTokens;
         p.todayStats.outputTokens += session.outputTokens;
         p.todayStats.tokens += session.totalTokens;
+        p.todayStats.cacheReadTokens += session.cacheReadTokens || 0;
+        p.todayStats.cacheCreationTokens += session.cacheCreationTokens || 0;
         p.todayStats.sessions += 1;
         p.todayStats.queries += session.queryCount;
         p.todaySessions.push({
@@ -308,12 +339,16 @@ async function parseAllSessions() {
           totalTokens: session.totalTokens,
           inputTokens: session.inputTokens,
           outputTokens: session.outputTokens,
+          cacheReadTokens: session.cacheReadTokens || 0,
+          cacheCreationTokens: session.cacheCreationTokens || 0,
           prompts: collectSessionPrompts(),
         });
       } else if (sessionDate >= startOfYesterday && sessionDate < startOfToday) {
         p.yesterdayStats.inputTokens += session.inputTokens;
         p.yesterdayStats.outputTokens += session.outputTokens;
         p.yesterdayStats.tokens += session.totalTokens;
+        p.yesterdayStats.cacheReadTokens += session.cacheReadTokens || 0;
+        p.yesterdayStats.cacheCreationTokens += session.cacheCreationTokens || 0;
         p.yesterdayStats.sessions += 1;
         p.yesterdayStats.queries += session.queryCount;
         p.yesterdaySessions.push({
@@ -324,6 +359,8 @@ async function parseAllSessions() {
           totalTokens: session.totalTokens,
           inputTokens: session.inputTokens,
           outputTokens: session.outputTokens,
+          cacheReadTokens: session.cacheReadTokens || 0,
+          cacheCreationTokens: session.cacheCreationTokens || 0,
           prompts: collectSessionPrompts(),
         });
       }
@@ -332,17 +369,20 @@ async function parseAllSessions() {
     for (const q of session.queries) {
       if (q.model === '<synthetic>' || q.model === 'unknown') continue;
       if (!p.modelMap[q.model]) {
-        p.modelMap[q.model] = { model: q.model, inputTokens: 0, outputTokens: 0, totalTokens: 0, queryCount: 0 };
+        p.modelMap[q.model] = { model: q.model, inputTokens: 0, outputTokens: 0, totalTokens: 0, cacheReadTokens: 0, cacheCreationTokens: 0, queryCount: 0 };
       }
       const m = p.modelMap[q.model];
       m.inputTokens += q.inputTokens;
       m.outputTokens += q.outputTokens;
       m.totalTokens += q.totalTokens;
+      m.cacheReadTokens += q.cacheReadTokens || 0;
+      m.cacheCreationTokens += q.cacheCreationTokens || 0;
       m.queryCount += 1;
     }
 
     // Per-project prompt grouping with tool tracking
     let curPrompt = null, curInput = 0, curOutput = 0, curConts = 0;
+    let curCacheRead = 0, curCacheCreation = 0;
     let curModels = {}, curTools = {};
     const flushProjectPrompt = () => {
       if (curPrompt && (curInput + curOutput) > 0) {
@@ -352,6 +392,8 @@ async function parseAllSessions() {
           inputTokens: curInput,
           outputTokens: curOutput,
           totalTokens: curInput + curOutput,
+          cacheReadTokens: curCacheRead,
+          cacheCreationTokens: curCacheCreation,
           continuations: curConts,
           model: topModel,
           toolCounts: { ...curTools },
@@ -365,12 +407,15 @@ async function parseAllSessions() {
         flushProjectPrompt();
         curPrompt = q.userPrompt;
         curInput = 0; curOutput = 0; curConts = 0;
+        curCacheRead = 0; curCacheCreation = 0;
         curModels = {}; curTools = {};
       } else if (!q.userPrompt) {
         curConts++;
       }
       curInput += q.inputTokens;
       curOutput += q.outputTokens;
+      curCacheRead += q.cacheReadTokens || 0;
+      curCacheCreation += q.cacheCreationTokens || 0;
       if (q.model && q.model !== '<synthetic>') curModels[q.model] = (curModels[q.model] || 0) + 1;
       for (const t of q.tools || []) curTools[t] = (curTools[t] || 0) + 1;
     }
@@ -382,6 +427,8 @@ async function parseAllSessions() {
     inputTokens: p.inputTokens,
     outputTokens: p.outputTokens,
     totalTokens: p.totalTokens,
+    cacheReadTokens: p.cacheReadTokens,
+    cacheCreationTokens: p.cacheCreationTokens,
     sessionCount: p.sessionCount,
     queryCount: p.queryCount,
     todayStats: p.todayStats,
@@ -404,6 +451,8 @@ async function parseAllSessions() {
     totalTokens: sessions.reduce((sum, s) => sum + s.totalTokens, 0),
     totalInputTokens: sessions.reduce((sum, s) => sum + s.inputTokens, 0),
     totalOutputTokens: sessions.reduce((sum, s) => sum + s.outputTokens, 0),
+    totalCacheReadTokens: sessions.reduce((sum, s) => sum + (s.cacheReadTokens || 0), 0),
+    totalCacheCreationTokens: sessions.reduce((sum, s) => sum + (s.cacheCreationTokens || 0), 0),
     avgTokensPerQuery: 0,
     avgTokensPerSession: 0,
     dateRange: dailyUsage.length > 0
