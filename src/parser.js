@@ -445,14 +445,20 @@ async function parseAllSessions() {
   allPrompts.sort((a, b) => b.totalTokens - a.totalTokens);
   const topPrompts = allPrompts.slice(0, 20);
 
+  const totalCacheRead = sessions.reduce((sum, s) => sum + (s.cacheReadTokens || 0), 0);
+  const totalCacheCreation = sessions.reduce((sum, s) => sum + (s.cacheCreationTokens || 0), 0);
+  const totalInput = sessions.reduce((sum, s) => sum + s.inputTokens, 0);
+  const totalFreshInput = totalInput - totalCacheRead - totalCacheCreation;
+
   const grandTotals = {
     totalSessions: sessions.length,
     totalQueries: sessions.reduce((sum, s) => sum + s.queryCount, 0),
     totalTokens: sessions.reduce((sum, s) => sum + s.totalTokens, 0),
-    totalInputTokens: sessions.reduce((sum, s) => sum + s.inputTokens, 0),
+    totalInputTokens: totalInput,
     totalOutputTokens: sessions.reduce((sum, s) => sum + s.outputTokens, 0),
-    totalCacheReadTokens: sessions.reduce((sum, s) => sum + (s.cacheReadTokens || 0), 0),
-    totalCacheCreationTokens: sessions.reduce((sum, s) => sum + (s.cacheCreationTokens || 0), 0),
+    totalCacheReadTokens: totalCacheRead,
+    totalCacheCreationTokens: totalCacheCreation,
+    totalFreshInputTokens: totalFreshInput,
     avgTokensPerQuery: 0,
     avgTokensPerSession: 0,
     dateRange: dailyUsage.length > 0
