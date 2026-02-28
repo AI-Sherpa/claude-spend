@@ -1142,6 +1142,21 @@ function formatDate(d) {
   return `${months[parseInt(parts[1])-1]} ${parseInt(parts[2])}`;
 }
 
+function formatDateTime(isoStr) {
+  if (!isoStr) return '';
+  try {
+    const dt = new Date(isoStr);
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const month = months[dt.getMonth()];
+    const day = dt.getDate();
+    const hours = String(dt.getHours()).padStart(2, '0');
+    const mins = String(dt.getMinutes()).padStart(2, '0');
+    return `${month} ${day}, ${hours}:${mins}`;
+  } catch {
+    return '';
+  }
+}
+
 let _commonPrefix = '';
 function computeCommonPrefix() {
   const projects = (DATA.projectBreakdown || []).map(p => projectShort(p.project));
@@ -1671,7 +1686,7 @@ function buildDrawerPromptRow(pr, i) {
     '<div class="drawer-rank">' + (i + 1) + '</div>',
     '<div>',
     '<div class="drawer-prompt-text">' + escapeHtml(pr.prompt) + '</div>',
-    '<div class="drawer-prompt-meta">' + badge + chips + '</div>',
+    '<div class="drawer-prompt-meta">' + badge + chips + (pr.timestamp ? ' <span style="font-size:11px;color:var(--text-tertiary);">\u00b7 ' + formatDateTime(pr.timestamp) + '</span>' : '') + '</div>',
     '</div>',
     '<div class="drawer-tokens"><div class="value">' + tokVal + '</div><div class="sub">' + tokSub + '</div></div>',
     '</div>',
@@ -1690,7 +1705,7 @@ function buildDrawerContent(p, dateFilter) {
       return '<div class="drawer-empty">No sessions ' + dateFilter + '</div>';
     }
     // Sort sessions in reverse chronological order (most recent first)
-    sessions.sort((a, b) => b.timestamp - a.timestamp);
+    sessions.sort((a, b) => (b.timestamp || '').localeCompare(a.timestamp || ''));
     const chevronSvg = '<svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l4 4-4 4"/></svg>';
     const cards = sessions.map(s => {
       const badge = '<span class="model-badge ' + modelClass(s.model) + '"><span class="model-dot"></span>' + modelShort(s.model) + '</span>';
@@ -1702,7 +1717,7 @@ function buildDrawerContent(p, dateFilter) {
         '<div class="drawer-session-chevron">' + chevronSvg + '</div>',
         '<div>',
         '<div class="drawer-session-name">' + escapeHtml(s.name) + '</div>',
-        '<div class="drawer-session-meta">' + badge + queriesChip + '</div>',
+        '<div class="drawer-session-meta">' + badge + queriesChip + (s.timestamp ? ' <span style="font-size:11px;color:var(--text-tertiary);">\u00b7 ' + formatDateTime(s.timestamp) + '</span>' : '') + '</div>',
         '</div>',
         '<div class="drawer-tokens"><div class="value">' + fmt(s.totalTokens) + '</div><div class="sub">' + fmt(s.freshInputTokens) + ' fresh\u00a0\u00b7\u00a0' + fmt(s.cacheReadTokens) + ' cached\u00a0\u00b7\u00a0' + fmt(s.outputTokens) + ' out</div></div>',
         '</div>',
@@ -1754,6 +1769,7 @@ function buildProjectRow(p, i, maxTokens, extraClass) {
     chevron,
     '<div>',
     '<div class="proj-name" title="' + escapeHtml(projectFull(p.project)) + '">' + escapeHtml(projectShort(p.project)) + '</div>',
+    '<div style="font-size:11px;color:var(--text-tertiary);margin-top:3px;margin-bottom:4px">' + (p.latestTimestamp ? formatDateTime(p.latestTimestamp) : 'unknown') + '</div>',
     '<ul class="model-pills" aria-label="Models used: ' + escapeHtml(ariaLabel) + '">' + pillItems + '</ul>',
     '</div></div></td>',
     '<td class="token-num" style="font-weight:700;vertical-align:top;padding-top:12px">',
@@ -1785,12 +1801,13 @@ function renderProjectBreakdown() {
   if (!projects || !projects.length) return;
 
   // Split into three groups: today active, yesterday-only, inactive
+  // All groups sorted by latest timestamp (reverse chronological - newest first)
   const todayProjects = projects.filter(p => p.todayStats.tokens > 0)
-    .sort((a, b) => b.todayStats.tokens - a.todayStats.tokens);
+    .sort((a, b) => (b.latestTimestamp || '').localeCompare(a.latestTimestamp || ''));
   const yesterdayOnly = projects.filter(p => !p.todayStats.tokens && p.yesterdayStats.tokens > 0)
-    .sort((a, b) => b.yesterdayStats.tokens - a.yesterdayStats.tokens);
+    .sort((a, b) => (b.latestTimestamp || '').localeCompare(a.latestTimestamp || ''));
   const inactive = projects.filter(p => !p.todayStats.tokens && !p.yesterdayStats.tokens)
-    .sort((a, b) => b.totalTokens - a.totalTokens);
+    .sort((a, b) => (b.latestTimestamp || '').localeCompare(a.latestTimestamp || ''));
 
   const activeCount = todayProjects.length + yesterdayOnly.length;
   const countEl = document.getElementById('projectsCount');

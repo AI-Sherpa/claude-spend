@@ -261,6 +261,7 @@ async function parseAllSessions() {
         inputTokens: 0, outputTokens: 0, totalTokens: 0,
         cacheReadTokens: 0, cacheCreationTokens: 0,
         sessionCount: 0, queryCount: 0,
+        latestTimestamp: null,
         modelMap: {},
         allPrompts: [],
         todayStats: { inputTokens: 0, outputTokens: 0, tokens: 0, cacheReadTokens: 0, cacheCreationTokens: 0, sessions: 0, queries: 0 },
@@ -278,12 +279,17 @@ async function parseAllSessions() {
     p.sessionCount += 1;
     p.queryCount += session.queryCount;
 
+    // Track latest timestamp for project
+    if (session.timestamp && (!p.latestTimestamp || session.timestamp > p.latestTimestamp)) {
+      p.latestTimestamp = session.timestamp;
+    }
+
     // Helper to collect grouped prompts for a session
     const collectSessionPrompts = () => {
       const prompts = [];
       let curPrompt = null, curInput = 0, curOutput = 0, curConts = 0;
       let curCacheRead = 0, curCacheCreation = 0;
-      let curModels = {}, curTools = {};
+      let curModels = {}, curTools = {}, latestTimestamp = null;
       const flushPrompt = () => {
         if (curPrompt && (curInput + curOutput) > 0) {
           const topModel = Object.entries(curModels).sort((a, b) => b[1] - a[1])[0]?.[0] || session.model;
@@ -298,6 +304,7 @@ async function parseAllSessions() {
             model: topModel,
             toolCounts: { ...curTools },
             sessionId: session.sessionId,
+            timestamp: latestTimestamp,
           });
         }
       };
@@ -308,6 +315,7 @@ async function parseAllSessions() {
           curInput = 0; curOutput = 0; curConts = 0;
           curCacheRead = 0; curCacheCreation = 0;
           curModels = {}; curTools = {};
+          latestTimestamp = null;
         } else if (!q.userPrompt) {
           curConts++;
         }
@@ -317,6 +325,10 @@ async function parseAllSessions() {
         curCacheCreation += q.cacheCreationTokens || 0;
         if (q.model && q.model !== '<synthetic>') curModels[q.model] = (curModels[q.model] || 0) + 1;
         for (const t of q.tools || []) curTools[t] = (curTools[t] || 0) + 1;
+        // Track latest timestamp from queries
+        if (q.assistantTimestamp && (!latestTimestamp || q.assistantTimestamp > latestTimestamp)) {
+          latestTimestamp = q.assistantTimestamp;
+        }
       }
       flushPrompt();
       return prompts;
@@ -343,6 +355,7 @@ async function parseAllSessions() {
           outputTokens: session.outputTokens,
           cacheReadTokens: session.cacheReadTokens || 0,
           cacheCreationTokens: session.cacheCreationTokens || 0,
+          timestamp: session.timestamp,
           prompts: collectSessionPrompts(),
         });
       } else if (sessionDate >= startOfYesterday && sessionDate < startOfToday) {
@@ -363,6 +376,7 @@ async function parseAllSessions() {
           outputTokens: session.outputTokens,
           cacheReadTokens: session.cacheReadTokens || 0,
           cacheCreationTokens: session.cacheCreationTokens || 0,
+          timestamp: session.timestamp,
           prompts: collectSessionPrompts(),
         });
       }
@@ -385,7 +399,7 @@ async function parseAllSessions() {
     // Per-project prompt grouping with tool tracking
     let curPrompt = null, curInput = 0, curOutput = 0, curConts = 0;
     let curCacheRead = 0, curCacheCreation = 0;
-    let curModels = {}, curTools = {};
+    let curModels = {}, curTools = {}, latestProjTimestamp = null;
     const flushProjectPrompt = () => {
       if (curPrompt && (curInput + curOutput) > 0) {
         const topModel = Object.entries(curModels).sort((a, b) => b[1] - a[1])[0]?.[0] || session.model;
@@ -401,6 +415,7 @@ async function parseAllSessions() {
           toolCounts: { ...curTools },
           date: session.date,
           sessionId: session.sessionId,
+          timestamp: latestProjTimestamp,
         });
       }
     };
@@ -411,6 +426,7 @@ async function parseAllSessions() {
         curInput = 0; curOutput = 0; curConts = 0;
         curCacheRead = 0; curCacheCreation = 0;
         curModels = {}; curTools = {};
+        latestProjTimestamp = null;
       } else if (!q.userPrompt) {
         curConts++;
       }
@@ -420,26 +436,37 @@ async function parseAllSessions() {
       curCacheCreation += q.cacheCreationTokens || 0;
       if (q.model && q.model !== '<synthetic>') curModels[q.model] = (curModels[q.model] || 0) + 1;
       for (const t of q.tools || []) curTools[t] = (curTools[t] || 0) + 1;
+      // Track latest timestamp from queries
+      if (q.assistantTimestamp && (!latestProjTimestamp || q.assistantTimestamp > latestProjTimestamp)) {
+        latestProjTimestamp = q.assistantTimestamp;
+      }
     }
     flushProjectPrompt();
   }
 
-  const projectBreakdown = Object.values(projectMap).map(p => ({
-    project: p.project,
-    inputTokens: p.inputTokens,
-    outputTokens: p.outputTokens,
-    totalTokens: p.totalTokens,
-    cacheReadTokens: p.cacheReadTokens,
-    cacheCreationTokens: p.cacheCreationTokens,
-    sessionCount: p.sessionCount,
-    queryCount: p.queryCount,
-    todayStats: p.todayStats,
-    yesterdayStats: p.yesterdayStats,
-    todaySessions: p.todaySessions,
-    yesterdaySessions: p.yesterdaySessions,
-    modelBreakdown: Object.values(p.modelMap).sort((a, b) => b.totalTokens - a.totalTokens),
-    topPrompts: (p.allPrompts || []).sort((a, b) => b.totalTokens - a.totalTokens).slice(0, 10),
-  })).sort((a, b) => b.totalTokens - a.totalTokens);
+  const projectBreakdown = Object.values(projectMap).map(p => {
+    // Sort sessions within today/yesterday by reverse chronological order
+    const todaySessions = [...p.todaySessions].sort((a, b) => (b.timestamp || '').localeCompare(a.timestamp || ''));
+    const yesterdaySessions = [...p.yesterdaySessions].sort((a, b) => (b.timestamp || '').localeCompare(a.timestamp || ''));
+
+    return {
+      project: p.project,
+      inputTokens: p.inputTokens,
+      outputTokens: p.outputTokens,
+      totalTokens: p.totalTokens,
+      cacheReadTokens: p.cacheReadTokens,
+      cacheCreationTokens: p.cacheCreationTokens,
+      sessionCount: p.sessionCount,
+      queryCount: p.queryCount,
+      latestTimestamp: p.latestTimestamp,
+      todayStats: p.todayStats,
+      yesterdayStats: p.yesterdayStats,
+      todaySessions: todaySessions,
+      yesterdaySessions: yesterdaySessions,
+      modelBreakdown: Object.values(p.modelMap).sort((a, b) => b.totalTokens - a.totalTokens),
+      topPrompts: (p.allPrompts || []).sort((a, b) => b.totalTokens - a.totalTokens).slice(0, 10),
+    };
+  }).sort((a, b) => (b.latestTimestamp || '').localeCompare(a.latestTimestamp || ''));
 
   const dailyUsage = Object.values(dailyMap).sort((a, b) => a.date.localeCompare(b.date));
 
