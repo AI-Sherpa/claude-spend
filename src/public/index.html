@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Claude Spend</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -1688,6 +1689,8 @@ function buildDrawerContent(p, dateFilter) {
     if (!sessions || sessions.length === 0) {
       return '<div class="drawer-empty">No sessions ' + dateFilter + '</div>';
     }
+    // Sort sessions in reverse chronological order (most recent first)
+    sessions.sort((a, b) => b.timestamp - a.timestamp);
     const chevronSvg = '<svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l4 4-4 4"/></svg>';
     const cards = sessions.map(s => {
       const badge = '<span class="model-badge ' + modelClass(s.model) + '"><span class="model-dot"></span>' + modelShort(s.model) + '</span>';
