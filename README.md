@@ -20,26 +20,103 @@ Dark theme with adaptive colors for comfortable viewing in low-light environment
 
 
 
-## Install
+## Quick Start
 
-```
+### Option 1: Run Directly (Simplest)
+
+```bash
 npx claude-spend
 ```
 
-That's it. Opens a dashboard in your browser.
+That's it. Opens a dashboard in your browser at `http://localhost:3456`.
+
+### Option 2: Clone & Run Locally
+
+If you want to contribute or run from source:
+
+```bash
+# Clone the repository
+git clone https://github.com/AI-Sherpa/claude-spend.git
+cd claude-spend
+
+# Install dependencies
+npm install
+
+# Start the dashboard
+npm start
+```
+
+This opens the dashboard at `http://localhost:3456` with auto-refresh on file changes.
+
+## Usage
+
+Once running, the dashboard is available at `http://localhost:3456`.
+
+### Custom Port
+
+```bash
+npx claude-spend --port 8080
+```
+
+Or when running from source:
+
+```bash
+node src/index.js --port 8080
+```
+
+### Skip Auto-Open
+
+```bash
+npx claude-spend --no-open
+node src/index.js --no-open
+```
+
+### Show Help
+
+```bash
+npx claude-spend --help
+```
 
 
-## What it does
+## Features
 
-- **Reads your local Claude Code session files** (nothing leaves your machine)
-- **Tracks token usage** across conversations, daily trends, and per-model breakdown
-  - Input, output, and cache tokens
-  - Cache creation and read metrics
-  - Token efficiency per session
-- **Intelligent project organization** with automatic time-based grouping (Today, Yesterday, Inactive)
-- **Query-level tracking** showing conversation activity alongside token metrics
-- **Surfaces actionable insights** like which prompts cost the most, usage patterns, and optimization opportunities
-- **Interactive dashboard** with charts, tables, theme toggle (light/dark), and real-time refresh
+### 📊 Comprehensive Token Analytics
+- **Input, output, and cache tokens** tracked separately
+- **Cache metrics** including creation (write) and read costs
+- **Token efficiency** per session, project, and model
+- **Grand totals** showing lifetime statistics across all sessions
+
+### 🎯 Smart Project Organization
+- **Time-based grouping** — Automatically sorted into Today, Yesterday, and Inactive projects
+- **Per-project stats** — Tokens spent, session count, query count, last active timestamp
+- **Top prompts** — Most costly and frequently used prompts with token breakdowns
+
+### 📈 Usage Insights & Trends
+- **Daily usage chart** — Visual trends over time with interactive details
+- **Model breakdown** — Token consumption by Claude model with percentages
+- **Weekly patterns** — Usage distribution across days of the week
+- **Actionable insights** — 10 analysis types:
+  - Session efficiency and cost-per-query metrics
+  - Context growth patterns in conversations
+  - Peak usage times and day-of-week trends
+  - Model utilization and optimization opportunities
+  - Tool usage and API integration patterns
+  - Project dominance and resource allocation
+  - Input-to-output token ratio analysis
+  - Marathon sessions and conversation patterns
+  - Heavy context and conversation depth
+
+### 🎨 Interactive Dashboard
+- **Light & dark themes** with adaptive colors
+- **Real-time refresh** via `/api/refresh` endpoint
+- **Zero setup required** — All defaults work out of the box
+- **Privacy-first** — All data stays on your machine
+
+### 🔒 Security & Privacy
+- **Zero external calls** — No data leaves your computer
+- **No tracking** — No analytics, telemetry, or logging
+- **Local processing only** — Everything happens on your machine
+- **Minimal dependencies** — Only `express` and `open`
 
 
 ## How it works
@@ -101,13 +178,6 @@ Auto-generated analysis including:
 - **Model timeline** — Historical adoption of different Claude models
 
 
-## Options
-
-```
-claude-spend --port 8080   # custom port (default: 3456)
-claude-spend --no-open     # don't auto-open browser
-claude-spend --help        # show all options
-```
 
 ## Technical Details
 
