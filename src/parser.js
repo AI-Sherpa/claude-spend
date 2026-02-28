@@ -135,10 +135,11 @@ async function parseAllSessions() {
       if (queries.length === 0) continue;
 
       let inputTokens = 0, outputTokens = 0;
-      let cacheReadTokens = 0, cacheCreationTokens = 0;
+      let freshInputTokens = 0, cacheReadTokens = 0, cacheCreationTokens = 0;
       for (const q of queries) {
         inputTokens += q.inputTokens;
         outputTokens += q.outputTokens;
+        freshInputTokens += q.freshInputTokens || 0;
         cacheReadTokens += q.cacheReadTokens || 0;
         cacheCreationTokens += q.cacheCreationTokens || 0;
       }
@@ -207,6 +208,7 @@ async function parseAllSessions() {
         inputTokens,
         outputTokens,
         totalTokens,
+        freshInputTokens,
         cacheReadTokens,
         cacheCreationTokens,
       });
